@@ -12,15 +12,11 @@ export default class HomePage_{
         this.elements = page.getByRole('heading', {name: 'Elements'});
 
     }
-
-    hehe = () => this.page.locator('aa');
-
-
+    
     // list Elements
     async gotoElementPage(){
         await this.page.goto('https://demoqa.com/');
         await this.elements.click();
-        await this.hehe.click();
         // await this.
     }
 
