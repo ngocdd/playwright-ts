@@ -7,3 +7,7 @@ test('test Elements page', async ({ page }) => {
   homePage = new HomePage(page);
   homePage.gotoElementPage;
 });
+
+test('test new',async () => {
+  
+});
