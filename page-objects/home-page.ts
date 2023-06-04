@@ -12,11 +12,12 @@ export default class HomePage_{
         this.elements = page.getByRole('heading', {name: 'Elements'});
 
     }
-    
+
     // list Elements
     async gotoElementPage(){
         await this.page.goto('https://demoqa.com/');
         await this.elements.click();
+        await this.page.pause();
         // await this.
     }
 
