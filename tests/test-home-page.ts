@@ -5,7 +5,7 @@ let homePage: HomePage;
 
 test('test Elements page', async ({ page }) => {
   const homePage = new HomePage(page);
-  await homePage.gotoElementPage();
+  await homePage.gotoHomePage();
   await page.pause();
 });
 
