@@ -1,7 +1,7 @@
 import {setEnv} from "./utils/env/env";
 
 function globalConfig (){
-    const env = setEnv();
+    setEnv();
 }
 
 export default globalConfig;

@@ -8,7 +8,9 @@
     "encrypt-uat-env": "./node_modules/.bin/dotenvenc -e -i ./utils/env/.env.uat -o ./utils/env/.uat.enc",
     "encrypt-prod-env": "./node_modules/.bin/dotenvenc -e -i ./utils/env/.env.prod -o ./utils/env/.prod.enc",
     "encrypt-env": "npm run encrypt-stg-env && npm run encrypt-uat-env && npm run encrypt-prod-env",
-    "test": "npx dotenv -v ENV=uat npx playwright test"
+    "test-stg": "npx dotenv -v ENV=stg npx playwright test",
+    "test-uat": "npx dotenv -v ENV=uat npx playwright test",
+    "test-prod": "npx dotenv -v ENV=prod npx playwright test"
   },
   "keywords": [],
   "author": "",
