@@ -1,3 +1,7 @@
-import { setupEnv } from "./utils/env/env";
+import {setEnv} from "./utils/env/env";
 
-setupEnv();
+function globalConfig (){
+    const env = setEnv();
+}
+
+export default globalConfig;
