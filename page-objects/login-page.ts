@@ -1,4 +1,4 @@
-import { Page, Locator } from "@playwright/test";
+import { Page, Locator, expect } from "@playwright/test";
 
 
 export default class LoginPage{
@@ -10,6 +10,7 @@ export default class LoginPage{
     readonly btnSubmit: Locator;
     readonly languageOption: Locator;
     readonly langEng: Locator;
+    readonly profileName: Locator;
 
     // constructor
     constructor(page:Page){
@@ -20,6 +21,7 @@ export default class LoginPage{
         this.btnSubmit = page.getByTestId('LoginTenantForm__buttonLogin');
         this.languageOption = page.getByTestId('LocaleSwitcher');
         this.langEng = page.getByRole('menuitem',{name: 'ENGLISH'});
+        this.profileName = page.getByTestId('Appbar__role');
     }
 
     // go to Login Page

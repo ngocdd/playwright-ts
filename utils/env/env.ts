@@ -2,7 +2,7 @@ export function setEnv (){
 
     // env config
     const envConfig = {
-    path: `./utils/env/.env.${process.env.ENV}`, 
+    path: `./utils/env/.env.uat`, 
     override: true
     }
     
@@ -10,11 +10,12 @@ export function setEnv (){
     require('dotenv').config(envConfig);
 
     // decrypt en
-    require('@tka85/dotenvenc').decrypt({ encryptedFile: `./utils/env/.${process.env.ENV}.enc`});
+    // require('@tka85/dotenvenc').decrypt({ encryptedFile: `./utils/env/.${process.env.ENV}.enc`});
 
     // test get env var
     // console.log(process.env.BASE_URL);
 
 }
 
-    
+
+

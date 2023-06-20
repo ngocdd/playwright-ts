@@ -10,6 +10,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  timeout: 100000,
   testMatch: ["**/*.ts"],
   globalTimeout: 600000,
   globalSetup: './global.setup.ts',

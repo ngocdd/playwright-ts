@@ -12,7 +12,8 @@ test('test Elements page', async ({ page }) => {
 
   await loginPage.gotoLogin();
   await loginPage.login();
-  await homePage.gotoBookDetail('01H39XX2Y899CZNRH4YAJW5191');
-  await homePage.addNewChapter();
+  await homePage.gotoBookDetail('01H3CH2XGJB6XPGR130H58A2T3');
+  await homePage.addNewLO();
+  await homePage.addNewQuestion();
   await page.pause();
 });
