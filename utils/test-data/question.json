@@ -1,0 +1,113 @@
+[
+    {
+      "question": "Which planet is known as the 'Red Planet'?",
+      "description": "Identify the planet often referred to as the 'Red Planet' due to its reddish appearance.",
+      "choices": {
+        "a": "Mars",
+        "b": "Jupiter",
+        "c": "Venus",
+        "d": "Saturn"
+      },
+      "explanation": "The correct answer is (a) Mars. Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface."
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "description": "Select the chemical symbol representing the element gold.",
+      "choices": {
+        "a": "Au",
+        "b": "Ag",
+        "c": "Hg",
+        "d": "Pt"
+      },
+      "explanation": "The correct answer is (a) Au. The chemical symbol for gold is Au, which comes from the Latin word 'aurum.'"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "description": "Choose the artist responsible for creating the famous painting 'Mona Lisa.'",
+      "choices": {
+        "a": "Leonardo da Vinci",
+        "b": "Vincent van Gogh",
+        "c": "Pablo Picasso",
+        "d": "Claude Monet"
+      },
+      "explanation": "The correct answer is (a) Leonardo da Vinci. Leonardo da Vinci painted the Mona Lisa, which is one of the most famous and iconic paintings in the world."
+    },
+    {
+      "question": "Which country is known for its tango dance?",
+      "description": "Identify the country renowned for its traditional dance form called tango.",
+      "choices": {
+        "a": "Argentina",
+        "b": "Spain",
+        "c": "Brazil",
+        "d": "Italy"
+      },
+      "explanation": "The correct answer is (a) Argentina. The tango dance originated in Argentina and is an important part of its cultural heritage."
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "description": "Choose the capital city of the country Australia.",
+      "choices": {
+        "a": "Sydney",
+        "b": "Melbourne",
+        "c": "Canberra",
+        "d": "Perth"
+      },
+      "explanation": "The correct answer is (c) Canberra. Canberra is the capital city of Australia, while Sydney and Melbourne are other major cities in the country."
+    },
+    {
+      "question": "Which scientist proposed the theory of relativity?",
+      "description": "Identify the scientist who introduced the theory of relativity.",
+      "choices": {
+        "a": "Albert Einstein",
+        "b": "Isaac Newton",
+        "c": "Nikola Tesla",
+        "d": "Marie Curie"
+      },
+      "explanation": "The correct answer is (a) Albert Einstein. Albert Einstein is credited with developing the theory of relativity, which revolutionized our understanding of space, time, and gravity."
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "description": "Select the organ that holds the title of being the largest in the human body.",
+      "choices": {
+        "a": "Liver",
+        "b": "Heart",
+        "c": "Brain",
+        "d": "Skin"
+      },
+      "explanation": "The correct answer is (d) Skin. The skin is the largest organ in the human body, serving as a protective barrier and regulating temperature."
+    },
+    {
+      "question": "Who wrote the novel 'To Kill a Mockingbird'?",
+      "description": "Choose the author of the novel 'To Kill a Mockingbird.'",
+      "choices": {
+        "a": "Harper Lee",
+        "b": "F. Scott Fitzgerald",
+        "c": "Ernest Hemingway",
+        "d": "Jane Austen"
+      },
+      "explanation": "The correct answer is (a) Harper Lee. Harper Lee wrote the novel 'To Kill a Mockingbird,' which explores themes of racial injustice and compassion in the American South."
+    },
+    {
+      "question": "What is the chemical formula for water?",
+      "description": "Identify the correct chemical formula for the compound known as water.",
+      "choices": {
+        "a": "H2O",
+        "b": "CO2",
+        "c": "CH4",
+        "d": "NaCl"
+      },
+      "explanation": "The correct answer is (a) H2O. The chemical formula for water is H2O, indicating that it consists of two hydrogen atoms bonded to one oxygen atom."
+    },
+    {
+      "question": "Who is credited with inventing the telephone?",
+      "description": "Choose the individual credited with the invention of the telephone.",
+      "choices": {
+        "a": "Alexander Graham Bell",
+        "b": "Thomas Edison",
+        "c": "Nikola Tesla",
+        "d": "Benjamin Franklin"
+      },
+      "explanation": "The correct answer is (a) Alexander Graham Bell. Alexander Graham Bell is widely recognized as the inventor of the telephone, revolutionizing communication."
+    }
+  ]
+  
