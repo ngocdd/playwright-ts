@@ -1,113 +1,237 @@
 [
-    {
-      "question": "Which planet is known as the 'Red Planet'?",
-      "description": "Identify the planet often referred to as the 'Red Planet' due to its reddish appearance.",
-      "choices": {
-        "a": "Mars",
-        "b": "Jupiter",
-        "c": "Venus",
-        "d": "Saturn"
-      },
-      "explanation": "The correct answer is (a) Mars. Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface."
-    },
-    {
-      "question": "What is the chemical symbol for gold?",
-      "description": "Select the chemical symbol representing the element gold.",
-      "choices": {
-        "a": "Au",
-        "b": "Ag",
-        "c": "Hg",
-        "d": "Pt"
-      },
-      "explanation": "The correct answer is (a) Au. The chemical symbol for gold is Au, which comes from the Latin word 'aurum.'"
-    },
-    {
-      "question": "Who painted the Mona Lisa?",
-      "description": "Choose the artist responsible for creating the famous painting 'Mona Lisa.'",
-      "choices": {
-        "a": "Leonardo da Vinci",
-        "b": "Vincent van Gogh",
-        "c": "Pablo Picasso",
-        "d": "Claude Monet"
-      },
-      "explanation": "The correct answer is (a) Leonardo da Vinci. Leonardo da Vinci painted the Mona Lisa, which is one of the most famous and iconic paintings in the world."
-    },
-    {
-      "question": "Which country is known for its tango dance?",
-      "description": "Identify the country renowned for its traditional dance form called tango.",
-      "choices": {
-        "a": "Argentina",
-        "b": "Spain",
-        "c": "Brazil",
-        "d": "Italy"
-      },
-      "explanation": "The correct answer is (a) Argentina. The tango dance originated in Argentina and is an important part of its cultural heritage."
-    },
-    {
-      "question": "What is the capital city of Australia?",
-      "description": "Choose the capital city of the country Australia.",
-      "choices": {
-        "a": "Sydney",
-        "b": "Melbourne",
-        "c": "Canberra",
-        "d": "Perth"
-      },
-      "explanation": "The correct answer is (c) Canberra. Canberra is the capital city of Australia, while Sydney and Melbourne are other major cities in the country."
-    },
-    {
-      "question": "Which scientist proposed the theory of relativity?",
-      "description": "Identify the scientist who introduced the theory of relativity.",
-      "choices": {
-        "a": "Albert Einstein",
-        "b": "Isaac Newton",
-        "c": "Nikola Tesla",
-        "d": "Marie Curie"
-      },
-      "explanation": "The correct answer is (a) Albert Einstein. Albert Einstein is credited with developing the theory of relativity, which revolutionized our understanding of space, time, and gravity."
-    },
-    {
-      "question": "What is the largest organ in the human body?",
-      "description": "Select the organ that holds the title of being the largest in the human body.",
-      "choices": {
-        "a": "Liver",
-        "b": "Heart",
-        "c": "Brain",
-        "d": "Skin"
-      },
-      "explanation": "The correct answer is (d) Skin. The skin is the largest organ in the human body, serving as a protective barrier and regulating temperature."
-    },
-    {
-      "question": "Who wrote the novel 'To Kill a Mockingbird'?",
-      "description": "Choose the author of the novel 'To Kill a Mockingbird.'",
-      "choices": {
-        "a": "Harper Lee",
-        "b": "F. Scott Fitzgerald",
-        "c": "Ernest Hemingway",
-        "d": "Jane Austen"
-      },
-      "explanation": "The correct answer is (a) Harper Lee. Harper Lee wrote the novel 'To Kill a Mockingbird,' which explores themes of racial injustice and compassion in the American South."
-    },
-    {
-      "question": "What is the chemical formula for water?",
-      "description": "Identify the correct chemical formula for the compound known as water.",
-      "choices": {
-        "a": "H2O",
-        "b": "CO2",
-        "c": "CH4",
-        "d": "NaCl"
-      },
-      "explanation": "The correct answer is (a) H2O. The chemical formula for water is H2O, indicating that it consists of two hydrogen atoms bonded to one oxygen atom."
-    },
-    {
-      "question": "Who is credited with inventing the telephone?",
-      "description": "Choose the individual credited with the invention of the telephone.",
-      "choices": {
-        "a": "Alexander Graham Bell",
-        "b": "Thomas Edison",
-        "c": "Nikola Tesla",
-        "d": "Benjamin Franklin"
-      },
-      "explanation": "The correct answer is (a) Alexander Graham Bell. Alexander Graham Bell is widely recognized as the inventor of the telephone, revolutionizing communication."
-    }
-  ]
-  
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "answers": ["Mars", "Jupiter", "Venus", "Saturn"],
+    "explanation": "The correct answer is (a) Mars. Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface."
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "answers": ["Au", "Ag", "Hg", "Pt"],
+    "explanation": "The correct answer is (a) Au. The chemical symbol for gold is Au, which comes from the Latin word 'aurum.'"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "answers": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+    "explanation": "The correct answer is (a) Leonardo da Vinci. Leonardo da Vinci painted the Mona Lisa, which is one of the most famous and iconic paintings in the world."
+  },
+  {
+    "question": "Which country is known for its tango dance?",
+    "answers": ["Argentina", "Spain", "Brazil", "Italy"],
+    "explanation": "The correct answer is (a) Argentina. The tango dance originated in Argentina and is an important part of its cultural heritage."
+  },
+  {
+    "question": "What is the capital city of Australia?",
+    "answers": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "explanation": "The correct answer is (c) Canberra. Canberra is the capital city of Australia, while Sydney and Melbourne are other major cities in the country."
+  },
+  {
+    "question": "Which scientist proposed the theory of relativity?",
+    "answers": ["Albert Einstein", "Isaac Newton", "Nikola Tesla", "Marie Curie"],
+    "explanation": "The correct answer is (a) Albert Einstein. Albert Einstein is credited with developing the theory of relativity, which revolutionized our understanding of space, time, and gravity."
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "answers": ["Liver", "Heart", "Brain", "Skin"],
+    "explanation": "The correct answer is (d) Skin. The skin is the largest organ in the human body, serving as a protective barrier and regulating temperature."
+  },
+  {
+    "question": "Who wrote the novel 'To Kill a Mockingbird'?",
+    "answers": ["Harper Lee", "F. Scott Fitzgerald", "Ernest Hemingway", "Jane Austen"],
+    "explanation": "The correct answer is (a) Harper Lee. Harper Lee wrote the novel 'To Kill a Mockingbird,' which explores themes of racial injustice and compassion in the American South."
+  },
+  {
+    "question": "What is the chemical formula for water?",
+    "answers": ["H2O", "CO2", "CH4", "NaCl"],
+    "explanation": "The correct answer is (a) H2O. The chemical formula for water is H2O, indicating that it consists of two hydrogen atoms bonded to one oxygen atom."
+  },
+  {
+    "question": "Who is credited with inventing the telephone?",
+    "answers": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Benjamin Franklin"],
+    "explanation": "The correct answer is (a) Alexander Graham Bell. Alexander Graham Bell is widely recognized as the inventor of the telephone, revolutionizing communication."
+  },
+  {
+    "question": "What is the symbol for the element carbon?",
+    "answers": ["C", "Ca", "Co", "Cu"],
+    "explanation": "The correct answer is (a) C. The symbol for the element carbon is C, which is derived from the Latin word 'carbo.' Carbon is a fundamental element found in all living organisms and many non-living substances."
+  },
+  {
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "answers": ["William Shakespeare", "Arthur Miller", "Tennessee Williams", "Samuel Beckett"],
+    "explanation": "The correct answer is (a) William Shakespeare. William Shakespeare wrote the famous play 'Romeo and Juliet,' which tells the tragic love story of two young individuals from feuding families."
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "answers": ["Jupiter", "Saturn", "Neptune", "Uranus"],
+    "explanation": "The correct answer is (a) Jupiter. Jupiter is the largest planet in our solar system, with a diameter over 11 times that of Earth. It is known for its vibrant bands of clouds and the iconic Great Red Spot."
+  },
+  {
+    "question": "Which instrument is used to measure atmospheric pressure?",
+    "answers": ["Barometer", "Thermometer", "Hydrometer", "Anemometer"],
+    "explanation": "The correct answer is (a) Barometer. A barometer is an instrument used to measure atmospheric pressure, which is an important factor in weather forecasting and studying atmospheric conditions."
+  },
+  {
+    "question": "Who is the Greek god of the sea?",
+    "answers": ["Poseidon", "Zeus", "Hades", "Apollo"],
+    "explanation": "The correct answer is (a) Poseidon. Poseidon is the Greek god of the sea, known for his power and control over the oceans, earthquakes, and horses."
+  },
+  {
+    "question": "What is the chemical symbol for sodium?",
+    "answers": ["Na", "K", "Mg", "Ca"],
+    "explanation": "The correct answer is (a) Na. The chemical symbol for sodium comes from the Latin word 'natrium.' Sodium is a highly reactive alkali metal commonly found in salts and plays a crucial role in many biological processes."
+  },
+  {
+    "question": "Who painted the ceiling of the Sistine Chapel?",
+    "answers": ["Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"],
+    "explanation": "The correct answer is (a) Michelangelo. Michelangelo painted the breathtaking ceiling of the Sistine Chapel in Vatican City, showcasing iconic biblical scenes and renowned artistic mastery."
+  },
+  {
+    "question": "What is the national animal of China?",
+    "answers": ["Giant panda", "Tiger", "Dragon", "Red-crowned crane"],
+    "explanation": "The correct answer is (a) Giant panda. The giant panda is the national animal of China and is considered a symbol of peace, friendship, and environmental conservation."
+  },
+  {
+    "question": "Who discovered penicillin?",
+    "answers": ["Alexander Fleming", "Louis Pasteur", "Marie Curie", "Gregor Mendel"],
+    "explanation": "The correct answer is (a) Alexander Fleming. Alexander Fleming discovered penicillin, a breakthrough in medicine that revolutionized the treatment of bacterial infections."
+  },
+  {
+    "question": "What is the largest species of shark?",
+    "answers": ["Whale shark", "Great white shark", "Tiger shark", "Hammerhead shark"],
+    "explanation": "The correct answer is (a) Whale shark. The whale shark is the largest species of shark and the largest fish in the ocean. Despite its size, it is a gentle filter feeder, primarily consuming plankton."
+  },
+  {
+    "question": "Who wrote the famous novel 'Pride and Prejudice'?",
+    "answers": ["Jane Austen", "Charlotte Bronte", "Emily Bronte", "Virginia Woolf"],
+    "explanation": "The correct answer is (a) Jane Austen. Jane Austen wrote the classic novel 'Pride and Prejudice,' which explores themes of love, social status, and personal growth in 19th-century England."
+  },
+  {
+    "question": "Which gas makes up the majority of Earth's atmosphere?",
+    "answers": ["Nitrogen", "Oxygen", "Carbon dioxide", "Argon"],
+    "explanation": "The correct answer is (a) Nitrogen. Nitrogen makes up the majority of Earth's atmosphere, accounting for about 78% of the total volume. Oxygen is the second most abundant gas."
+  },
+  {
+    "question": "Who is the author of the 'Harry Potter' book series?",
+    "answers": ["J.K. Rowling", "Stephenie Meyer", "George R.R. Martin", "J.R.R. Tolkien"],
+    "explanation": "The correct answer is (a) J.K. Rowling. J.K. Rowling is the author of the immensely popular 'Harry Potter' book series, which follows the magical adventures of a young wizard and his friends."
+  },
+  {
+    "question": "What is the chemical formula for table salt?",
+    "answers": ["NaCl", "H2O", "CO2", "CaCl2"],
+    "explanation": "The correct answer is (a) NaCl. The chemical formula for table salt is NaCl, which stands for sodium chloride. It is a common seasoning used in cooking and food preservation."
+  },
+  {
+    "question": "Who was the first person to walk on the moon?",
+    "answers": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
+    "explanation": "The correct answer is (a) Neil Armstrong. Neil Armstrong became the first person to walk on the moon during the Apollo 11 mission on July 20, 1969, famously uttering the words, 'That's one small step for man, one giant leap for mankind.'"
+  },
+  {
+    "question": "What is the primary language spoken in Brazil?",
+    "answers": ["Portuguese", "Spanish", "English", "French"],
+    "explanation": "The correct answer is (a) Portuguese. Portuguese is the primary language spoken in Brazil, as it was a former colony of Portugal. It is the most widely spoken language in South America."
+  },
+  {
+    "question": "Who is known as the 'Father of Modern Physics'?",
+    "answers": ["Isaac Newton", "Albert Einstein", "Niels Bohr", "Galileo Galilei"],
+    "explanation": "The correct answer is (b) Albert Einstein. Albert Einstein is known as the 'Father of Modern Physics' for his groundbreaking contributions to the field, including the theory of relativity and the concept of mass-energy equivalence (E=mc²)."
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "answers": ["Skin", "Liver", "Brain", "Heart"],
+    "explanation": "The correct answer is (a) Skin. The skin is the largest organ in the human body, serving as a protective barrier and regulating temperature."
+  },
+  {
+    "question": "Who painted the famous artwork 'The Starry Night'?",
+    "answers": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+    "explanation": "The correct answer is (a) Vincent van Gogh. Vincent van Gogh painted the iconic artwork 'The Starry Night,' known for its swirling sky and expressive brushstrokes."
+  },
+  {
+    "question": "Which country is known for its tulips and windmills?",
+    "answers": ["Netherlands", "Italy", "France", "Germany"],
+    "explanation": "The correct answer is (a) Netherlands. The Netherlands is famous for its tulips and windmills, symbolizing its rich cultural heritage and beautiful landscapes."
+  },
+  {
+    "question": "What is the chemical symbol for iron?",
+    "answers": ["Fe", "I", "Ir", "In"],
+    "explanation": "The correct answer is (a) Fe. The chemical symbol for iron comes from its Latin name 'ferrum.' Iron is a common metal with various industrial and biological uses."
+  },
+  {
+    "question": "Who wrote the famous novel '1984'?",
+    "answers": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Margaret Atwood"],
+    "explanation": "The correct answer is (a) George Orwell. George Orwell wrote the dystopian novel '1984,' which portrays a totalitarian society and explores themes of government surveillance and individual freedom."
+  },
+  {
+    "question": "What is the capital city of Canada?",
+    "answers": ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+    "explanation": "The correct answer is (a) Ottawa. Ottawa is the capital city of Canada, known for its historic landmarks, governmental institutions, and vibrant cultural scene."
+  },
+  {
+    "question": "Who is the Greek goddess of wisdom?",
+    "answers": ["Athena", "Hera", "Aphrodite", "Artemis"],
+    "explanation": "The correct answer is (a) Athena. Athena is the Greek goddess of wisdom, strategic warfare, and handicrafts. She is often depicted with an owl, symbolizing wisdom."
+  },
+  {
+    "question": "What is the symbol for the element oxygen?",
+    "answers": ["O", "O2", "C", "H2O"],
+    "explanation": "The correct answer is (a) O. The symbol for the element oxygen is O, representing one of the most abundant elements on Earth and a crucial component of the atmosphere."
+  },
+  {
+    "question": "Who composed the Symphony No. 5 in C minor?",
+    "answers": ["Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Franz Schubert"],
+    "explanation": "The correct answer is (a) Ludwig van Beethoven. Ludwig van Beethoven composed the Symphony No. 5 in C minor, one of the most famous and recognizable symphonies in classical music."
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "answers": ["Sahara Desert", "Gobi Desert", "Arabian Desert", "Antarctic Desert"],
+    "explanation": "The correct answer is (a) Sahara Desert. The Sahara Desert, located in northern Africa, is the largest hot desert in the world, covering a vast expanse of land."
+  },
+  {
+    "question": "Who is the author of the 'Lord of the Rings' book series?",
+    "answers": ["J.R.R. Tolkien", "C.S. Lewis", "George R.R. Martin", "Terry Pratchett"],
+    "explanation": "The correct answer is (a) J.R.R. Tolkien. J.R.R. Tolkien is the author of the 'Lord of the Rings' book series, a beloved epic fantasy that has captivated readers for generations."
+  },
+  {
+    "question": "Which continent is known as the 'Dark Continent'?",
+    "answers": ["Africa", "Asia", "South America", "Antarctica"],
+    "explanation": "The correct answer is (a) Africa. Africa is sometimes referred to as the 'Dark Continent,' a term historically used to describe its mysterious and unexplored nature by European explorers."
+  },
+  {
+    "question": "What is the chemical formula for carbon dioxide?",
+    "answers": ["CO2", "H2O", "O2", "N2"],
+    "explanation": "The correct answer is (a) CO2. The chemical formula for carbon dioxide is CO2, indicating that it consists of one carbon atom bonded to two oxygen atoms. It is a greenhouse gas and an essential component of Earth's carbon cycle."
+  },
+  {
+    "question": "Who was the first woman to win a Nobel Prize?",
+    "answers": ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Dorothy Hodgkin"],
+    "explanation": "The correct answer is (a) Marie Curie. Marie Curie, a physicist and chemist, became the first woman to win a Nobel Prize in 1903, sharing the award in Physics for her research on radioactivity."
+  },
+  {
+    "question": "Which artist painted the 'Mona Lisa'?",
+    "answers": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Michelangelo"],
+    "explanation": "The correct answer is (a) Leonardo da Vinci. Leonardo da Vinci painted the famous artwork 'Mona Lisa,' renowned for its enigmatic smile and captivating expression."
+  },
+  {
+    "question": "What is the currency of Japan?",
+    "answers": ["Japanese yen", "Euro", "Pound sterling", "US dollar"],
+    "explanation": "The correct answer is (a) Japanese yen. The currency of Japan is the Japanese yen, symbolized by ¥. It is one of the most traded currencies in the world."
+  },
+  {
+    "question": "Who is known as the 'King of Pop'?",
+    "answers": ["Michael Jackson", "Elvis Presley", "Stevie Wonder", "Prince"],
+    "explanation": "The correct answer is (a) Michael Jackson. Michael Jackson, with his iconic music, dance moves, and global impact, is often referred to as the 'King of Pop.'"
+  },
+  {
+    "question": "What is the longest river in the world?",
+    "answers": ["Nile River", "Amazon River", "Yangtze River", "Mississippi River"],
+    "explanation": "The correct answer is (a) Nile River. The Nile River, flowing through northeastern Africa, is widely considered the longest river in the world, with a length of approximately 6,650 kilometers (4,130 miles)."
+  },
+  {
+    "question": "Who is the founder of Microsoft?",
+    "answers": ["Bill Gates", "Steve Jobs", "Mark Zuckerberg", "Larry Page"],
+    "explanation": "The correct answer is (a) Bill Gates. Bill Gates co-founded Microsoft, a multinational technology company, and played a significant role in the development of the personal computer revolution."
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "answers": ["Mars", "Jupiter", "Saturn", "Mercury"],
+    "explanation": "The correct answer is (a) Mars. Mars is often referred to as the 'Red Planet' due to its reddish appearance, caused by iron oxide (rust) present on its surface."
+  }
+]

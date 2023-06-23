@@ -1,6 +1,5 @@
 import { Page, expect, Locator } from "@playwright/test";
 
-
 export default class HomePage{
     // list elements
     readonly page:Page;
@@ -19,7 +18,7 @@ export default class HomePage{
     readonly txtTopicName: Locator;
     readonly txtLOName: Locator;
     readonly btnQuestions: Locator;
-    readonly btnCreateQuesiton: Locator;
+    readonly btnCreateQuestion: Locator;
     readonly ddlQuestionType: Locator;
     readonly txtQuestionDescription: Locator;
     readonly txtQuestionAnswers: any;
@@ -27,6 +26,7 @@ export default class HomePage{
     readonly btnDeleteQuestion: Locator;
     readonly rdoCorrectAnswer: any;
     readonly btnAddAnswer: Locator;
+    readonly btnExamDetail: Locator;
 
     // constructor
     constructor(page:Page){
@@ -46,7 +46,7 @@ export default class HomePage{
         this.ddlLO = page.getByRole('option').getByText('Learning Objective');
         this.txtLOName = page.getByTestId('TextFieldHF__input');
         this.btnQuestions = page.getByTestId('QuestionListSectionHeader__action').getByTestId('ActionPanel__trigger');
-        this.btnCreateQuesiton = page.getByLabel('createQuestion', {exact: true});
+        this.btnCreateQuestion = page.getByLabel('createQuestion', {exact: true});
         this.btnDeleteQuestion = page.getByTestId('QuizAnswer__DeleteButton');
         this.ddlQuestionType = page.getByTestId('QuizTypeSelect__root');
         this.txtQuestionDescription = page.getByTestId('Editor__content').filter({hasText: 'Question Description'}).getByTestId('Editor__draftEditor');
@@ -54,6 +54,7 @@ export default class HomePage{
         this.txtQuestionExplanation = page.getByTestId('Editor__content').filter({hasText: 'Explanation'}).getByTestId('Editor__draftEditor');
         this.rdoCorrectAnswer = (answerNumber = 1)=>{return page.getByTestId('QuizMCQAnswerItem__root').filter({hasText: `Answer ${answerNumber}`}).getByTestId('QuizMCQRadioHF__radio')};
         this.btnAddAnswer = page.getByTestId('QuizAnswerList__btnAddAnswer');
+        this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
     }   
 
     // 
@@ -74,6 +75,17 @@ export default class HomePage{
             await this.gotoBookManagement();
             await this.page.goto(`${process.env.BASE_URL}syllabus/books/${bookId}/show`);
         }
+    }
+
+    async gotoLODetail(loID: string){
+        await this.gotoBookManagement();
+        await this.page.goto('https://backoffice-mfe.uat.manabie.io/syllabus/learning_objective/01H3MZ0F7HWFB8BDTBJADZZ38A/show?bookId=01H3CH2XGJB6XPGR130H58A2T3&chapterId=01H3MWPBYS9N4X0NKFS0CFATVY&parentId=01H3MWPGR0NS9QQ0DW0WPGSE4P');
+    }
+
+    async gotoExamDetail(){
+        await this.gotoBookManagement();
+        await this.page.goto('https://backoffice-mfe.uat.manabie.io/syllabus/exam_los/01H3N04HKWT566P7BCWVAJ76TG/show?bookId=01H3CH2XGJB6XPGR130H58A2T3&chapterId=01H3MWPBYS9N4X0NKFS0CFATVY&parentId=01H3MWPGR0NS9QQ0DW0WPGSE4P');
+        await this.btnExamDetail.click();
     }
 
     async addNewChapter(){
@@ -98,7 +110,7 @@ export default class HomePage{
 
     async addNewQuestion(){
         await this.btnQuestions.click();
-        await this.btnCreateQuesiton.click();
+        await this.btnCreateQuestion.click();
     }
 
     async addNewAnswer(){
@@ -109,17 +121,20 @@ export default class HomePage{
         await this.rdoCorrectAnswer(answerNumber).click();
     }
 
-    async inputQuestionInformation(questionDescription: string, QuestionExplanation: string){;
+    async inputQuestionDescription(questionDescription: string){;
         await this.txtQuestionDescription.fill(questionDescription);
+    }
+
+    async inputQuestionExplanation(QuestionExplanation: string){;
         await this.txtQuestionExplanation.fill(QuestionExplanation);
     }
 
-    async inputAnswers(answerNumber = 1, answerDescription: string){
+    async inputAnswers(answerNumber: number, answerDescription: string){
         await this.txtQuestionAnswers(answerNumber).fill(answerDescription);
     }
 
     async saveAction(){
-        await this.btnAddAnswer.click();
+        await this.btnSave.click();
     }
 
 }
