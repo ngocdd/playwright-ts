@@ -27,6 +27,9 @@ export default class HomePage{
     readonly rdoCorrectAnswer: any;
     readonly btnAddAnswer: Locator;
     readonly btnExamDetail: Locator;
+    readonly mnuChapter: any;
+    readonly mnuTopic: any;
+    readonly mnuLO: any;
 
     // constructor
     constructor(page:Page){
@@ -55,6 +58,9 @@ export default class HomePage{
         this.rdoCorrectAnswer = (answerNumber = 1)=>{return page.getByTestId('QuizMCQAnswerItem__root').filter({hasText: `Answer ${answerNumber}`}).getByTestId('QuizMCQRadioHF__radio')};
         this.btnAddAnswer = page.getByTestId('QuizAnswerList__btnAddAnswer');
         this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
+        this.mnuChapter = (chapterName: string) => {page.getByTestId('ChapterAccordion__name')};
+        this.mnuTopic = (topicName: string) => {page.getByTestId('TopicAccordion__name').filter({hasText: `${topicName}`})};
+        this.mnuLO = (loName: string) => {page.getByTestId('LOAndAssignmentItem__name').filter({hasText: `${loName}`})};
     }   
 
     // 
@@ -77,15 +83,16 @@ export default class HomePage{
         }
     }
 
-    async gotoLODetail(loID: string){
-        await this.gotoBookManagement();
-        await this.page.goto('https://backoffice-mfe.uat.manabie.io/syllabus/learning_objective/01H3MZ0F7HWFB8BDTBJADZZ38A/show?bookId=01H3CH2XGJB6XPGR130H58A2T3&chapterId=01H3MWPBYS9N4X0NKFS0CFATVY&parentId=01H3MWPGR0NS9QQ0DW0WPGSE4P');
+    async gotoChapterDetail(chapterName: string){
+        await this.mnuChapter(chapterName).click();
     }
 
-    async gotoExamDetail(){
-        await this.gotoBookManagement();
-        await this.page.goto('https://backoffice-mfe.uat.manabie.io/syllabus/exam_los/01H3N04HKWT566P7BCWVAJ76TG/show?bookId=01H3CH2XGJB6XPGR130H58A2T3&chapterId=01H3MWPBYS9N4X0NKFS0CFATVY&parentId=01H3MWPGR0NS9QQ0DW0WPGSE4P');
-        await this.btnExamDetail.click();
+    async gotoTopicDetail(topicName: string){
+        await this.mnuTopic(topicName).click();
+    }
+
+    async gotoLosDetail(loName: string){
+        await this.mnuLO(loName).click();
     }
 
     async addNewChapter(){
