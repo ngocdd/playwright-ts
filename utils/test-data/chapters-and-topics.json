@@ -1,0 +1,152 @@
+[
+  {
+    "chapter_name": "Chapter 1",
+    "topics": [
+      "Introduction to Programming",
+      "Variables and Data Types",
+      "Control Statements",
+      "Functions",
+      "Arrays",
+      "Strings",
+      "File Handling",
+      "Exception Handling",
+      "Object-Oriented Programming",
+      "Recursion"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 2",
+    "topics": [
+      "Classes and Objects",
+      "Inheritance",
+      "Polymorphism",
+      "Abstract Classes and Interfaces",
+      "Collections",
+      "Generics",
+      "Multithreading",
+      "Lambda Expressions",
+      "Serialization",
+      "Database Connectivity"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 3",
+    "topics": [
+      "Introduction to Algorithms",
+      "Sorting Algorithms",
+      "Searching Algorithms",
+      "Graph Algorithms",
+      "Dynamic Programming",
+      "Greedy Algorithms",
+      "Divide and Conquer",
+      "Backtracking",
+      "Big O Notation",
+      "Algorithm Design Techniques"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 4",
+    "topics": [
+      "Introduction to Data Structures",
+      "Arrays",
+      "Linked Lists",
+      "Stacks",
+      "Queues",
+      "Trees",
+      "Hash Tables",
+      "Graphs",
+      "Heaps",
+      "Advanced Data Structures"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 5",
+    "topics": [
+      "Introduction to Web Development",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Web Design",
+      "Bootstrap",
+      "Backend Technologies",
+      "API Development",
+      "Web Security",
+      "Web Hosting"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 6",
+    "topics": [
+      "Introduction to Databases",
+      "Relational Databases",
+      "SQL",
+      "Database Design",
+      "Normalization",
+      "Joins and Subqueries",
+      "Indexing and Optimization",
+      "Transactions",
+      "NoSQL Databases",
+      "Database Administration"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 7",
+    "topics": [
+      "Operating Systems",
+      "Process Management",
+      "Memory Management",
+      "File Systems",
+      "Concurrency",
+      "Scheduling Algorithms",
+      "Deadlock",
+      "Virtualization",
+      "Network Protocols",
+      "Security and Privacy"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 8",
+    "topics": [
+      "Introduction to Machine Learning",
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Model Evaluation",
+      "Feature Selection and Extraction",
+      "Dimensionality Reduction",
+      "Ensemble Methods",
+      "Natural Language Processing"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 9",
+    "topics": [
+      "Software Engineering Principles",
+      "Software Development Life Cycle",
+      "Requirements Engineering",
+      "Software Design",
+      "Software Testing",
+      "Software Maintenance",
+      "Agile Methodologies",
+      "Version Control",
+      "Continuous Integration",
+      "Quality Assurance"
+    ]
+  },
+  {
+    "chapter_name": "Chapter 10",
+    "topics": [
+      "Introduction to Computer Networks",
+      "Network Models",
+      "TCP/IP Protocol Suite",
+      "Network Security",
+      "Wireless Networks",
+      "Network Administration",
+      "Cloud Computing",
+      "Internet of Things",
+      "Virtual Private Networks",
+      "Network Troubleshooting"
+    ]
+  }
+]

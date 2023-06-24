@@ -1,8 +1,8 @@
 import * as fs from 'fs-extra';
 
-export function readJSONFile(filePath: string): any {
+export function readJSONFile(fileName: string): any {
     try {
-        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const fileContent = fs.readFileSync(`./utils/test-data/${fileName}.json`, 'utf8');
         const jsonData = JSON.parse(fileContent);
         // console.log(jsonData[0]['choices'][0]);
         return jsonData;

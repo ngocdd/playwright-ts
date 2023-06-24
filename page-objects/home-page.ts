@@ -30,6 +30,8 @@ export default class HomePage{
     readonly mnuChapter: any;
     readonly mnuTopic: any;
     readonly mnuLO: any;
+    readonly mnuChapterExpand: (chapterName: string) => Promise<string>;
+    readonly mnuTopicExpand: any;
 
     // constructor
     constructor(page:Page){
@@ -58,9 +60,10 @@ export default class HomePage{
         this.rdoCorrectAnswer = (answerNumber = 1)=>{return page.getByTestId('QuizMCQAnswerItem__root').filter({hasText: `Answer ${answerNumber}`}).getByTestId('QuizMCQRadioHF__radio')};
         this.btnAddAnswer = page.getByTestId('QuizAnswerList__btnAddAnswer');
         this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
-        this.mnuChapter = (chapterName: string) => {page.getByTestId('ChapterAccordion__name')};
-        this.mnuTopic = (topicName: string) => {page.getByTestId('TopicAccordion__name').filter({hasText: `${topicName}`})};
-        this.mnuLO = (loName: string) => {page.getByTestId('LOAndAssignmentItem__name').filter({hasText: `${loName}`})};
+        this.mnuChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__content').filter({hasText: `${chapterName}`})};
+        this.mnuTopic = (topicName: string) => {return page.getByTestId('TopicAccordion__name').filter({hasText: `${topicName}`})};
+        this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__name').filter({hasText: `${loName}`})};
+        this.mnuChapterExpand = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getAttribute('aria-expanded')};
     }   
 
     // 
@@ -84,7 +87,13 @@ export default class HomePage{
     }
 
     async gotoChapterDetail(chapterName: string){
-        await this.mnuChapter(chapterName).click();
+        const chapterExpandResult = await this.checkChapterExpand(chapterName);
+        if(chapterExpandResult == 'true'){
+            // do nothing
+        }else{
+            await this.mnuChapter(chapterName).click();
+        }
+        
     }
 
     async gotoTopicDetail(topicName: string){
@@ -95,23 +104,23 @@ export default class HomePage{
         await this.mnuLO(loName).click();
     }
 
-    async addNewChapter(){
+    async addNewChapter(chapterName: string){
         await this.btnAddChapter.click();
-        await this.txtChapterName.fill('chapter name 1');
+        await this.txtChapterName.fill(chapterName);
         await this.btnChapterSave.click();
     }
 
-    async addNewTopic(){
+    async addNewTopic(topicName: string){
         await this.btnAddTopic.click();
-        await this.txtTopicName.fill('topic Name');
+        await this.txtTopicName.fill(topicName);
         await this.btnSave.click();
     }
 
-    async addNewLO(){
+    async addNewLO(loName: string){
         await this.btnAddLO.click();
         await this.lstLO.click();
         await this.ddlLO.click();
-        await this.txtLOName.fill('abc');
+        await this.txtLOName.fill(loName);
         await this.btnSave.click();
     }
 
@@ -142,6 +151,12 @@ export default class HomePage{
 
     async saveAction(){
         await this.btnSave.click();
+    }
+
+    async checkChapterExpand(chapterName: string): Promise<string>{
+        const value = await this.mnuChapterExpand(chapterName);
+        console.log(value+"htn");
+        return value;
     }
 
 }

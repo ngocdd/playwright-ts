@@ -5,14 +5,14 @@ import { readJSONFile } from '../utils/data-provider/data-provider';
 import { homedir } from 'os';
 
 
-test.skip('test Elements page', async ({ page }) => {
+test.skip('create questions for LOs', async ({ page }) => {
   const homePage = new HomePage(page);
   const loginPage = new LoginPage(page);
 
   await loginPage.gotoLogin();
   await loginPage.login();
 
-  const data = await readJSONFile('./utils/test-data/question.json');
+  const data = await readJSONFile('question');
   for(let i=0; i < data.length; i++){
     // console.log(data[i]['choices'][0]);
     await homePage.addNewQuestion();
@@ -26,17 +26,43 @@ test.skip('test Elements page', async ({ page }) => {
   await page.pause();
 });
 
-test('test 1', async({page})=>{
+test.skip('create chapters and topic for book', async({page})=>{
   const homePage = new HomePage(page);
   const loginPage = new LoginPage(page);
 
   await loginPage.gotoLogin();
   await loginPage.login();
 
-  await homePage.gotoBookDetail('01H3CH2XGJB6XPGR130H58A2T3');
-  await homePage.gotoChapterDetail('Chapter 1');
-  await homePage.gotoTopicDetail('Topic 1');
-  await homePage.gotoLosDetail('HTN');
-  await page.pause();
+  const data = await readJSONFile('chapters-and-topics');
+
+  await homePage.gotoBookDetail('01H3PABGW2KC59CDJNN169BKFV');
+
+  for(let i = 0; i< data.length; i++){
+    let chapterName = data[i]['chapter_name']
+    await homePage.addNewChapter(chapterName);
+    await homePage.gotoChapterDetail(chapterName);
+    for(let y =0; y < data[i]['topics'].length; y++){
+      let topicName = data[i]['topics'][y];
+      await homePage.addNewTopic(topicName);
+    }
+  }
+
 });
 
+test('check test script',async ({page}) => {
+  const homePage = new HomePage(page);
+  const loginPage = new LoginPage(page);
+
+  await loginPage.gotoLogin();
+  await loginPage.login();
+
+  await homePage.gotoBookDetail('01H3PABGW2KC59CDJNN169BKFV');
+  const chapterExpandResult = await homePage.checkChapterExpand('Chapter 1');
+  if(chapterExpandResult){
+    // do nothing
+  }else{
+    await homePage.gotoChapterDetail('Chapter 1')
+  }
+
+  await page.pause();
+});
