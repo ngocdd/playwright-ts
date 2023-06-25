@@ -33,7 +33,7 @@ export default class LoginPage{
     async login(){
         await this.languageOption.click();
         await this.langEng.click();
-        await this.orgId.fill(`${process.env.ORD_ID}`);
+        await this.orgId.fill(`${process.env.ORG_ID}`);
         await this.userName.fill(`${process.env.ADMIN_USERNAME}`);
         await this.passWord.fill(`${process.env.ADMIN_PASSWORD}`);
         await this.btnSubmit.click();
