@@ -57,12 +57,10 @@ test('check test script',async ({page}) => {
   await loginPage.login();
 
   await homePage.gotoBookDetail('01H3PABGW2KC59CDJNN169BKFV');
-  const chapterExpandResult = await homePage.checkChapterExpand('Chapter 1');
-  if(chapterExpandResult){
-    // do nothing
-  }else{
-    await homePage.gotoChapterDetail('Chapter 1')
-  }
+  await homePage.gotoChapterDetail('Chapter 1')
+  await homePage.addNewTopic('Chapter 1','new 1');
+  await homePage.addNewLO('htn', 'hahaa')
+
 
   await page.pause();
 });

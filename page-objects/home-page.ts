@@ -11,8 +11,8 @@ export default class HomePage{
     readonly dlgSuccessPopup: Locator;
     readonly btnAddChapter: Locator;
     readonly btnChapterSave: Locator;
-    readonly btnAddTopic: Locator;
-    readonly btnAddLO: Locator;
+    readonly btnAddTopic: any;
+    readonly btnAddLO: any;
     readonly lstLO: Locator;
     readonly ddlLO: Locator;
     readonly txtTopicName: Locator;
@@ -30,7 +30,7 @@ export default class HomePage{
     readonly mnuChapter: any;
     readonly mnuTopic: any;
     readonly mnuLO: any;
-    readonly mnuChapterExpand: (chapterName: string) => Promise<string>;
+    readonly mnuChapterExpand: any;
     readonly mnuTopicExpand: any;
 
     // constructor
@@ -45,8 +45,8 @@ export default class HomePage{
         this.dlgSuccessPopup = page.getByTestId('SnackbarBase__content');
         this.btnAddChapter = page.getByTestId('ChapterForm__visibleFormControl');
         this.btnChapterSave = page.getByTestId('ChapterForm__submit');
-        this.btnAddTopic = page.getByTestId('TopicList__createTopic');
-        this.btnAddLO = page.getByTestId('LOAndAssignment__addLOs');
+        this.btnAddTopic = (chapterName: string) => {return page.getByTestId('ChapterItem_root').filter({hasText: `${chapterName}`}).getByTestId('TopicList__createTopic');}
+        this.btnAddLO = (topicName: string) => {page.getByTestId('TopicItem__root').filter({hasText: topicName}).getByTestId('LOAndAssignment__addLOs')};
         this.lstLO = page.getByTestId('SelectHF__select');
         this.ddlLO = page.getByRole('option').getByText('Learning Objective');
         this.txtLOName = page.getByTestId('TextFieldHF__input');
@@ -63,7 +63,7 @@ export default class HomePage{
         this.mnuChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__content').filter({hasText: `${chapterName}`})};
         this.mnuTopic = (topicName: string) => {return page.getByTestId('TopicAccordion__name').filter({hasText: `${topicName}`})};
         this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__name').filter({hasText: `${loName}`})};
-        this.mnuChapterExpand = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getAttribute('aria-expanded')};
+        this.mnuChapterExpand = (chapterName?: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getAttribute('aria-expanded')};
     }   
 
     // 
@@ -110,14 +110,14 @@ export default class HomePage{
         await this.btnChapterSave.click();
     }
 
-    async addNewTopic(topicName: string){
-        await this.btnAddTopic.click();
+    async addNewTopic(chapterName: string, topicName: string){
+        await this.btnAddTopic(chapterName).click();
         await this.txtTopicName.fill(topicName);
         await this.btnSave.click();
     }
 
-    async addNewLO(loName: string){
-        await this.btnAddLO.click();
+    async addNewLO(topicName: string, loName: string){
+        await this.btnAddLO(topicName).click();
         await this.lstLO.click();
         await this.ddlLO.click();
         await this.txtLOName.fill(loName);
@@ -155,8 +155,13 @@ export default class HomePage{
 
     async checkChapterExpand(chapterName: string): Promise<string>{
         const value = await this.mnuChapterExpand(chapterName);
-        console.log(value+"htn");
+        // console.log(value);
+        // console.log(await this.mnuChapterExpand(chapterName));
         return value;
+    }
+
+    async collapseAllChapter(){
+
     }
 
 }
