@@ -1,0 +1,1399 @@
+[
+  {
+    "chapter_name": "Chapter 1: Introduction to Programming",
+    "topics": [
+      {
+        "topic_name": "Chapter 1 - Topic 1: Variables and Data Types",
+        "LO": [
+          "Understand the concept of variables and their role in programming.",
+          "Identify and differentiate between different data types in the programming language.",
+          "Declare variables and assign values to them.",
+          "Perform basic operations using variables and data types."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 2: Control Flow",
+        "LO": [
+          "Comprehend the concept of control flow in programming.",
+          "Utilize conditional statements (if-else, switch) to control program execution.",
+          "Implement loops (for, while) to repeat code blocks.",
+          "Understand and use control flow statements effectively."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 3: Functions and Modules",
+        "LO": [
+          "Define and use functions to organize code and improve reusability.",
+          "Understand function parameters and return values.",
+          "Utilize built-in functions and libraries/modules in programming.",
+          "Implement user-defined functions and modules."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 4: Arrays and Lists",
+        "LO": [
+          "Understand the concepts of arrays and lists in programming.",
+          "Create and manipulate arrays/lists.",
+          "Access and modify elements within arrays/lists.",
+          "Utilize array/list methods and functions for common operations."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 5: Error Handling and Debugging",
+        "LO": [
+          "Recognize common types of errors in programming.",
+          "Implement error handling techniques (try-except) to handle exceptions.",
+          "Debug programs using effective strategies and tools.",
+          "Write clean and robust code to minimize errors."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 6: Object-Oriented Programming",
+        "LO": [
+          "Understand the principles and concepts of object-oriented programming.",
+          "Create and use classes, objects, and inheritance.",
+          "Apply encapsulation, polymorphism, and abstraction in code.",
+          "Utilize object-oriented programming techniques to solve problems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 7: File Handling and I/O Operations",
+        "LO": [
+          "Read from and write to files using file handling operations.",
+          "Understand different file formats (text, binary, CSV, JSON, etc.).",
+          "Perform input/output operations on files.",
+          "Handle file exceptions and errors."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 8: Recursion",
+        "LO": [
+          "Comprehend the concept of recursion in programming.",
+          "Implement recursive functions and algorithms.",
+          "Understand recursive problem-solving approaches.",
+          "Use recursion to solve specific programming problems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 9: Data Structures",
+        "LO": [
+          "Understand different data structures (stacks, queues, linked lists, etc.).",
+          "Implement and use various data structures.",
+          "Perform common operations on data structures.",
+          "Choose appropriate data structures for specific use cases."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 10: Algorithms and Algorithm Analysis",
+        "LO": [
+          "Comprehend basic algorithms and their analysis (sorting, searching, etc.).",
+          "Implement and use common algorithms.",
+          "Analyze and evaluate algorithm efficiency (time and space complexity).",
+          "Choose appropriate algorithms for specific problem scenarios."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 11: Database Management",
+        "LO": [
+          "Understand database management systems and their role in software development.",
+          "Create and manage databases using a database management system.",
+          "Perform CRUD operations (create, read, update, delete) on databases.",
+          "Write basic SQL queries to interact with databases."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 12: Web Development",
+        "LO": [
+          "Understand web development concepts and technologies.",
+          "Create web pages using HTML and CSS.",
+          "Implement client-side scripting with JavaScript.",
+          "Interact with web servers and APIs."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 13: Software Development Lifecycle",
+        "LO": [
+          "Understand the stages of the software development lifecycle (SDLC).",
+          "Apply software development methodologies (waterfall, agile, etc.).",
+          "Utilize software development tools (version control, bug tracking, etc.).",
+          "Collaborate effectively in a software development team."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 14: Software Engineering Principles",
+        "LO": [
+          "Understand fundamental software engineering principles.",
+          "Apply software engineering best practices in code development.",
+          "Utilize design patterns and architectural concepts.",
+          "Write maintainable, scalable, and reliable software."
+        ]
+      },
+      {
+        "topic_name": "Chapter 1 - Topic 15: Other Topic",
+        "LO": [
+          "Specify the learning objectives for the topic."
+        ]
+      }
+    ]          
+  },
+  {
+    "chapter_name": "Chapter 2: Classes and Objects",
+    "topics": [
+      {
+        "topic_name": "Chapter 2 - Topic 1: Class Basics",
+        "LO": [
+          "Understand the concept of classes and objects.",
+          "Create and instantiate classes.",
+          "Define class attributes and methods.",
+          "Utilize class objects to solve programming problems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 2: Inheritance",
+        "LO": [
+          "Comprehend the concept of inheritance in object-oriented programming.",
+          "Create class hierarchies using inheritance.",
+          "Override and extend inherited class methods.",
+          "Apply inheritance to model real-world relationships."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 3: Polymorphism",
+        "LO": [
+          "Understand the concept of polymorphism.",
+          "Implement polymorphism through method overriding and overloading.",
+          "Utilize polymorphism to write flexible and reusable code.",
+          "Apply polymorphism to achieve code extensibility."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 4: Encapsulation",
+        "LO": [
+          "Understand the principle of encapsulation.",
+          "Apply encapsulation to hide implementation details.",
+          "Define and use getters and setters.",
+          "Ensure data integrity and access control through encapsulation."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 5: Abstraction",
+        "LO": [
+          "Comprehend the concept of abstraction in object-oriented programming.",
+          "Create abstract classes and methods.",
+          "Implement abstraction to define common behaviors and contracts.",
+          "Utilize abstraction to simplify code complexity."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 6: Constructors",
+        "LO": [
+          "Understand the purpose and role of constructors in classes.",
+          "Define and use constructors to initialize objects.",
+          "Apply constructor overloading and chaining.",
+          "Utilize constructors for object initialization and setup."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 7: Static and Instance Members",
+        "LO": [
+          "Differentiate between static and instance members in classes.",
+          "Create and use static variables and methods.",
+          "Understand the concept of instance variables and methods.",
+          "Apply static and instance members appropriately in class design."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 8: Method Overriding",
+        "LO": [
+          "Comprehend the concept of method overriding.",
+          "Override inherited methods to provide specialized implementations.",
+          "Understand the rules and considerations for method overriding.",
+          "Apply method overriding to customize class behavior."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 9: Access Modifiers",
+        "LO": [
+          "Understand access modifiers (public, private, protected).",
+          "Apply access modifiers to control member visibility and accessibility.",
+          "Comprehend the concept of encapsulation in relation to access modifiers.",
+          "Utilize access modifiers to enforce class design and security."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 10: Class Relationships",
+        "LO": [
+          "Understand different class relationships (association, aggregation, composition, inheritance).",
+          "Model and implement class relationships in object-oriented programming.",
+          "Comprehend the principles and benefits of class relationships.",
+          "Utilize appropriate class relationships for specific modeling scenarios."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 11: Abstract Classes",
+        "LO": [
+          "Understand abstract classes and their purpose.",
+          "Define abstract classes with abstract methods.",
+          "Implement concrete classes that inherit from abstract classes.",
+          "Utilize abstract classes to create class hierarchies and provide common behaviors."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 12: Interfaces",
+        "LO": [
+          "Comprehend the concept of interfaces in object-oriented programming.",
+          "Define interfaces and their contract requirements.",
+          "Implement interfaces in classes to fulfill contract obligations.",
+          "Utilize interfaces to achieve code modularity and multiple inheritance."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 13: Inner Classes",
+        "LO": [
+          "Understand the concept of inner classes.",
+          "Create and use inner classes within outer classes.",
+          "Comprehend the benefits and use cases of inner classes.",
+          "Utilize inner classes for code organization and encapsulation."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 14: Object Composition",
+        "LO": [
+          "Comprehend the concept of object composition.",
+          "Create and utilize object compositions in class design.",
+          "Understand the benefits and use cases of object composition.",
+          "Apply object composition to model complex relationships and behaviors."
+        ]
+      },
+      {
+        "topic_name": "Chapter 2 - Topic 15: Design Patterns",
+        "LO": [
+          "Understand the concept of design patterns in software engineering.",
+          "Comprehend different categories and types of design patterns.",
+          "Apply design patterns to solve common programming problems.",
+          "Utilize design patterns to improve code maintainability and reusability."
+        ]
+      }
+    ]
+    
+  },
+  {
+    "chapter_name": "Chapter 3: Introduction to Algorithms",
+    "topics": [
+      {
+        "topic_name": "Chapter 3 - Topic 1: Algorithm Basics",
+        "LO": [
+          "Understand the fundamentals of algorithms and their importance in problem-solving.",
+          "Comprehend algorithmic problem-solving strategies.",
+          "Analyze and evaluate algorithm correctness and efficiency.",
+          "Apply algorithmic thinking to solve programming problems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 2: Sorting Algorithms",
+        "LO": [
+          "Understand different sorting algorithms (e.g., bubble sort, insertion sort, merge sort, quicksort).",
+          "Implement and analyze the efficiency of sorting algorithms.",
+          "Choose appropriate sorting algorithms based on problem requirements.",
+          "Apply sorting algorithms to sort data in various programming scenarios."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 3: Searching Algorithms",
+        "LO": [
+          "Comprehend different searching algorithms (e.g., linear search, binary search).",
+          "Implement and analyze the efficiency of searching algorithms.",
+          "Choose appropriate searching algorithms based on problem requirements.",
+          "Apply searching algorithms to find elements in data collections."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 4: Graph Algorithms",
+        "LO": [
+          "Understand graph theory concepts (vertices, edges, paths, cycles).",
+          "Implement and analyze graph traversal algorithms (e.g., depth-first search, breadth-first search).",
+          "Apply graph algorithms to solve problems involving graphs (e.g., shortest path, minimum spanning tree).",
+          "Utilize graph algorithms to model and analyze real-world relationships."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 5: Dynamic Programming",
+        "LO": [
+          "Understand the concept of dynamic programming.",
+          "Identify problem scenarios suitable for dynamic programming solutions.",
+          "Implement dynamic programming algorithms to solve complex problems.",
+          "Analyze the efficiency and correctness of dynamic programming solutions."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 6: Greedy Algorithms",
+        "LO": [
+          "Comprehend the concept of greedy algorithms.",
+          "Identify problem scenarios suitable for greedy algorithm solutions.",
+          "Implement greedy algorithms to solve optimization problems.",
+          "Evaluate the correctness and efficiency of greedy algorithm solutions."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 7: Complexity Analysis",
+        "LO": [
+          "Understand the importance of complexity analysis in algorithm design.",
+          "Analyze and evaluate algorithm efficiency using Big O notation.",
+          "Comprehend the concepts of time complexity and space complexity.",
+          "Apply complexity analysis to compare and choose algorithms for specific problem scenarios."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 8: Recursion and Backtracking",
+        "LO": [
+          "Comprehend the concept of recursion and its applications in algorithm design.",
+          "Implement recursive algorithms to solve problems.",
+          "Understand the concept of backtracking and its applications.",
+          "Utilize backtracking algorithms to explore problem solution spaces."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 9: Divide and Conquer",
+        "LO": [
+          "Understand the divide and conquer algorithmic paradigm.",
+          "Apply divide and conquer strategies to solve problems.",
+          "Implement divide and conquer algorithms (e.g., merge sort, binary search).",
+          "Analyze the efficiency and correctness of divide and conquer solutions."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 10: String Algorithms",
+        "LO": [
+          "Comprehend string manipulation algorithms and their applications.",
+          "Implement and analyze string searching and matching algorithms (e.g., Knuth-Morris-Pratt, Rabin-Karp).",
+          "Apply string algorithms to solve problems involving text processing and pattern matching.",
+          "Utilize regular expressions and string manipulation techniques in programming tasks."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 11: Number Theory",
+        "LO": [
+          "Understand the fundamentals of number theory (e.g., prime numbers, modular arithmetic).",
+          "Apply number theory concepts in algorithmic problem-solving.",
+          "Implement algorithms for prime number generation, factorization, and modular arithmetic operations.",
+          "Utilize number theory algorithms in cryptographic systems and mathematical computations."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 12: Approximation Algorithms",
+        "LO": [
+          "Comprehend approximation algorithms and their purpose.",
+          "Implement and analyze approximation algorithms for optimization problems.",
+          "Understand the trade-off between approximation quality and algorithm efficiency.",
+          "Apply approximation algorithms to solve NP-hard problems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 13: Parallel and Distributed Algorithms",
+        "LO": [
+          "Understand the concepts of parallel and distributed computing.",
+          "Comprehend parallel algorithms and their design strategies.",
+          "Implement and analyze parallel algorithms using parallel programming paradigms (e.g., threads, processes).",
+          "Utilize distributed algorithms to solve problems in distributed computing environments."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 14: Online Algorithms",
+        "LO": [
+          "Comprehend online algorithms and their characteristics.",
+          "Implement and analyze online algorithms for scenarios with limited information.",
+          "Understand the concept of competitive analysis in online algorithms.",
+          "Apply online algorithms to solve problems with streaming or real-time data."
+        ]
+      },
+      {
+        "topic_name": "Chapter 3 - Topic 15: Algorithmic Problem Solving",
+        "LO": [
+          "Apply algorithmic problem-solving strategies to solve complex problems.",
+          "Break down problems into smaller subproblems and devise efficient algorithms.",
+          "Implement and evaluate algorithms for various problem domains.",
+          "Utilize algorithmic problem-solving techniques to optimize solutions."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 4: Introduction to Data Structures",
+    "topics": [
+      {
+        "topic_name": "Chapter 4 - Topic 1: Array and Matrix",
+        "LO": [
+          "Understand the concepts of arrays and matrices.",
+          "Implement operations on arrays and matrices (e.g., insertion, deletion, search).",
+          "Analyze the time and space complexity of array and matrix operations.",
+          "Apply arrays and matrices to solve problems in various domains."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 2: Linked List",
+        "LO": [
+          "Understand the concept of linked lists.",
+          "Implement basic operations on linked lists (e.g., insertion, deletion, traversal).",
+          "Analyze the time complexity of linked list operations.",
+          "Apply linked lists to solve problems involving dynamic data structures."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 3: Stack",
+        "LO": [
+          "Comprehend the stack data structure and its operations.",
+          "Implement stack operations (e.g., push, pop) using arrays or linked lists.",
+          "Analyze the time and space complexity of stack operations.",
+          "Utilize stacks to solve problems requiring last-in, first-out (LIFO) behavior."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 4: Queue",
+        "LO": [
+          "Understand the queue data structure and its operations.",
+          "Implement queue operations (e.g., enqueue, dequeue) using arrays or linked lists.",
+          "Analyze the time and space complexity of queue operations.",
+          "Utilize queues to solve problems requiring first-in, first-out (FIFO) behavior."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 5: Tree",
+        "LO": [
+          "Understand the concepts of trees and their properties.",
+          "Implement tree traversal algorithms (e.g., preorder, inorder, postorder).",
+          "Analyze and evaluate tree traversal algorithms for efficiency.",
+          "Apply trees to solve problems involving hierarchical relationships."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 6: Heap",
+        "LO": [
+          "Comprehend the concept of a heap data structure.",
+          "Implement heap operations (e.g., insert, extract min/max) using arrays or binary trees.",
+          "Analyze the time complexity of heap operations.",
+          "Utilize heaps to solve problems involving priority queues and efficient element retrieval."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 7: Hashing",
+        "LO": [
+          "Understand the concept of hashing and its applications.",
+          "Implement hash functions and hash tables.",
+          "Analyze the time complexity and collision resolution techniques in hashing.",
+          "Utilize hashing to solve problems requiring efficient data retrieval and storage."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 8: Graph",
+        "LO": [
+          "Understand the concepts of graphs and their properties.",
+          "Implement graph representations (e.g., adjacency matrix, adjacency list).",
+          "Apply graph traversal algorithms (e.g., depth-first search, breadth-first search).",
+          "Utilize graphs to solve problems involving relationships and connectivity."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 9: Trie",
+        "LO": [
+          "Comprehend the concept of a trie data structure.",
+          "Implement trie operations (e.g., insertion, deletion, search).",
+          "Analyze the time and space complexity of trie operations.",
+          "Utilize tries to solve problems involving efficient string search and prefix matching."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 10: Disjoint Set",
+        "LO": [
+          "Understand the concepts of disjoint set data structure.",
+          "Implement disjoint set operations (e.g., union, find) using various data structures.",
+          "Apply disjoint sets to solve problems involving set operations and connected components."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 11: AVL Tree",
+        "LO": [
+          "Comprehend the concept of an AVL tree and its properties.",
+          "Implement AVL tree operations (e.g., insertion, deletion, balancing).",
+          "Analyze the time complexity of AVL tree operations.",
+          "Utilize AVL trees to maintain balanced binary search trees for efficient operations."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 12: Red-Black Tree",
+        "LO": [
+          "Understand the concept of a red-black tree and its properties.",
+          "Implement red-black tree operations (e.g., insertion, deletion, balancing).",
+          "Analyze the time complexity of red-black tree operations.",
+          "Utilize red-black trees to maintain balanced binary search trees with efficient operations."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 13: B-Tree",
+        "LO": [
+          "Comprehend the concept of a B-tree and its properties.",
+          "Implement B-tree operations (e.g., insertion, deletion, search).",
+          "Analyze the time complexity of B-tree operations.",
+          "Utilize B-trees to maintain balanced search trees for efficient disk-based storage."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 14: Skip List",
+        "LO": [
+          "Understand the concept of a skip list and its properties.",
+          "Implement skip list operations (e.g., insertion, deletion, search).",
+          "Analyze the time and space complexity of skip list operations.",
+          "Utilize skip lists as an alternative data structure for efficient search and indexing."
+        ]
+      },
+      {
+        "topic_name": "Chapter 4 - Topic 15: Segment Tree",
+        "LO": [
+          "Comprehend the concept of a segment tree and its applications.",
+          "Implement segment tree operations (e.g., construction, query, update).",
+          "Analyze the time complexity of segment tree operations.",
+          "Utilize segment trees for efficient range query and update operations on arrays."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 5: Introduction to Web Development",
+    "topics": [
+      {
+        "topic_name": "Chapter 5 - Topic 1: HTML Basics",
+        "LO": [
+          "Understand the basic structure and syntax of HTML.",
+          "Create HTML documents with proper markup and semantic elements.",
+          "Apply HTML tags and attributes to structure and format content.",
+          "Utilize HTML forms and input elements to collect user data."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 2: CSS Styling",
+        "LO": [
+          "Comprehend the concepts of CSS and its role in web design.",
+          "Apply CSS rules and selectors to style HTML elements.",
+          "Utilize CSS properties for layout, typography, colors, and backgrounds.",
+          "Create responsive designs using CSS media queries and flexbox/grid layouts."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 3: JavaScript Fundamentals",
+        "LO": [
+          "Understand the fundamentals of JavaScript programming language.",
+          "Use variables, data types, operators, and control flow in JavaScript.",
+          "Implement functions and handle events using JavaScript.",
+          "Utilize JavaScript to manipulate the DOM and interact with HTML and CSS."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 4: DOM Manipulation",
+        "LO": [
+          "Comprehend the Document Object Model (DOM) and its representation of web documents.",
+          "Manipulate the DOM using JavaScript to dynamically update web page content.",
+          "Handle DOM events and event listeners for interactivity.",
+          "Utilize DOM traversal and manipulation methods to modify web page elements."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 5: Web Design Principles",
+        "LO": [
+          "Understand fundamental design principles for creating visually appealing web interfaces.",
+          "Apply principles of typography, color theory, and layout in web design.",
+          "Utilize design tools and techniques to create aesthetically pleasing web pages.",
+          "Consider user experience (UX) and user interface (UI) design in web development."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 6: Responsive Web Development",
+        "LO": [
+          "Understand the concept of responsive web design and its importance.",
+          "Create responsive layouts using media queries and fluid grid systems.",
+          "Implement responsive images and videos for optimal display on different devices.",
+          "Utilize responsive frameworks and libraries for efficient responsive web development."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 7: Front-End Frameworks",
+        "LO": [
+          "Comprehend the purpose and benefits of front-end frameworks.",
+          "Utilize front-end frameworks (e.g., Bootstrap, Foundation) for rapid web development.",
+          "Apply pre-built components and templates to create consistent and responsive web pages.",
+          "Customize front-end frameworks to match specific design and functionality requirements."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 8: Back-End Development",
+        "LO": [
+          "Understand the concept of back-end development and its role in web applications.",
+          "Implement server-side logic using back-end programming languages (e.g., Node.js, Python).",
+          "Connect front-end interfaces to back-end systems through APIs and data exchange.",
+          "Handle data storage, retrieval, and processing on the server-side of web applications."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 9: Server-Side Frameworks",
+        "LO": [
+          "Comprehend the purpose and benefits of server-side frameworks.",
+          "Utilize server-side frameworks (e.g., Express.js, Django) for efficient web development.",
+          "Implement routing, middleware, and request handling using server-side frameworks.",
+          "Utilize server-side frameworks to simplify server management and application development."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 10: Database Integration",
+        "LO": [
+          "Understand the basics of database management systems and their role in web applications.",
+          "Utilize database querying languages (e.g., SQL) to interact with databases.",
+          "Implement database integration in web applications using back-end frameworks.",
+          "Handle database operations (e.g., CRUD operations) and data manipulation in web apps."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 11: Web Security",
+        "LO": [
+          "Understand common web security threats and vulnerabilities.",
+          "Implement secure coding practices to mitigate security risks.",
+          "Utilize authentication and authorization mechanisms to protect web applications.",
+          "Handle input validation, data sanitization, and protection against common attacks."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 12: API Development",
+        "LO": [
+          "Understand the concept of Application Programming Interfaces (APIs) and their role.",
+          "Design and implement RESTful APIs for web applications.",
+          "Utilize API documentation and testing tools for API development.",
+          "Handle API requests, responses, and data exchange between client and server."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 13: Web Performance Optimization",
+        "LO": [
+          "Comprehend the importance of web performance optimization.",
+          "Apply techniques to improve website loading speed and overall performance.",
+          "Optimize assets (e.g., images, scripts) and minimize network requests.",
+          "Utilize caching, compression, and minification to enhance web performance."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 14: Content Management Systems",
+        "LO": [
+          "Understand the concept of Content Management Systems (CMS).",
+          "Utilize CMS platforms (e.g., WordPress, Drupal) for website development.",
+          "Create and manage website content, themes, and plugins using CMS tools.",
+          "Customize and extend CMS functionality to meet specific requirements."
+        ]
+      },
+      {
+        "topic_name": "Chapter 5 - Topic 15: Web Accessibility",
+        "LO": [
+          "Understand the importance of web accessibility for users with disabilities.",
+          "Apply accessibility guidelines and best practices in web development.",
+          "Utilize semantic HTML and ARIA attributes for improved accessibility.",
+          "Test and evaluate web accessibility using assistive technologies and tools."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 6: Introduction to Databases",
+    "topics": [
+      {
+        "topic_name": "Chapter 6 - Topic 1: Relational Databases",
+        "LO": [
+          "Understand the concept of relational databases and their use in data management.",
+          "Comprehend the components of relational databases (tables, rows, columns, keys).",
+          "Utilize relational database management systems (RDBMS) for data storage and retrieval.",
+          "Apply relational database concepts (relationships, normalization) in database design."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 2: SQL Basics",
+        "LO": [
+          "Understand Structured Query Language (SQL) and its role in database management.",
+          "Write SQL queries to retrieve data from relational databases.",
+          "Utilize SQL statements (SELECT, INSERT, UPDATE, DELETE) for data manipulation.",
+          "Apply SQL clauses (WHERE, GROUP BY, ORDER BY) for query filtering and sorting."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 3: Database Design",
+        "LO": [
+          "Comprehend the principles of good database design.",
+          "Analyze and translate business requirements into a conceptual database model.",
+          "Create entity-relationship diagrams (ERDs) to represent database relationships.",
+          "Apply normalization techniques to improve database efficiency and reduce redundancy."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 4: Query Optimization",
+        "LO": [
+          "Understand the concept of query optimization and its importance in database performance.",
+          "Analyze and optimize SQL queries to improve execution efficiency.",
+          "Utilize indexing, query rewriting, and query hints for query optimization.",
+          "Monitor and tune database performance using performance profiling tools."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 5: Indexing and Performance",
+        "LO": [
+          "Understand the purpose and benefits of database indexing.",
+          "Create and manage database indexes to improve query performance.",
+          "Apply different types of indexes (e.g., B-tree, hash) based on specific use cases.",
+          "Monitor and optimize database performance using performance tuning techniques."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 6: Transactions and Concurrency",
+        "LO": [
+          "Comprehend the concepts of database transactions and their properties (ACID).",
+          "Implement transaction management in database applications.",
+          "Handle concurrency control and isolation levels to ensure data consistency.",
+          "Utilize locking and concurrency control mechanisms for concurrent database access."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 7: NoSQL Databases",
+        "LO": [
+          "Understand the concepts and characteristics of NoSQL databases.",
+          "Compare and contrast NoSQL databases with traditional relational databases.",
+          "Utilize different types of NoSQL databases (e.g., document, key-value, columnar).",
+          "Design and implement NoSQL database solutions based on specific requirements."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 8: Data Warehousing",
+        "LO": [
+          "Comprehend the concepts and architecture of data warehousing.",
+          "Design and implement data warehousing solutions for business intelligence (BI).",
+          "Utilize Extract, Transform, Load (ETL) processes for data integration.",
+          "Apply data mining and analytics techniques on data warehouse systems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 9: Data Mining",
+        "LO": [
+          "Understand the concept and process of data mining.",
+          "Apply data mining algorithms and techniques to extract valuable insights.",
+          "Utilize data mining tools and software for pattern discovery and predictive modeling.",
+          "Interpret and evaluate data mining results for decision-making purposes."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 10: Big Data",
+        "LO": [
+          "Comprehend the characteristics and challenges of big data.",
+          "Understand the concept and components of the Hadoop ecosystem.",
+          "Utilize big data processing frameworks (e.g., MapReduce, Apache Spark).",
+          "Apply big data analytics techniques for large-scale data processing and analysis."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 11: Distributed Databases",
+        "LO": [
+          "Understand the concepts and challenges of distributed databases.",
+          "Design and implement distributed database systems for scalability and fault tolerance.",
+          "Utilize replication, partitioning, and sharding techniques in distributed databases.",
+          "Handle consistency, availability, and partition tolerance (CAP theorem) in distributed systems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 12: Database Security",
+        "LO": [
+          "Comprehend the importance of database security and its implications.",
+          "Implement security measures (e.g., authentication, authorization) to protect databases.",
+          "Apply encryption and access control mechanisms for securing data.",
+          "Monitor and audit database activities for security compliance and threat detection."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 13: Database Administration",
+        "LO": [
+          "Understand the role and responsibilities of database administrators (DBAs).",
+          "Perform database installation, configuration, and maintenance tasks.",
+          "Manage database users, permissions, and security settings.",
+          "Monitor and optimize database performance, backup, and recovery processes."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 14: Backup and Recovery",
+        "LO": [
+          "Understand the importance of database backup and recovery strategies.",
+          "Perform database backups (full, incremental, differential) using appropriate methods.",
+          "Implement database recovery techniques (e.g., point-in-time recovery, transaction logs).",
+          "Test and validate database backups to ensure data integrity and disaster recovery readiness."
+        ]
+      },
+      {
+        "topic_name": "Chapter 6 - Topic 15: Emerging Trends in Databases",
+        "LO": [
+          "Stay updated with current and emerging trends in the field of databases.",
+          "Explore new database technologies and concepts (e.g., blockchain, graph databases).",
+          "Understand the impact of emerging trends on database management and applications.",
+          "Adapt to and leverage emerging trends for improved database solutions."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 7: Operating Systems",
+    "topics": [
+      {
+        "topic_name": "Chapter 7 - Topic 1: Operating System Basics",
+        "LO": [
+          "Understand the role and functions of an operating system.",
+          "Comprehend the components and layers of an operating system.",
+          "Differentiate between different types of operating systems (e.g., batch, time-sharing, real-time).",
+          "Explore the evolution and history of operating systems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 2: Process Management",
+        "LO": [
+          "Understand the concept of a process and its life cycle.",
+          "Manage and schedule processes in an operating system.",
+          "Implement process synchronization and communication mechanisms.",
+          "Handle process creation, termination, and resource allocation."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 3: Memory Management",
+        "LO": [
+          "Comprehend memory management techniques in an operating system.",
+          "Manage and allocate memory resources effectively.",
+          "Utilize memory partitioning, paging, and segmentation techniques.",
+          "Implement memory protection and virtual memory systems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 4: File Systems",
+        "LO": [
+          "Understand the concept of a file system and its organization.",
+          "Manage files and directories in an operating system.",
+          "Implement file operations (create, read, write, delete) and permissions.",
+          "Utilize file system optimization techniques for performance improvement."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 5: Input/Output Systems",
+        "LO": [
+          "Comprehend input/output (I/O) systems and their importance in an operating system.",
+          "Handle I/O devices and their drivers.",
+          "Implement I/O operations and buffering techniques.",
+          "Optimize I/O performance and manage I/O concurrency."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 6: Device Management",
+        "LO": [
+          "Understand the concept of device management in an operating system.",
+          "Manage and control I/O devices and their drivers.",
+          "Handle device interrupts and device allocation.",
+          "Implement device management techniques for efficient resource utilization."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 7: Distributed Systems",
+        "LO": [
+          "Comprehend the concepts and characteristics of distributed systems.",
+          "Understand the challenges and advantages of distributed computing.",
+          "Utilize distributed system models and architectures.",
+          "Implement communication and coordination mechanisms in distributed systems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 8: Scheduling Algorithms",
+        "LO": [
+          "Understand the concept and importance of process scheduling in an operating system.",
+          "Compare and evaluate different process scheduling algorithms (e.g., FCFS, Round Robin, Priority).",
+          "Optimize scheduling algorithms for performance and fairness.",
+          "Handle scheduling criteria and policies in a multitasking environment."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 9: Deadlock Handling",
+        "LO": [
+          "Comprehend the concept of deadlock and its implications in an operating system.",
+          "Identify and prevent deadlock situations.",
+          "Utilize deadlock detection and recovery techniques.",
+          "Implement deadlock avoidance and resource allocation strategies."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 10: Virtualization",
+        "LO": [
+          "Understand the concept and benefits of virtualization.",
+          "Implement virtualization techniques for hardware, storage, and network resources.",
+          "Utilize virtual machines and hypervisors for efficient resource allocation.",
+          "Manage and monitor virtualized environments."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 11: File Protection and Security",
+        "LO": [
+          "Comprehend the importance of file protection and security in an operating system.",
+          "Implement access control mechanisms (e.g., permissions, ownership).",
+          "Handle file encryption, authentication, and auditing.",
+          "Manage file security policies and prevent unauthorized access."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 12: Real-Time Systems",
+        "LO": [
+          "Understand the concepts and requirements of real-time systems.",
+          "Comprehend the challenges and constraints of real-time computing.",
+          "Utilize real-time scheduling algorithms and techniques.",
+          "Implement real-time task management and synchronization."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 13: Kernel Design",
+        "LO": [
+          "Understand the structure and functions of a kernel in an operating system.",
+          "Comprehend the design principles and considerations for kernel development.",
+          "Implement kernel modules and device drivers.",
+          "Optimize kernel performance and resource management."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 14: Interprocess Communication",
+        "LO": [
+          "Understand the concept of interprocess communication (IPC) in an operating system.",
+          "Implement IPC mechanisms (e.g., shared memory, message passing).",
+          "Handle synchronization and data sharing among processes.",
+          "Optimize IPC performance and ensure reliable communication."
+        ]
+      },
+      {
+        "topic_name": "Chapter 7 - Topic 15: Operating System Performance",
+        "LO": [
+          "Comprehend the factors affecting operating system performance.",
+          "Monitor and analyze system performance using appropriate tools.",
+          "Optimize system resource utilization (e.g., CPU, memory, disk).",
+          "Identify and resolve performance bottlenecks in an operating system."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 8: Introduction to Machine Learning",
+    "topics": [
+      {
+        "topic_name": "Chapter 8 - Topic 1: Machine Learning Fundamentals",
+        "LO": [
+          "Understand the basic concepts and principles of machine learning.",
+          "Comprehend the different types of machine learning algorithms.",
+          "Explore the process of developing and deploying machine learning models.",
+          "Identify the applications and limitations of machine learning."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 2: Supervised Learning",
+        "LO": [
+          "Understand the concept of supervised learning and its applications.",
+          "Differentiate between classification and regression problems.",
+          "Utilize various supervised learning algorithms (e.g., linear regression, logistic regression, decision trees, support vector machines).",
+          "Evaluate and select appropriate models for supervised learning tasks."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 3: Unsupervised Learning",
+        "LO": [
+          "Comprehend the concept of unsupervised learning and its applications.",
+          "Utilize clustering algorithms (e.g., k-means, hierarchical clustering) for data segmentation.",
+          "Apply dimensionality reduction techniques (e.g., PCA, t-SNE) for feature extraction and visualization.",
+          "Evaluate and interpret the results of unsupervised learning algorithms."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 4: Reinforcement Learning",
+        "LO": [
+          "Understand the concept of reinforcement learning and its applications.",
+          "Comprehend the components of a reinforcement learning system (agent, environment, rewards).",
+          "Utilize reinforcement learning algorithms (e.g., Q-learning, policy gradients) for sequential decision making.",
+          "Implement and evaluate reinforcement learning models."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 5: Deep Learning",
+        "LO": [
+          "Understand the principles and architectures of deep learning.",
+          "Comprehend the components of a neural network (layers, activation functions).",
+          "Utilize deep learning frameworks (e.g., TensorFlow, Keras) for model development.",
+          "Implement and train deep learning models for various tasks (e.g., image classification, natural language processing)."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 6: Neural Networks",
+        "LO": [
+          "Understand the structure and working principles of neural networks.",
+          "Comprehend the different types of neural networks (e.g., feedforward, recurrent, convolutional).",
+          "Utilize neural network architectures and techniques (e.g., backpropagation, gradient descent) for model training.",
+          "Optimize neural networks for performance and generalization."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 7: Feature Engineering",
+        "LO": [
+          "Comprehend the importance of feature engineering in machine learning.",
+          "Explore techniques for data preprocessing, transformation, and feature extraction.",
+          "Handle missing data, categorical variables, and numerical scaling.",
+          "Create informative and relevant features for machine learning models."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 8: Model Evaluation and Selection",
+        "LO": [
+          "Understand the importance of model evaluation and selection.",
+          "Utilize performance metrics (e.g., accuracy, precision, recall) for model evaluation.",
+          "Apply cross-validation techniques for unbiased model assessment.",
+          "Select and compare models based on evaluation results and criteria."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 9: Dimensionality Reduction",
+        "LO": [
+          "Understand the concept and motivation behind dimensionality reduction.",
+          "Utilize techniques such as PCA (Principal Component Analysis) and LDA (Linear Discriminant Analysis) for dimensionality reduction.",
+          "Comprehend the trade-offs and limitations of dimensionality reduction.",
+          "Apply dimensionality reduction to improve model performance and interpretability."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 10: Clustering",
+        "LO": [
+          "Understand the concept and applications of clustering.",
+          "Utilize clustering algorithms (e.g., k-means, hierarchical clustering) for grouping similar data points.",
+          "Evaluate and interpret clustering results.",
+          "Apply clustering techniques for data exploration and pattern discovery."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 11: Natural Language Processing",
+        "LO": [
+          "Comprehend the challenges and techniques involved in natural language processing (NLP).",
+          "Utilize libraries and tools (e.g., NLTK, spaCy) for text preprocessing and tokenization.",
+          "Apply techniques such as sentiment analysis, named entity recognition, and text classification.",
+          "Develop NLP models for various applications (e.g., chatbots, sentiment analysis)."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 12: Recommender Systems",
+        "LO": [
+          "Understand the concept and applications of recommender systems.",
+          "Utilize collaborative filtering and content-based methods for recommendation.",
+          "Handle the cold start problem and user-item interactions.",
+          "Evaluate and improve the performance of recommender systems."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 13: Time Series Analysis",
+        "LO": [
+          "Comprehend the characteristics and challenges of time series data.",
+          "Utilize techniques for time series data preprocessing (e.g., resampling, smoothing).",
+          "Apply time series forecasting models (e.g., ARIMA, LSTM) for prediction.",
+          "Evaluate and interpret time series forecasting results."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 14: Machine Learning Pipelines",
+        "LO": [
+          "Understand the concept and benefits of machine learning pipelines.",
+          "Implement end-to-end machine learning pipelines for data preprocessing, model training, and evaluation.",
+          "Handle feature engineering, model selection, and hyperparameter tuning within a pipeline.",
+          "Automate the deployment and maintenance of machine learning pipelines."
+        ]
+      },
+      {
+        "topic_name": "Chapter 8 - Topic 15: Model Deployment",
+        "LO": [
+          "Comprehend the process of deploying machine learning models into production.",
+          "Utilize frameworks and tools (e.g., Flask, Docker) for model deployment.",
+          "Handle scalability, performance, and security considerations.",
+          "Monitor and update deployed models for ongoing improvement."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 9: Software Engineering Principles",
+    "topics":[
+      {
+        "topic_name": "Chapter 9 - Topic 1: Software Development Life Cycle",
+        "LO": [
+          "Understand the different phases of the software development life cycle (SDLC).",
+          "Comprehend the importance of following a structured approach to software development.",
+          "Identify and apply appropriate SDLC models (e.g., waterfall, iterative, agile) for different project scenarios.",
+          "Manage and coordinate activities across different SDLC phases."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 2: Requirements Engineering",
+        "LO": [
+          "Understand the importance of requirements engineering in software development.",
+          "Comprehend the different types of requirements (e.g., functional, non-functional, user, system).",
+          "Utilize techniques for requirements elicitation, analysis, and documentation.",
+          "Validate and prioritize requirements based on stakeholder needs and project constraints."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 3: Software Design Principles",
+        "LO": [
+          "Comprehend the fundamental principles and concepts of software design.",
+          "Apply design principles (e.g., SOLID principles, DRY, KISS) for creating modular, maintainable, and extensible software.",
+          "Utilize design notations (e.g., UML) to visualize and communicate software designs.",
+          "Evaluate and improve software designs based on design principles and best practices."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 4: Design Patterns",
+        "LO": [
+          "Understand the concept and purpose of design patterns in software development.",
+          "Comprehend the different types of design patterns (e.g., creational, structural, behavioral).",
+          "Apply design patterns to solve common software design problems.",
+          "Evaluate and select appropriate design patterns for specific design scenarios."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 5: Code Quality and Testing",
+        "LO": [
+          "Understand the importance of code quality and testing in software development.",
+          "Utilize coding standards and best practices for writing clean, readable, and maintainable code.",
+          "Apply testing techniques (e.g., unit testing, integration testing) to validate software functionality.",
+          "Identify and fix software defects through debugging and testing."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 6: Software Metrics",
+        "LO": [
+          "Comprehend the concept and importance of software metrics in software engineering.",
+          "Identify and apply appropriate metrics for measuring software quality, productivity, and complexity.",
+          "Analyze and interpret software metrics to identify areas for improvement.",
+          "Utilize software metrics for project planning, estimation, and monitoring."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 7: Software Maintenance and Evolution",
+        "LO": [
+          "Understand the challenges and importance of software maintenance and evolution.",
+          "Comprehend the different types of software maintenance activities (e.g., corrective, adaptive, perfective, preventive).",
+          "Utilize techniques for managing and prioritizing software maintenance tasks.",
+          "Plan and execute software evolution activities to address changing requirements and technologies."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 8: Configuration Management",
+        "LO": [
+          "Understand the concept and importance of configuration management in software development.",
+          "Utilize version control systems (e.g., Git, SVN) for managing software configurations.",
+          "Manage software releases, branches, and merging.",
+          "Handle configuration management for collaborative software development."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 9: Software Project Management",
+        "LO": [
+          "Comprehend the fundamentals of software project management.",
+          "Utilize project management techniques (e.g., planning, scheduling, resource allocation) for software projects.",
+          "Monitor and control software projects to ensure successful delivery.",
+          "Identify and mitigate risks in software projects."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 10: Software Documentation",
+        "LO": [
+          "Understand the importance of documentation in software development.",
+          "Comprehend the different types of software documentation (e.g., requirements documents, design documents, user manuals).",
+          "Create clear, concise, and well-structured software documentation.",
+          "Maintain and update software documentation throughout the software development life cycle."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 11: Software Quality Assurance",
+        "LO": [
+          "Understand the concept and importance of software quality assurance.",
+          "Utilize quality assurance techniques and processes to ensure software quality.",
+          "Plan and execute software quality assurance activities (e.g., reviews, inspections, audits, testing).",
+          "Identify and address quality issues throughout the software development life cycle."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 12: Software Testing Techniques",
+        "LO": [
+          "Comprehend the different types and levels of software testing (e.g., unit testing, integration testing, system testing).",
+          "Utilize black-box and white-box testing techniques for different testing scenarios.",
+          "Create and execute test cases to validate software functionality and behavior.",
+          "Apply testing techniques for detecting and fixing software defects."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 13: Software Validation and Verification",
+        "LO": [
+          "Understand the concepts of software validation and verification.",
+          "Utilize techniques for validating software against user requirements and specifications.",
+          "Plan and execute verification activities to ensure the correctness and completeness of software.",
+          "Evaluate and improve software validation and verification processes."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 14: Agile Development",
+        "LO": [
+          "Comprehend the principles and values of agile software development.",
+          "Utilize agile methodologies (e.g., Scrum, Kanban) for iterative and incremental software development.",
+          "Collaborate effectively in agile teams and adapt to changing requirements.",
+          "Apply agile practices for improving software quality, productivity, and customer satisfaction."
+        ]
+      },
+      {
+        "topic_name": "Chapter 9 - Topic 15: Ethical Considerations in Software Engineering",
+        "LO": [
+          "Understand the ethical responsibilities of software engineers.",
+          "Comprehend the ethical issues and challenges in software development and usage.",
+          "Apply ethical frameworks and principles to make ethical decisions in software engineering.",
+          "Promote ethical behavior and professionalism in software engineering practices."
+        ]
+      }
+    ]      
+  },
+  {
+    "chapter_name": "Chapter 10: Introduction to Computer Networks",
+    "topics": [
+      {
+        "topic_name": "Chapter 10 - Topic 1: Network Basics",
+        "LO": [
+          "Understand the fundamental concepts and components of computer networks.",
+          "Comprehend the different types of network topologies and architectures.",
+          "Identify the roles and functions of networking devices (e.g., routers, switches, hubs).",
+          "Explain the importance of network protocols in data communication."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 2: Network Models",
+        "LO": [
+          "Understand the layered structure and operation of network models (e.g., OSI model, TCP/IP model).",
+          "Comprehend the functions and protocols associated with each layer.",
+          "Identify the interactions between different layers in the network model.",
+          "Analyze and troubleshoot network issues using the network model."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 3: TCP/IP Protocol Suite",
+        "LO": [
+          "Comprehend the structure and components of the TCP/IP protocol suite.",
+          "Understand the purpose and functionality of TCP/IP protocols (e.g., IP, TCP, UDP, ICMP).",
+          "Configure and troubleshoot TCP/IP network settings.",
+          "Analyze network traffic using TCP/IP packet analysis tools."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 4: Network Addressing and Subnetting",
+        "LO": [
+          "Understand the concepts and formats of IP addressing (IPv4 and IPv6).",
+          "Comprehend the subnetting process and subnet mask calculations.",
+          "Configure and troubleshoot IP addresses and subnet masks.",
+          "Analyze and optimize IP address allocation and subnetting schemes."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 5: Routing and Switching",
+        "LO": [
+          "Understand the principles and algorithms of routing in computer networks.",
+          "Comprehend the operation and configuration of routing protocols (e.g., RIP, OSPF, BGP).",
+          "Configure and troubleshoot routing tables and routing protocols.",
+          "Understand the role and operation of switches in network communication."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 6: Network Security",
+        "LO": [
+          "Understand the importance of network security in protecting data and resources.",
+          "Comprehend common network security threats and attacks.",
+          "Configure and manage network security measures (e.g., firewalls, IDS, VPN).",
+          "Implement secure network communication protocols (e.g., SSL/TLS)."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 7: Wireless and Mobile Networks",
+        "LO": [
+          "Understand the principles and technologies of wireless and mobile networks.",
+          "Comprehend the operation and configuration of wireless network standards (e.g., Wi-Fi, Bluetooth, cellular).",
+          "Configure and troubleshoot wireless network settings.",
+          "Analyze and optimize wireless network performance and security."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 8: Network Management",
+        "LO": [
+          "Understand the concepts and tools of network management.",
+          "Comprehend the tasks and responsibilities of network administrators.",
+          "Configure and manage network devices and services.",
+          "Monitor and troubleshoot network performance and availability."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 9: Network Performance Optimization",
+        "LO": [
+          "Understand the factors and metrics related to network performance.",
+          "Comprehend techniques for optimizing network performance (e.g., traffic shaping, load balancing).",
+          "Analyze and diagnose network performance issues.",
+          "Implement measures to improve network performance and scalability."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 10: Cloud Computing and Networking",
+        "LO": [
+          "Understand the concepts and models of cloud computing.",
+          "Comprehend the role of networking in cloud computing environments.",
+          "Configure and manage networking in cloud-based infrastructures.",
+          "Analyze and optimize network performance in cloud environments."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 11: Internet of Things",
+        "LO": [
+          "Understand the concepts and principles of the Internet of Things (IoT).",
+          "Comprehend the communication protocols and architectures used in IoT.",
+          "Configure and manage networking for IoT devices and systems.",
+          "Analyze and optimize network connectivity and security in IoT environments."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 12: Network Virtualization",
+        "LO": [
+          "Understand the concept and benefits of network virtualization.",
+          "Comprehend the technologies and techniques used in network virtualization (e.g., VLAN, VPN, SDN).",
+          "Configure and manage virtual networks and network overlays.",
+          "Analyze and troubleshoot network virtualization configurations."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 13: Network Protocols and Standards",
+        "LO": [
+          "Comprehend the purpose and function of network protocols and standards.",
+          "Understand the role of standard organizations in developing and maintaining network protocols.",
+          "Identify and interpret commonly used network protocols (e.g., HTTP, FTP, DNS).",
+          "Evaluate and select appropriate network protocols and standards for specific scenarios."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 14: Multimedia Networking",
+        "LO": [
+          "Understand the principles and challenges of multimedia networking.",
+          "Comprehend the techniques and protocols used for multimedia data transmission.",
+          "Configure and optimize network settings for multimedia applications.",
+          "Analyze and troubleshoot multimedia networking issues."
+        ]
+      },
+      {
+        "topic_name": "Chapter 10 - Topic 15: Emerging Trends in Computer Networks",
+        "LO": [
+          "Stay updated with the latest trends and advancements in computer networks.",
+          "Understand the potential impact of emerging technologies on computer networks.",
+          "Evaluate and adopt new networking technologies and solutions.",
+          "Anticipate and adapt to future developments in computer networking."
+        ]
+      }
+    ]      
+  }
+]

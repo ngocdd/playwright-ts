@@ -1,4 +1,5 @@
 import { Page, expect, Locator } from "@playwright/test";
+import {LOType} from "../utils/enumeration/enumeration"
 
 export default class HomePage{
     // list elements
@@ -14,7 +15,7 @@ export default class HomePage{
     readonly btnAddTopic: any;
     readonly btnAddLO: any;
     readonly lstLO: Locator;
-    readonly ddlLO: Locator;
+    readonly ddlLOType: any;
     readonly txtTopicName: Locator;
     readonly txtLOName: Locator;
     readonly btnQuestions: Locator;
@@ -30,8 +31,8 @@ export default class HomePage{
     readonly mnuChapter: any;
     readonly mnuTopic: any;
     readonly mnuLO: any;
-    readonly mnuChapterExpand: any;
-    readonly mnuTopicExpand: any;
+    readonly sttCheckExpand: any;
+    readonly brdcTopic: Locator;
 
     // constructor
     constructor(page:Page){
@@ -46,9 +47,9 @@ export default class HomePage{
         this.btnAddChapter = page.getByTestId('ChapterForm__visibleFormControl');
         this.btnChapterSave = page.getByTestId('ChapterForm__submit');
         this.btnAddTopic = (chapterName: string) => {return page.getByTestId('ChapterItem_root').filter({hasText: `${chapterName}`}).getByTestId('TopicList__createTopic');}
-        this.btnAddLO = (topicName: string) => {page.getByTestId('TopicItem__root').filter({hasText: topicName}).getByTestId('LOAndAssignment__addLOs')};
+        this.btnAddLO = (topicName: string) => {return page.getByTestId('TopicItem__root').filter({hasText: topicName}).getByTestId('LOAndAssignment__addLOs')};
         this.lstLO = page.getByTestId('SelectHF__select');
-        this.ddlLO = page.getByRole('option').getByText('Learning Objective');
+        this.ddlLOType = (loType: LOType) => {return page.locator(`[data-value="${loType}"]`)};
         this.txtLOName = page.getByTestId('TextFieldHF__input');
         this.btnQuestions = page.getByTestId('QuestionListSectionHeader__action').getByTestId('ActionPanel__trigger');
         this.btnCreateQuestion = page.getByLabel('createQuestion', {exact: true});
@@ -62,9 +63,11 @@ export default class HomePage{
         this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
         this.mnuChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__content').filter({hasText: `${chapterName}`})};
         this.mnuTopic = (topicName: string) => {return page.getByTestId('TopicAccordion__name').filter({hasText: `${topicName}`})};
-        this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__name').filter({hasText: `${loName}`})};
-        this.mnuChapterExpand = (chapterName?: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getAttribute('aria-expanded')};
+        this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__root').getByTitle(loName)};
+        this.sttCheckExpand = (name: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${name}`}).getAttribute('aria-expanded')};
+        this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
     }   
+
 
     // 
     async gotoBookManagement(){
@@ -86,18 +89,22 @@ export default class HomePage{
         }
     }
 
-    async gotoChapterDetail(chapterName: string){
-        const chapterExpandResult = await this.checkChapterExpand(chapterName);
+    async gotoChapterDetail(name: string){
+        const chapterExpandResult = await this.sttCheckExpand(name);
         if(chapterExpandResult == 'true'){
             // do nothing
         }else{
-            await this.mnuChapter(chapterName).click();
-        }
-        
+            await this.mnuChapter(name).click();
+        }  
     }
 
-    async gotoTopicDetail(topicName: string){
-        await this.mnuTopic(topicName).click();
+    async gotoTopicDetail(name: string){
+        const chapterExpandResult = await this.sttCheckExpand(name);
+        if(chapterExpandResult == 'true'){
+            // do nothing
+        }else{
+            await this.mnuTopic(name).click();
+        }  
     }
 
     async gotoLosDetail(loName: string){
@@ -116,11 +123,13 @@ export default class HomePage{
         await this.btnSave.click();
     }
 
-    async addNewLO(topicName: string, loName: string){
+    async addNewLO(topicName: string, loType: LOType, loName: string){
         await this.btnAddLO(topicName).click();
         await this.lstLO.click();
-        await this.ddlLO.click();
-        await this.txtLOName.fill(loName);
+        await this.ddlLOType(loType).click();
+        if([LOType.LO, LOType.FlashCard].includes(loType)){
+            await this.txtLOName.fill(loName);
+        }
         await this.btnSave.click();
     }
 
@@ -152,16 +161,9 @@ export default class HomePage{
     async saveAction(){
         await this.btnSave.click();
     }
-
-    async checkChapterExpand(chapterName: string): Promise<string>{
-        const value = await this.mnuChapterExpand(chapterName);
-        // console.log(value);
-        // console.log(await this.mnuChapterExpand(chapterName));
-        return value;
-    }
-
-    async collapseAllChapter(){
-
+    
+    async backtoTopic(){
+        await this.brdcTopic.click();
     }
 
 }
