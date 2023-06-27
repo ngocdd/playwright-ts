@@ -2,7 +2,7 @@ export function setEnv (){
 
     // env config
     const envConfig = {
-    path: `./utils/env/.env.uat`, 
+    path: `./utils/env/.env.${process.env.ENV}`, 
     override: true
     }
     
