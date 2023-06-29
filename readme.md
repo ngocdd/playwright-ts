@@ -15,6 +15,11 @@ npm install
 ```
 This will install all the necessary packages specified in the package.json file.
 
+Then install playwright browsers by following commend:
+```
+npx playwright install
+```
+
 ## Usage
 Encrypting Environment Variables
 The repository provides several scripts to help you encrypt environment variables for different environments. These scripts utilize the dotenvenc package to encrypt the environment files.
