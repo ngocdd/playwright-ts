@@ -77,7 +77,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 dotenv: Loads environment variables from a file into process.env. Version: ^16.3.0
 
-dotenv-cli: A command-line utility for running scripts with environment variables loaded from a .env file. VersionContinued...
+dotenv-cli: A command-line utility for running scripts with environment variables loaded from a .env file. 
 
 fs-extra: A package that provides additional file system methods beyond the built-in fs module. Version: ^11.1.1
 
