@@ -11,7 +11,7 @@ test.skip('create questions for LO worker 1', async({page})=>{
   const homePage = new HomePage(page);
   const loginPage = new LoginPage(page);
 
-  await loginPage.gotoLogin();
+  await loginPage.gotoLoginPage();
   await loginPage.login();
 
   const data = await readJSONFile('10chapter-15topics-5los');

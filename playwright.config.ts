@@ -1,12 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
-import { setEnv } from './utils/env/env';
-import * as path from 'path';
-import { emptyDir } from 'fs-extra';
-// setup env for run test
-setEnv();
 
-export const STORAGE_STATE = path.join('./utils/auth/storage.json')
-
+const admin_STORAGE = './utils/auth/admin.json';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -17,7 +11,7 @@ export default defineConfig({
   timeout: 1000*60*600,
   globalTimeout: 1000*60*600, // time out for whole test run
   testMatch: ["**/*.ts"],
-  // globalSetup: './global.setup.ts', // setup before all test
+  globalSetup: './global.setup.ts', // setup before all test
   // globalTeardown: './global.teardown.ts', // cleanup after all test
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -34,19 +28,27 @@ export default defineConfig({
   use: {
     actionTimeout: 1000 * 60 * 2, // time out for each actions
     navigationTimeout: 1000 * 60 * 3, // time out for each navigation cation
-    storageState: STORAGE_STATE,
     trace: 'on-first-retry',
     headless:false,
     locale: 'en-GB',
     timezoneId: 'Asia/Saigon',
+    storageState: admin_STORAGE,
   },
 
   /* Configure projects for major browsers */
   projects: [
+    // setup project
+    { name: 'setup', testMatch: './global.setup.ts'},
+    // setup chrome with storage
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      dependencies: ['setup'],
+      use: {
+         ...devices['Desktop Chrome'],
+         storageState: './utils/auth/admin.json'
+      },
     },
+    
 
     // {
     //   name: 'firefox',

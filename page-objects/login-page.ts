@@ -25,14 +25,15 @@ export default class LoginPage{
     }
 
     // go to Login Page
-    async gotoLogin(){
+    async gotoLoginPage(){
         await this.page.goto(`${process.env.BASE_URL}`);
         // await this.
     }
 
     async login(){
-        await this.languageOption.click();
-        await this.langEng.click();
+        // await this.languageOption.click();
+        // await this.langEng.click();
+        await this.gotoLoginPage();
         await this.orgId.fill(`${process.env.ORG_ID}`);
         await this.userName.fill(`${process.env.ADMIN_USERNAME}`);
         await this.passWord.fill(`${process.env.ADMIN_PASSWORD}`);
