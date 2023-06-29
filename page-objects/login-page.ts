@@ -1,5 +1,7 @@
 import { Page, Locator, expect } from "@playwright/test";
+import HomePage from "./home-page";
 
+let homePage: HomePage;
 
 export default class LoginPage{
     // list elements
@@ -31,13 +33,15 @@ export default class LoginPage{
     }
 
     async login(){
-        // await this.languageOption.click();
-        // await this.langEng.click();
+        homePage = new HomePage(this.page);
         await this.gotoLoginPage();
+        await this.languageOption.click();
+        await this.langEng.click();
         await this.orgId.fill(`${process.env.ORG_ID}`);
         await this.userName.fill(`${process.env.ADMIN_USERNAME}`);
         await this.passWord.fill(`${process.env.ADMIN_PASSWORD}`);
         await this.btnSubmit.click();
+        await homePage.gotoBookManagement();
     }
 
     

@@ -42,10 +42,10 @@ export default defineConfig({
     // setup chrome with storage
     {
       name: 'chromium',
-      dependencies: ['setup'],
+      // dependencies: ['setup'],
       use: {
          ...devices['Desktop Chrome'],
-         storageState: './utils/auth/admin.json'
+        //  storageState: './utils/auth/admin.json'
       },
     },
     
