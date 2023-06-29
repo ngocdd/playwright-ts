@@ -89,21 +89,21 @@ export default class HomePage{
         }
     }
 
-    async gotoChapterDetail(name: string){
-        const chapterExpandResult = await this.sttCheckExpand(name);
+    async gotoChapterDetail(chapterName: string){
+        const chapterExpandResult = await this.sttCheckExpand(chapterName);
         if(chapterExpandResult == 'true'){
             // do nothing
         }else{
-            await this.mnuChapter(name).click();
+            await this.mnuChapter(chapterName).click();
         }  
     }
 
-    async gotoTopicDetail(name: string){
-        const chapterExpandResult = await this.sttCheckExpand(name);
+    async gotoTopicDetail(topicName: string){
+        const chapterExpandResult = await this.sttCheckExpand(topicName);
         if(chapterExpandResult == 'true'){
             // do nothing
         }else{
-            await this.mnuTopic(name).click();
+            await this.mnuTopic(topicName).click();
         }  
     }
 
