@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from "@playwright/test";
-import HomePage from "./home-page";
+import HomePage from "./book-management-page";
 
 let homePage: HomePage;
 
@@ -41,7 +41,6 @@ export default class LoginPage{
         await this.userName.fill(`${process.env.ADMIN_USERNAME}`);
         await this.passWord.fill(`${process.env.ADMIN_PASSWORD}`);
         await this.btnSubmit.click();
-        await homePage.gotoBookManagement();
     }
 
     

@@ -1,4 +1,5 @@
 import * as fs from 'fs-extra';
+import { v4 as uuidv4 } from 'uuid';
 
 export function readJSONFile(fileName: string): any {
     try {
@@ -11,4 +12,12 @@ export function readJSONFile(fileName: string): any {
         throw error;
     }
 }
-// readJSONFile('./utils/test-data/question.json');
+
+export function generateUUID(){
+    let myuuid: string;
+    myuuid = uuidv4();
+    console.log('aa'+myuuid)
+    return myuuid;
+}
+
+generateUUID();

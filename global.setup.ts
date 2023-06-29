@@ -6,7 +6,7 @@ async function globalSetup() {
     await setEnv();
     
     // get authentication for all tests
-    await authenticate();
+    // await authenticate();
 }
 
 export default globalSetup;

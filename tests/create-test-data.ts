@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import HomePage from '../page-objects/home-page';
+import HomePage from '../page-objects/book-management-page';
 import LoginPage from '../page-objects/login-page';
 import { readJSONFile } from '../utils/data-provider/data-provider';
 import { LOType } from '../utils/enumeration/enumeration';

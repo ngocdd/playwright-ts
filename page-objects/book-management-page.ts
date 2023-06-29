@@ -33,7 +33,8 @@ export default class HomePage{
     readonly mnuLO: any;
     readonly sttCheckExpand: any;
     readonly brdcTopic: Locator;
-
+    readonly snbMessage: Locator;
+ 
     // constructor
     constructor(page:Page){
         this.page = page;
@@ -66,6 +67,7 @@ export default class HomePage{
         this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__root').getByTitle(loName)};
         this.sttCheckExpand = (name: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${name}`}).getAttribute('aria-expanded')};
         this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
+        this.snbMessage = page.getByTestId('SnackbarBase__content');
     }   
 
 
@@ -164,6 +166,11 @@ export default class HomePage{
     
     async backtoTopic(){
         await this.brdcTopic.click();
+    }
+
+    async checksnbMessage(){
+        const heeh = await this.snbMessage.allTextContents();
+        console.log(heeh);
     }
 
 }
