@@ -1,11 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 import { setEnv } from './utils/env/env';
-import path from 'path';
-
+import * as path from 'path';
+import { emptyDir } from 'fs-extra';
 // setup env for run test
 setEnv();
 
-export const STORAGE_STATE = path.join('./utils/auth/storage.json');
+export const STORAGE_STATE = path.join('./utils/auth/storage.json')
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -17,8 +17,8 @@ export default defineConfig({
   timeout: 1000*60*600,
   globalTimeout: 1000*60*600, // time out for whole test run
   testMatch: ["**/*.ts"],
-  globalSetup: './global.setup.ts', // setup before all test
-  globalTeardown: './global.teardown.ts', // cleanup after all test
+  // globalSetup: './global.setup.ts', // setup before all test
+  // globalTeardown: './global.teardown.ts', // cleanup after all test
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
