@@ -1,7 +1,15 @@
-import {setEnv} from "./utils/env/env";
+import { test as setup, expect } from '@playwright/test';
+import LoginPage from './page-objects/login-page';
+import { STORAGE_STATE } from './playwright.config';
 
-function globalConfig (){
-    setEnv();
-}
 
-export default globalConfig;
+setup('do login', async ({ page }) => {
+    let loginPage = new LoginPage(page);
+    loginPage.gotoLogin();
+    loginPage.login();
+
+    // save storage
+    await page.context().storageState({ path: STORAGE_STATE });
+
+});
+

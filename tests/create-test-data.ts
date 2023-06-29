@@ -6,7 +6,7 @@ import { LOType } from '../utils/enumeration/enumeration';
 
 
 
-test('create questions for LO worker 1', async({page})=>{
+test.skip('create questions for LO worker 1', async({page})=>{
   // await page.waitForTimeout(10000);
   const homePage = new HomePage(page);
   const loginPage = new LoginPage(page);

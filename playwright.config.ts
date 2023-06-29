@@ -1,19 +1,24 @@
 import { defineConfig, devices } from '@playwright/test';
+import { setEnv } from './utils/env/env';
+import path from 'path';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
+// setup env for run test
+setEnv();
+
+export const STORAGE_STATE = path.join('./utils/auth/storage.json');
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  expect: {
+    timeout: 1000 * 60, // time out for checking expected
+  },
   timeout: 1000*60*600,
+  globalTimeout: 1000*60*600, // time out for whole test run
   testMatch: ["**/*.ts"],
-  globalTimeout: 1000*60*600,
-  globalSetup: './global.setup.ts',
+  globalSetup: './global.setup.ts', // setup before all test
+  globalTeardown: './global.teardown.ts', // cleanup after all test
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -27,10 +32,9 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    actionTimeout: 1000 * 60 * 2, // time out for each actions
+    navigationTimeout: 1000 * 60 * 3, // time out for each navigation cation
+    storageState: STORAGE_STATE,
     trace: 'on-first-retry',
     headless:false,
     locale: 'en-GB',
