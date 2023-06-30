@@ -44,7 +44,7 @@ export default class BookManagementPage{
         this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material');
         this.tblBook = page.getByTestId('TableBaseBody__root');
         this.mnuBookManagement = page.getByLabel('Book', {exact: true});
-        this.mnuBookName = (bookName: string) => {return page.getByTestId('BookList__bookNameLink').getByTitle(bookName)};
+        this.mnuBookName = (bookName: string) => {return page.getByTitle(bookName)};
         this.txtBookName = page.getByTestId('TextFieldHF__input');
         this.btnAddBook = page.getByTestId('AddBook__addButton');
         this.txtChapterName = page.getByTestId('ChapterForm__root').getByTestId('TextFieldHF__input');
@@ -69,7 +69,7 @@ export default class BookManagementPage{
         this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
         this.mnuChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__content').filter({hasText: `${chapterName}`})};
         this.mnuTopic = (topicName: string) => {return page.getByTestId('TopicAccordion__name').filter({hasText: `${topicName}`})};
-        this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__root').getByTitle(loName)};
+        this.mnuLO = (loName: string) => {return page.getByTestId('LOAndAssignmentItem__name').filter({hasText: loName})};
         this.sttCheckExpand = (name: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${name}`}).getAttribute('aria-expanded')};
         this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
         this.snbMessage = page.getByTestId('SnackbarBase__content');
@@ -170,7 +170,7 @@ export default class BookManagementPage{
         await this.btnSave.click();
     }
     
-    async backtoTopic(){
+    async backtoTopicDetail(){
         await this.brdcTopic.click();
     }
 
@@ -187,8 +187,8 @@ export default class BookManagementPage{
     }
 
     async searchBook(bookName: string) {
-        await this.txtSearchBox.fill(bookName);
         await this.txtSearchBox.focus();
+        await this.txtSearchBox.fill(bookName);
         await this.page.keyboard.press('Enter');
         await this.mnuBookName(bookName).click();
     }
