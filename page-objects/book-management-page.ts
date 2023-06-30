@@ -7,6 +7,7 @@ export default class HomePage{
     readonly mnuLearningMaterial: Locator;
     readonly mnuBook: Locator;
     readonly btnAddBook: Locator;
+    readonly txtBookName: Locator;
     readonly txtChapterName: Locator;
     readonly btnSave: Locator;
     readonly dlgSuccessPopup: Locator;
@@ -40,11 +41,11 @@ export default class HomePage{
         this.page = page;
         this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material');
         this.mnuBook = page.getByLabel('Book', {exact: true});
+        this.txtBookName = page.getByTestId('TextFieldHF__input');
         this.btnAddBook = page.getByTestId('AddBook__addButton');
         this.txtChapterName = page.getByTestId('ChapterForm__root').getByTestId('TextFieldHF__input');
         this.txtTopicName = page.getByTestId('TopicForm__root').getByTestId('TextFieldHF__input');
         this.btnSave = page.getByTestId('FooterDialogConfirm__buttonSave');
-        this.dlgSuccessPopup = page.getByTestId('SnackbarBase__content');
         this.btnAddChapter = page.getByTestId('ChapterForm__visibleFormControl');
         this.btnChapterSave = page.getByTestId('ChapterForm__submit');
         this.btnAddTopic = (chapterName: string) => {return page.getByTestId('ChapterItem_root').filter({hasText: `${chapterName}`}).getByTestId('TopicList__createTopic');}
@@ -79,9 +80,9 @@ export default class HomePage{
 
     async addNewBook(bookName:string){
         await this.btnAddBook.click();
-        await this.txtChapterName.fill(bookName);
+        await this.txtBookName.fill(bookName);
         await this.btnSave.click();
-        console.log(this.dlgSuccessPopup.textContent());
+        // console.log(this.dlgSuccessPopup.textContent());
     }
 
     async gotoBookDetail(bookId?:string){
@@ -169,7 +170,8 @@ export default class HomePage{
     }
 
     async checksnbMessage(){
-        const heeh = await this.snbMessage.allTextContents();
+        // this.page.waitForSelector('SnackbarBase__content');
+        const heeh = await this.snbMessage.textContent();
         console.log(heeh);
     }
 

@@ -1,7 +1,7 @@
 export function setEnv (){
 
     // default ENV is UAT
-    process.env['ENV'] = 'uat';
+    process.env['ENV'] = 'stg';
 
     // env config
     const envConfig = {

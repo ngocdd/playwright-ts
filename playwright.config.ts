@@ -32,7 +32,7 @@ export default defineConfig({
     headless:false,
     locale: 'en-GB',
     timezoneId: 'Asia/Saigon',
-    storageState: admin_STORAGE,
+    // storageState: admin_STORAGE,
   },
 
   /* Configure projects for major browsers */

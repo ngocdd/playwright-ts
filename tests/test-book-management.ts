@@ -18,11 +18,12 @@ test.beforeEach(async ({page}) => {
 
 
 test('test create new book', async ({ page }) => {
-  let bookName = generateUUID();
+  let bookName = await generateUUID('HTN');
+  // console.log(bookName);
   await homePage.gotoBookManagement();
   await homePage.addNewBook(bookName);
   await homePage.checksnbMessage();
-  
+  await expect(homePage.snbMessage).toHaveText('You have created a new book successfully');
 });
 
 

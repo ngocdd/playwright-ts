@@ -13,11 +13,16 @@ export function readJSONFile(fileName: string): any {
     }
 }
 
-export function generateUUID(){
+export function generateUUID(preFix?: string){
     let myuuid: string;
     myuuid = uuidv4();
-    console.log('aa'+myuuid)
-    return myuuid;
+    if(preFix){
+        myuuid = preFix + '---' + myuuid;
+        return myuuid;
+    }else{
+        return myuuid
+    }
 }
 
-generateUUID();
+// let aa = generateUUID('as');
+// console.log(aa);
