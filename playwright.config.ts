@@ -6,7 +6,7 @@ const admin_STORAGE = './utils/auth/admin.json';
  */
 export default defineConfig({
   expect: {
-    timeout: 1000 * 60, // time out for checking expected
+    timeout: 1000 * 30, // time out for checking expected
   },
   timeout: 1000*60*600,
   globalTimeout: 1000*60*600, // time out for whole test run

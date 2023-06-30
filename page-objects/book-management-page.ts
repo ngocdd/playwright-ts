@@ -1,16 +1,16 @@
 import { Page, expect, Locator } from "@playwright/test";
 import {LOType} from "../utils/enumeration/enumeration"
 
-export default class HomePage{
+export default class BookManagementPage{
     // list elements
     readonly page:Page;
     readonly mnuLearningMaterial: Locator;
+    readonly tblBook: Locator;
     readonly mnuBook: Locator;
     readonly btnAddBook: Locator;
     readonly txtBookName: Locator;
     readonly txtChapterName: Locator;
     readonly btnSave: Locator;
-    readonly dlgSuccessPopup: Locator;
     readonly btnAddChapter: Locator;
     readonly btnChapterSave: Locator;
     readonly btnAddTopic: any;
@@ -40,6 +40,7 @@ export default class HomePage{
     constructor(page:Page){
         this.page = page;
         this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material');
+        this.tblBook = page.getByTestId('TableBaseBody__root');
         this.mnuBook = page.getByLabel('Book', {exact: true});
         this.txtBookName = page.getByTestId('TextFieldHF__input');
         this.btnAddBook = page.getByTestId('AddBook__addButton');
@@ -172,7 +173,13 @@ export default class HomePage{
     async checksnbMessage(){
         // this.page.waitForSelector('SnackbarBase__content');
         const heeh = await this.snbMessage.textContent();
-        console.log(heeh);
+        // console.log(heeh);
+    }
+
+    async getListBook(){
+        let listBookName = await this.tblBook.textContent();
+        // console.log(aa);
+        return listBookName;
     }
 
 }
