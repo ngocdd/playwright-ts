@@ -6,7 +6,7 @@ export default class BookManagementPage{
     readonly page:Page;
     readonly mnuLearningMaterial: Locator;
     readonly tblBook: Locator;
-    readonly mnuBook: Locator;
+    readonly mnuBookManagement: Locator;
     readonly btnAddBook: Locator;
     readonly txtBookName: Locator;
     readonly txtChapterName: Locator;
@@ -35,13 +35,16 @@ export default class BookManagementPage{
     readonly sttCheckExpand: any;
     readonly brdcTopic: Locator;
     readonly snbMessage: Locator;
+    readonly txtSearchBox: Locator;
+    readonly mnuBookName: any;
  
     // constructor
     constructor(page:Page){
         this.page = page;
         this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material');
         this.tblBook = page.getByTestId('TableBaseBody__root');
-        this.mnuBook = page.getByLabel('Book', {exact: true});
+        this.mnuBookManagement = page.getByLabel('Book', {exact: true});
+        this.mnuBookName = (bookName: string) => {return page.getByTestId('BookList__bookNameLink').getByTitle(bookName)};
         this.txtBookName = page.getByTestId('TextFieldHF__input');
         this.btnAddBook = page.getByTestId('AddBook__addButton');
         this.txtChapterName = page.getByTestId('ChapterForm__root').getByTestId('TextFieldHF__input');
@@ -70,13 +73,14 @@ export default class BookManagementPage{
         this.sttCheckExpand = (name: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${name}`}).getAttribute('aria-expanded')};
         this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
         this.snbMessage = page.getByTestId('SnackbarBase__content');
+        this.txtSearchBox = page.getByTestId('FormFilterAdvanced__textField').getByPlaceholder('Enter your keyword');
     }   
 
 
     // 
     async gotoBookManagement(){
         await this.mnuLearningMaterial.click();
-        await this.mnuBook.click();
+        await this.mnuBookManagement.click();
     }
 
     async addNewBook(bookName:string){
@@ -180,6 +184,13 @@ export default class BookManagementPage{
         let listBookName = await this.tblBook.textContent();
         // console.log(aa);
         return listBookName;
+    }
+
+    async searchBook(bookName: string) {
+        await this.txtSearchBox.fill(bookName);
+        await this.txtSearchBox.focus();
+        await this.page.keyboard.press('Enter');
+        await this.mnuBookName(bookName).click();
     }
 
 }

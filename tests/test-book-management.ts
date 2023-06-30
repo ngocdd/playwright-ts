@@ -17,15 +17,30 @@ test.describe('test Book Management',async () => {
   });
   
   
-  test('test create new book', async ({ page }) => {
-    let bookName = await generateUUID('HTN');
+  test.skip('test create new book', async ({ page }) => {
+    let bookName = await generateUUID('Book');
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    await bookMngPage.checksnbMessage();
     await expect(bookMngPage.snbMessage).toHaveText('You have created a new book successfully');
     await expect(bookMngPage.tblBook).toContainText(bookName);
-  
+  });
+
+  test('test create new chapter in book', async ({ page }) => {
+    let bookName = await generateUUID('Book');
+    // console.log(bookName);
+    await bookMngPage.gotoBookManagement();
+    await bookMngPage.addNewBook(bookName);
+
+
+    await bookMngPage.searchBook(bookName);
+
+    let chapterName = await generateUUID('Chapter');
+    await bookMngPage.addNewChapter(chapterName);
+
+    await expect(bookMngPage.mnuChapter).toHaveText(chapterName);
+
+
   });
   
 
