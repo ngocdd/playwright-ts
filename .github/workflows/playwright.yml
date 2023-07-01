@@ -19,14 +19,14 @@ jobs:
     # - name: Install Playwright Browsers
     #   run: npx playwright install --with-deps
 
-    - name: set enviroments
-      run: export GIT_ACTION=commit
-
-    - name:  set 1
-      run: source ~/.bashrc
-
-    - name: test env
-      run: echo $GIT_ACTION
+    - name: environment
+      run: |
+      echo "export ENV=DEV" > ~/.bashrc
+      
+    - name: get_env
+      run: | 
+        source ~/.bashrc
+        echo $ENV
 
     - name: Run Playwright tests
       run: npx playwright test
