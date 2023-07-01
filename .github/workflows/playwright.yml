@@ -19,10 +19,8 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    # - name: set enviroments
-    #   run: |
-    #     npx dotenv -v ENV=stg
-    #     npx dotenv -v DOTENVENC_KEY=${{env.DOTENVENC_KEY}}
+    - name: set enviroments
+      run: echo 'export DOTENVENC_PASS=${{env.DOTENVENC_PASS}}' >> ~/.bashrc
 
     - name: Run Playwright tests
       run: npx playwright test
