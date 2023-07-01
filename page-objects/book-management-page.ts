@@ -81,14 +81,14 @@ export default class BookManagementPage{
     async gotoBookManagement(){
         await this.mnuLearningMaterial.click();
         await this.mnuBookManagement.click();
-        this.waitMessageDisappear();
+        // this.waitMessageDisappear();
     }
 
     async addNewBook(bookName:string){
         await this.btnAddBook.click();
         await this.txtBookName.fill(bookName);
         await this.btnSave.click();
-        this.waitMessageDisappear();
+        // this.waitMessageDisappear();
         // console.log(this.dlgSuccessPopup.textContent());
     }
 
@@ -125,14 +125,14 @@ export default class BookManagementPage{
         await this.btnAddChapter.click();
         await this.txtChapterName.fill(chapterName);
         await this.btnChapterSave.click();
-        this.waitMessageDisappear();
+        // this.waitMessageDisappear();
     }
 
     async addNewTopic(chapterName: string, topicName: string){
         await this.btnAddTopic(chapterName).click();
         await this.txtTopicName.fill(topicName);
         await this.btnSave.click();
-        this.waitMessageDisappear();
+        // this.waitMessageDisappear();
     }
 
     async addNewLO(topicName: string, loType: LOType, loName: string){
@@ -143,7 +143,7 @@ export default class BookManagementPage{
             await this.txtLOName.fill(loName);
         }
         await this.btnSave.click();
-        this.waitMessageDisappear();
+        // this.waitMessageDisappear();
     }
 
     async addNewQuestion(){
@@ -179,12 +179,6 @@ export default class BookManagementPage{
         await this.brdcTopic.click();
     }
 
-    async checksnbMessage(){
-        // this.page.waitForSelector('SnackbarBase__content');
-        const heeh = await this.snbMessage.textContent();
-        // console.log(heeh);
-    }
-
     async getListBook(){
         let listBookName = await this.tblBook.textContent();
         // console.log(aa);
@@ -199,8 +193,5 @@ export default class BookManagementPage{
         await this.mnuBookName(bookName).click();
     }
 
-    async waitMessageDisappear(){
-        await this.snbMessage.last().isHidden();
-    }
 
 }
