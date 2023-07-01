@@ -16,18 +16,17 @@ test.describe('test Book Management',async () => {
     await loginPage.login();
   });
   
-  test.skip('test create new book', async ({ page }) => {
+  test('test create new book', async ({ page }) => {
     let bookName = await generateUUID('Book');
 
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    
     await expect(bookMngPage.snbMessage).toHaveText('You have created a new book successfully');
-    await expect(bookMngPage.tblBook).toContainText(bookName);
+    await expect(bookMngPage.mnuBookName(bookName)).toContainText(bookName);
   });
 
-  test.skip('test create new chapter', async ({ page }) => {
+  test('test create new chapter', async ({ page }) => {
     let bookName = await generateUUID('Book');
     let chapterName = await generateUUID('Chapter');
 
@@ -37,11 +36,11 @@ test.describe('test Book Management',async () => {
     await bookMngPage.searchBook(bookName);
     await bookMngPage.addNewChapter(chapterName);
 
-    await expect(bookMngPage.snbMessage).toHaveText('You have added chapter successfully');
-    await expect(bookMngPage.mnuChapter(chapterName).last()).toHaveText(chapterName);
+    await expect(bookMngPage.snbMessage.last()).toHaveText('You have added chapter successfully');
+    await expect(bookMngPage.mnuChapter(chapterName)).toHaveText(chapterName);
   }); 
 
-  test.skip('test create new topic', async ({ page }) => {
+  test('test create new topic', async ({ page }) => {
     let bookName = await generateUUID('Book');
     let chapterName = await generateUUID('Chapter');
     let topicName = await generateUUID('Topic');
@@ -74,17 +73,7 @@ test.describe('test Book Management',async () => {
 
     await expect(bookMngPage.snbMessage.last()).toHaveText('You have created a new LO successfully');
     await expect(bookMngPage.mnuLO(loName)).toHaveText(loName);
+    // await page.pause();
   }); 
-
-
-
-
-
-
-  
-
-  
-  
-  
   
 })
