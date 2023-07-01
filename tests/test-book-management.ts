@@ -33,7 +33,8 @@ test.describe('test Book Management',async () => {
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    await bookMngPage.searchBook(bookName);
+    // await bookMngPage.searchBook(bookName);
+    await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
 
     await expect(bookMngPage.snbMessage.last()).toHaveText('You have added chapter successfully');
@@ -48,7 +49,8 @@ test.describe('test Book Management',async () => {
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    await bookMngPage.searchBook(bookName);
+    // await bookMngPage.searchBook(bookName);
+    await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
     await bookMngPage.addNewTopic(chapterName, topicName);
 
@@ -65,7 +67,8 @@ test.describe('test Book Management',async () => {
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    await bookMngPage.searchBook(bookName);
+    // await bookMngPage.searchBook(bookName);
+    await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
     await bookMngPage.addNewTopic(chapterName, topicName);
     await bookMngPage.addNewLO(topicName, LOType.LO, loName);

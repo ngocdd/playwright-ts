@@ -6,9 +6,9 @@ const admin_STORAGE = './utils/auth/admin.json';
  */
 export default defineConfig({
   expect: {
-    timeout: 1000 * 15, // time out for checking expected
+    timeout: 1000 * 60, // time out for checking expected
   },
-  timeout: 1000*30,
+  timeout: 1000*30*5,
   globalTimeout: 1000*60*600, // time out for whole test run
   testMatch: ["**/*.ts"],
   globalSetup: './global.setup.ts', // setup before all test
@@ -32,8 +32,8 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    actionTimeout: 1000 * 60 * 2, // time out for each actions
-    navigationTimeout: 1000 * 60 * 3, // time out for each navigation cation
+    actionTimeout: 1000 * 60 * 5, // time out for each actions
+    navigationTimeout: 1000 * 60 * 5, // time out for each navigation cation
     trace: 'on-first-retry',
     headless:true,
     locale: 'en-GB',

@@ -92,11 +92,14 @@ export default class BookManagementPage{
         // console.log(this.dlgSuccessPopup.textContent());
     }
 
-    async gotoBookDetail(bookId?:string){
+    async gotoBookDetail(bookName: string, bookId?:string, ){
         if (bookId){
             await this.gotoBookManagement();
             await this.page.goto(`${process.env.BASE_URL}syllabus/books/${bookId}/show`);
+        }else{
+            await this.mnuBookName(bookName).click();
         }
+
     }
 
     async gotoChapterDetail(chapterName: string){
