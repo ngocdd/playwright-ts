@@ -23,7 +23,7 @@ jobs:
       run: echo 'export DOTENVENC_PASS=${{env.DOTENVENC_PASS}}' >> ~/.bashrc
 
     - name: test env
-      run: echo ${{env.DOTENVENC_PASS}}
+      run: echo $DOTENVENC_PASS
 
     - name: Run Playwright tests
       run: npx playwright test
