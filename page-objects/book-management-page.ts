@@ -44,7 +44,7 @@ export default class BookManagementPage{
         this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material');
         this.tblBook = page.getByTestId('TableBaseBody__root');
         this.mnuBookManagement = page.getByLabel('Book', {exact: true});
-        this.mnuBookName = (bookName: string) => {return page.getByTitle(bookName)};
+        this.mnuBookName = (bookName: string) => {return page.getByTitle(bookName).getByTestId('BookList__bookName')};
         this.txtBookName = page.getByTestId('TextFieldHF__input');
         this.btnAddBook = page.getByTestId('AddBook__addButton');
         this.txtChapterName = page.getByTestId('ChapterForm__root').getByTestId('TextFieldHF__input');
@@ -73,7 +73,7 @@ export default class BookManagementPage{
         this.sttCheckExpand = (name: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${name}`}).getAttribute('aria-expanded')};
         this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
         this.snbMessage = page.getByTestId('SnackbarBase__content');
-        this.txtSearchBox = page.getByTestId('FormFilterAdvanced__textField').getByPlaceholder('Enter your keyword');
+        this.txtSearchBox = page.getByPlaceholder('Enter your keyword');
     }   
 
 
@@ -81,12 +81,14 @@ export default class BookManagementPage{
     async gotoBookManagement(){
         await this.mnuLearningMaterial.click();
         await this.mnuBookManagement.click();
+        this.waitMessageDisappear();
     }
 
     async addNewBook(bookName:string){
         await this.btnAddBook.click();
         await this.txtBookName.fill(bookName);
         await this.btnSave.click();
+        this.waitMessageDisappear();
         // console.log(this.dlgSuccessPopup.textContent());
     }
 
@@ -123,12 +125,14 @@ export default class BookManagementPage{
         await this.btnAddChapter.click();
         await this.txtChapterName.fill(chapterName);
         await this.btnChapterSave.click();
+        this.waitMessageDisappear();
     }
 
     async addNewTopic(chapterName: string, topicName: string){
         await this.btnAddTopic(chapterName).click();
         await this.txtTopicName.fill(topicName);
         await this.btnSave.click();
+        this.waitMessageDisappear();
     }
 
     async addNewLO(topicName: string, loType: LOType, loName: string){
@@ -139,6 +143,7 @@ export default class BookManagementPage{
             await this.txtLOName.fill(loName);
         }
         await this.btnSave.click();
+        this.waitMessageDisappear();
     }
 
     async addNewQuestion(){
@@ -189,8 +194,13 @@ export default class BookManagementPage{
     async searchBook(bookName: string) {
         await this.txtSearchBox.focus();
         await this.txtSearchBox.fill(bookName);
-        await this.page.keyboard.press('Enter');
+        await this.txtSearchBox.focus();
+        await this.txtSearchBox.press('Enter');
         await this.mnuBookName(bookName).click();
+    }
+
+    async waitMessageDisappear(){
+        await this.snbMessage.last().isHidden();
     }
 
 }

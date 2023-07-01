@@ -6,24 +6,30 @@ const admin_STORAGE = './utils/auth/admin.json';
  */
 export default defineConfig({
   expect: {
-    timeout: 1000 * 30, // time out for checking expected
+    timeout: 1000 * 15, // time out for checking expected
   },
-  timeout: 1000*60*600,
+  timeout: 1000*30,
   globalTimeout: 1000*60*600, // time out for whole test run
   testMatch: ["**/*.ts"],
   globalSetup: './global.setup.ts', // setup before all test
   // globalTeardown: './global.teardown.ts', // cleanup after all test
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: 1,
+  retries: 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['monocart-reporter', {  
+        name: "My Test Report",
+        outputFile: './test-results/report.html'
+    }]
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     actionTimeout: 1000 * 60 * 2, // time out for each actions

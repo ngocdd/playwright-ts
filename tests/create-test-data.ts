@@ -52,7 +52,7 @@ test.skip('create questions for LO worker 1', async({page})=>{
           await homePage.inputQuestionExplanation(questionData[q]['explanation']);
           await homePage.saveAction();
         }
-        await homePage.backtoTopic();
+        // await homePage.backtoTopic();
       }
     }
   }
