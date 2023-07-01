@@ -20,7 +20,7 @@ jobs:
     #   run: npx playwright install --with-deps
 
     - name: set enviroments
-      run: echo 'export DOTENVENC_PASS=${{secrets.DOTENVENC_PASS}}' >> ~/.bashrc
+      env: DOTENVENC_PASS: ${{secrets.DOTENVENC_PASS}}
 
     # - name:  set 1
     #   run: echo "DOTENVENC_PASS=" >> $GITHUB_ENV
