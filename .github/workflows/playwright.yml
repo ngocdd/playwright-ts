@@ -22,14 +22,6 @@ jobs:
     - name: Set environment variable
       run: echo "DOTENVENC_PASS=${{ secrets.DOTENVENC_PASS }}" >> $GITHUB_ENV
 
-
-
-
-    - name: get_env
-      run: | 
-        source ~/.bashrc
-        echo $DOTENVENC_PASS
-
     - name: Run Playwright tests
       run: npx playwright test
 
