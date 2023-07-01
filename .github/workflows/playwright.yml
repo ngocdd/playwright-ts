@@ -21,8 +21,8 @@ jobs:
 
     - name: environment
       run: |
-      echo "export ENV=DEV" > ~/.bashrc
-      
+        echo "export ENV=DEV" > ~/.bashrc
+
     - name: get_env
       run: | 
         source ~/.bashrc
