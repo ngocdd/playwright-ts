@@ -1,6 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const admin_STORAGE = './utils/auth/admin.json';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */

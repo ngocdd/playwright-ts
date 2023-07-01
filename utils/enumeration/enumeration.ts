@@ -1,5 +1,3 @@
-
-
 export enum LOType {
     LO = "LEARNING_MATERIAL_LEARNING_OBJECTIVE",
     FlashCard = 'LEARNING_MATERIAL_FLASH_CARD',
