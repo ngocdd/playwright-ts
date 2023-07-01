@@ -17,7 +17,7 @@ This will install all the necessary packages specified in the package.json file.
 
 Then install playwright browsers by following commend:
 ```
-npx playwright install
+npx playwright install --with-deps
 ```
 
 ## Usage
@@ -80,5 +80,3 @@ dotenv: Loads environment variables from a file into process.env. Version: ^16.3
 dotenv-cli: A command-line utility for running scripts with environment variables loaded from a .env file. Version: ^7.2.1
 
 fs-extra: A package that provides additional file system methods beyond the built-in fs module. Version: ^11.1.1
-
-Please make sure to update the README.md file with any necessary changes or additional information.
