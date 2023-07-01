@@ -71,7 +71,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 @types/fs-extra: TypeScript definitions for the fs-extra module. Version: ^11.0.1
 ### Dependencies
-@tka85/dotenvenc: A package that provides encryption and decryption functionality for dotenv files. Version: ^4.0.2
+@tka85/dotenvenc: A package that provides encryption and decryption functionality for dotenv files. Version: ^4.0.2 https://github.com/tka85/dotenvenc
 
 @types/node: TypeScript definitions for Node.js. Version: ^20.3.1
 
