@@ -35,7 +35,7 @@ export default defineConfig({
     actionTimeout: 1000 * 60 * 2, // time out for each actions
     navigationTimeout: 1000 * 60 * 3, // time out for each navigation cation
     trace: 'on-first-retry',
-    headless:false,
+    headless:true,
     locale: 'en-GB',
     timezoneId: 'Asia/Saigon',
     // storageState: admin_STORAGE,
