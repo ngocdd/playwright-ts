@@ -26,7 +26,7 @@ jobs:
       run: echo "DOTENVENC_PASS=hahahaha" >> $GITHUB_ENV
 
     - name: test env
-      run: echo ${{enb.DOTENVENC_PASS}}
+      run: echo ${{env.DOTENVENC_PASS}}
 
     - name: Run Playwright tests
       run: npx playwright test
