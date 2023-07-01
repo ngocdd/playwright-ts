@@ -16,11 +16,13 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+    # - name: Install Playwright Browsers
+    #   run: npx playwright install --with-deps
 
     - name: set enviroments
       run: echo 'export DOTENVENC_PASS=${{env.DOTENVENC_PASS}}' >> ~/.bashrc
+
+    - name: test env
       run: echo ${{env.DOTENVENC_PASS}}
 
     - name: Run Playwright tests
