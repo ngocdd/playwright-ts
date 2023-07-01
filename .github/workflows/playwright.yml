@@ -20,7 +20,9 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: set enviroments
-      run: npx dotenv -v ENV=stg && npx dotenv -v DOTENVENC_KEY=${{env.DOTENVENC_KEY}}
+      run: |
+        npx dotenv -v ENV=stg
+        npx dotenv -v DOTENVENC_KEY=${{env.DOTENVENC_KEY}}
 
     - name: Run Playwright tests
       run: npx playwright test
