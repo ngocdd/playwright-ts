@@ -33,7 +33,6 @@ test.describe('test Book Management',async () => {
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    // await bookMngPage.searchBook(bookName);
     await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
 
@@ -49,7 +48,6 @@ test.describe('test Book Management',async () => {
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    // await bookMngPage.searchBook(bookName);
     await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
     await bookMngPage.addNewTopic(chapterName, topicName);
@@ -67,7 +65,6 @@ test.describe('test Book Management',async () => {
     // console.log(bookName);
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
-    // await bookMngPage.searchBook(bookName);
     await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
     await bookMngPage.addNewTopic(chapterName, topicName);
