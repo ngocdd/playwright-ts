@@ -21,12 +21,12 @@ jobs:
 
     - name: environment
       run: |
-        echo "export ENV=DEV" > ~/.bashrc
+        echo "export DOTENVENC_PASS=ngocdd" > ~/.bashrc
 
     - name: get_env
       run: | 
         source ~/.bashrc
-        echo $ENV
+        echo $DOTENVENC_PASS
 
     - name: Run Playwright tests
       run: npx playwright test
