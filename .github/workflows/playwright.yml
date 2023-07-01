@@ -22,8 +22,8 @@ jobs:
     - name: set enviroments
       run: echo 'export DOTENVENC_PASS=${{env.DOTENVENC_PASS}}' >> ~/.bashrc
 
-    - name:  set 1
-      run: echo "DOTENVENC_PASS=hahahaha" >> $GITHUB_ENV
+    # - name:  set 1
+    #   run: echo "DOTENVENC_PASS=" >> $GITHUB_ENV
 
     - name: test env
       run: echo ${{env.DOTENVENC_PASS}}
