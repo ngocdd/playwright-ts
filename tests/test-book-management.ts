@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Locator } from '@playwright/test';
 import BookManagementPage from '../page-objects/book-management-page';
 import { readJSONFile, generateUUID } from '../utils/data-provider/data-provider';
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration';
@@ -93,10 +93,36 @@ test.describe('test Book Management',async () => {
 
     await bookMngPage.moveChapter(chapterName1, MoveDirection.Down);
     await bookMngPage.moveChapter(chapterName3, MoveDirection.Up);
-    await page.pause();
     
-    // await expect(bookMngPage.snbMessage.last()).toHaveText('You have added chapter successfully');
+    
+    const listOriginalChapter = await bookMngPage.lstChapter.all();
+    let listElements = [];
+    for(let i =0; i> listOriginalChapter.length; i++){
+      const name = await listOriginalChapter[i].textContent();
+      listElements.push(name);
+    }
+    console.log(listElements);
     
   }); 
+
+  test('test move topic', async ({ page }) => {
+    let bookName = await generateUUID('Book');
+    let chapterName = await generateUUID('Chapter');
+    let topicName1 = await generateUUID('Topic1');
+    let topicName2 = await generateUUID('Topic2');
+
+    // console.log(bookName);
+    await bookMngPage.gotoBookManagement();
+    await bookMngPage.addNewBook(bookName);
+    await bookMngPage.gotoBookDetail(bookName);
+    await bookMngPage.addNewChapter(chapterName);
+    await bookMngPage.addNewTopic(chapterName, topicName1);
+    await bookMngPage.addNewTopic(chapterName, topicName2);
+
+    await bookMngPage.moveTopic(topicName1, MoveDirection.Down);
+    await bookMngPage.moveTopic(topicName1, MoveDirection.Up);
+  }); 
+
+
   
 })

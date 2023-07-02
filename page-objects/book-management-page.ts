@@ -39,7 +39,11 @@ export default class BookManagementPage{
     readonly mnuBookName: any;
     readonly btnMoveUpChapter: any;
     readonly btnMoveDownChapter: any;
-    readonly temp: any;
+    readonly btnMoveDownTopic: any;
+    readonly btnMoveUpTopic: any;
+    readonly lstTopic: any;
+    readonly lstChapter: any;
+
  
     // constructor
     constructor(page:Page){
@@ -79,6 +83,10 @@ export default class BookManagementPage{
         this.txtSearchBox = page.getByPlaceholder('Enter your keyword');
         this.btnMoveDownChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getByTestId('ChapterItem__moveDown')};
         this.btnMoveUpChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getByTestId('ChapterItem__moveUp')};
+        this.btnMoveDownTopic = (topicName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: topicName}).getByTestId('TopicItem__moveDown') };
+        this.btnMoveUpTopic = (topicName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: topicName}).getByTestId('TopicItem__moveUp') };
+        this.lstTopic = (chapterName: string) => {return page.getByTestId('ChapterItem_root').filter({hasText: chapterName}).getByTestId('TopicAccordion__name')};
+        this.lstChapter = page.getByTestId('ChapterItem_root');
     }   
 
 
@@ -207,8 +215,17 @@ export default class BookManagementPage{
         }else if(direction == MoveDirection.Up){
             await this.btnMoveUpChapter(chapterName).click();
         } 
-
     }
+
+    async moveTopic(topicName: string, direction: MoveDirection){
+        if(direction == MoveDirection.Down){
+            await this.btnMoveDownTopic(topicName).click();
+        }else if(direction ==  MoveDirection.Up){
+            await this.btnMoveUpTopic(topicName).click();
+        }
+    }
+
+
 
 
 }

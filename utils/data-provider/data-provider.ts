@@ -1,3 +1,4 @@
+import { Locator } from '@playwright/test';
 import * as fs from 'fs-extra';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -24,5 +25,12 @@ export function generateUUID(preFix?: string){
     }
 }
 
-// let aa = generateUUID('as');
-// console.log(aa);
+// export async function getListElements(Locators: ){
+//     let listElements: (string) [];
+//     listElements = [];
+//     for(let i =0; i < Elements.length; i++){
+//         const temp = await Elements[i].textContent();
+//         listElements.push(String(temp));
+//     };
+//     return listElements;
+// }
