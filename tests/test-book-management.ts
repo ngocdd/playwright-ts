@@ -113,7 +113,7 @@ test.describe('test Book Management',async () => {
     
   }); 
 
-  test('test move topic', async ({ page }) => {
+  test.only('test move topic', async ({ page }) => {
     // INITIAL
     let bookName = await generateUUID('Book');
     let chapterName = await generateUUID('Chapter');
