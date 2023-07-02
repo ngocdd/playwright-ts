@@ -77,7 +77,7 @@ test.describe('test Book Management',async () => {
   }); 
 
 
-  test.only('test move chapter', async ({ page }) => {
+  test('test move chapter', async ({ page }) => {
     // initial
     let bookName = await generateUUID('Book');
     let chapterName1 = await generateUUID('Chapter1');
@@ -97,7 +97,7 @@ test.describe('test Book Management',async () => {
     await bookMngPage.moveChapter(chapterName3, MoveDirection.Up);
     
     // Assertion
-    await expect(bookMngPage.btnMoveDownChapter(chapterName3)).toBeEnabled();
+    await expect(bookMngPage.btnMoveChapterDown(chapterName3)).toBeEnabled();
     const listOriginalChapter = await bookMngPage.lstChapter.all();
     // console.log(listOriginalChapter);
     
@@ -113,22 +113,41 @@ test.describe('test Book Management',async () => {
     
   }); 
 
-  test('test move topic', async ({ page }) => {
+  test.only('test move topic', async ({ page }) => {
+    // INITIAL
     let bookName = await generateUUID('Book');
     let chapterName = await generateUUID('Chapter');
     let topicName1 = await generateUUID('Topic1');
     let topicName2 = await generateUUID('Topic2');
+    let topicName3 = await generateUUID('Topic3');
 
-    // console.log(bookName);
+    // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
     await bookMngPage.gotoBookDetail(bookName);
     await bookMngPage.addNewChapter(chapterName);
     await bookMngPage.addNewTopic(chapterName, topicName1);
     await bookMngPage.addNewTopic(chapterName, topicName2);
+    await bookMngPage.addNewTopic(chapterName, topicName3);
 
+    //  STEPS
     await bookMngPage.moveTopic(topicName1, MoveDirection.Down);
-    await bookMngPage.moveTopic(topicName1, MoveDirection.Up);
+    await bookMngPage.moveTopic(topicName3, MoveDirection.Up);
+
+
+    // ASSERTION
+    await expect(await bookMngPage.btnMoveTopicUp(topicName3)).toBeEnabled();
+    const listOriginalChapter = await bookMngPage.lstTopic(chapterName).all();
+    
+    let afterMove = [];
+    for(let i =0; i < listOriginalChapter.length; i++){
+      const name = await listOriginalChapter[i].textContent();
+      afterMove.push(name);
+    }
+    await expect(afterMove[0]).toEqual(topicName2);
+    await expect(afterMove[1]).toEqual(topicName3);
+    await expect(afterMove[2]).toEqual(topicName1);
+
   }); 
 
 
