@@ -25,6 +25,9 @@ jobs:
     - name: Set headless variable
       run: echo "headless=true" >> $GITHUB_ENV
 
+    - name: Set test only variable
+      run: echo "test_only=true" >> $GITHUB_ENV
+
     - name: Run Playwright tests
       run: npx playwright test 
 
