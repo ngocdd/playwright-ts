@@ -34,7 +34,7 @@ export default defineConfig({
     actionTimeout: 1000*60*5, // time out for each actions
     navigationTimeout: 1000*60*5, // time out for each navigation cation
     trace: 'on-first-retry',
-    headless: false,
+    headless: process.env.headless ? true: false,
     locale: 'en-GB',
     timezoneId: 'Asia/Saigon',
     // testIdAttribute: 'data-value'

@@ -22,8 +22,11 @@ jobs:
     - name: Set environment variable
       run: echo "DOTENVENC_PASS=${{ secrets.DOTENVENC_PASS }}" >> $GITHUB_ENV
 
+    - name: Set headless variable
+    run: echo "headless=true" >> $GITHUB_ENV
+
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test 
 
     - uses: actions/upload-artifact@v3
       if: always()
