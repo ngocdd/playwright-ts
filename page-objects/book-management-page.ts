@@ -1,5 +1,5 @@
 import { Page, expect, Locator } from "@playwright/test";
-import {LOType} from "../utils/enumeration/enumeration"
+import {LOType, MoveDirection} from "../utils/enumeration/enumeration"
 
 export default class BookManagementPage{
     // list elements
@@ -37,6 +37,9 @@ export default class BookManagementPage{
     readonly snbMessage: Locator;
     readonly txtSearchBox: Locator;
     readonly mnuBookName: any;
+    readonly btnMoveUpChapter: any;
+    readonly btnMoveDownChapter: any;
+    readonly temp: any;
  
     // constructor
     constructor(page:Page){
@@ -74,6 +77,8 @@ export default class BookManagementPage{
         this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
         this.snbMessage = page.getByTestId('SnackbarBase__content');
         this.txtSearchBox = page.getByPlaceholder('Enter your keyword');
+        this.btnMoveDownChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getByTestId('ChapterItem__moveDown')};
+        this.btnMoveUpChapter = (chapterName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: `${chapterName}`}).getByTestId('ChapterItem__moveUp')};
     }   
 
 
@@ -194,6 +199,15 @@ export default class BookManagementPage{
         await this.txtSearchBox.focus();
         await this.txtSearchBox.press('Enter');
         await this.mnuBookName(bookName).click();
+    }
+
+    async moveChapter(chapterName: string, direction: MoveDirection){
+        if(direction == MoveDirection.Down){
+            await this.btnMoveDownChapter(chapterName).click();
+        }else if(direction == MoveDirection.Up){
+            await this.btnMoveUpChapter(chapterName).click();
+        } 
+
     }
 
 

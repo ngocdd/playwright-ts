@@ -5,3 +5,8 @@ export enum LOType {
     Exam = 'LEARNING_MATERIAL_EXAM_LO',
     Task = 'LEARNING_MATERIAL_TASK_ASSIGNMENT'
 }
+
+export enum MoveDirection {
+    Up = "Up",
+    Down = "Down"
+}

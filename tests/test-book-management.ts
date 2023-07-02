@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import BookManagementPage from '../page-objects/book-management-page';
 import { readJSONFile, generateUUID } from '../utils/data-provider/data-provider';
-import { LOType } from '../utils/enumeration/enumeration';
+import { LOType, MoveDirection } from '../utils/enumeration/enumeration';
 import LoginPage from '../page-objects/login-page';
 
 let loginPage : LoginPage;
@@ -74,6 +74,29 @@ test.describe('test Book Management',async () => {
     await expect(bookMngPage.snbMessage.last()).toHaveText('You have created a new LO successfully');
     await expect(bookMngPage.mnuLO(loName)).toHaveText(loName);
     // await page.pause();
+  }); 
+
+
+  test.only('test move chapter', async ({ page }) => {
+    let bookName = await generateUUID('Book');
+    let chapterName1 = await generateUUID('Chapter1');
+    let chapterName2 = await generateUUID('Chapter2');
+    let chapterName3 = await generateUUID('Chapter3');
+
+    // console.log(bookName);
+    await bookMngPage.gotoBookManagement();
+    await bookMngPage.addNewBook(bookName);
+    await bookMngPage.gotoBookDetail(bookName);
+    await bookMngPage.addNewChapter(chapterName1);
+    await bookMngPage.addNewChapter(chapterName2);
+    await bookMngPage.addNewChapter(chapterName3);
+
+    await bookMngPage.moveChapter(chapterName1, MoveDirection.Down);
+    await bookMngPage.moveChapter(chapterName3, MoveDirection.Up);
+    await page.pause();
+    
+    // await expect(bookMngPage.snbMessage.last()).toHaveText('You have added chapter successfully');
+    
   }); 
   
 })
