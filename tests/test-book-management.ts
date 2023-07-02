@@ -78,12 +78,13 @@ test.describe('test Book Management',async () => {
 
 
   test.only('test move chapter', async ({ page }) => {
+    // initial
     let bookName = await generateUUID('Book');
     let chapterName1 = await generateUUID('Chapter1');
     let chapterName2 = await generateUUID('Chapter2');
     let chapterName3 = await generateUUID('Chapter3');
 
-    // console.log(bookName);
+    // precondition
     await bookMngPage.gotoBookManagement();
     await bookMngPage.addNewBook(bookName);
     await bookMngPage.gotoBookDetail(bookName);
@@ -91,17 +92,24 @@ test.describe('test Book Management',async () => {
     await bookMngPage.addNewChapter(chapterName2);
     await bookMngPage.addNewChapter(chapterName3);
 
+    // steps
     await bookMngPage.moveChapter(chapterName1, MoveDirection.Down);
     await bookMngPage.moveChapter(chapterName3, MoveDirection.Up);
     
-    
+    // Assertion
+    await expect(bookMngPage.btnMoveDownChapter(chapterName3)).toBeEnabled();
     const listOriginalChapter = await bookMngPage.lstChapter.all();
-    let listElements = [];
-    for(let i =0; i> listOriginalChapter.length; i++){
+    // console.log(listOriginalChapter);
+    
+    let afterMove = [];
+    for(let i =0; i < listOriginalChapter.length; i++){
       const name = await listOriginalChapter[i].textContent();
-      listElements.push(name);
+      afterMove.push(name);
     }
-    console.log(listElements);
+    await expect(afterMove[0]).toEqual(chapterName2);
+    await expect(afterMove[1]).toEqual(chapterName3);
+    await expect(afterMove[2]).toEqual(chapterName1);
+    // console.log(afterMove);
     
   }); 
 

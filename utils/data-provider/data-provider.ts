@@ -24,13 +24,3 @@ export function generateUUID(preFix?: string){
         return myuuid
     }
 }
-
-// export async function getListElements(Locators: ){
-//     let listElements: (string) [];
-//     listElements = [];
-//     for(let i =0; i < Elements.length; i++){
-//         const temp = await Elements[i].textContent();
-//         listElements.push(String(temp));
-//     };
-//     return listElements;
-// }

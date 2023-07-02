@@ -86,7 +86,7 @@ export default class BookManagementPage{
         this.btnMoveDownTopic = (topicName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: topicName}).getByTestId('TopicItem__moveDown') };
         this.btnMoveUpTopic = (topicName: string) => {return page.getByTestId('AccordionSummaryBase__root').filter({hasText: topicName}).getByTestId('TopicItem__moveUp') };
         this.lstTopic = (chapterName: string) => {return page.getByTestId('ChapterItem_root').filter({hasText: chapterName}).getByTestId('TopicAccordion__name')};
-        this.lstChapter = page.getByTestId('ChapterItem_root');
+        this.lstChapter = page.getByTestId('ChapterAccordion__name');
     }   
 
 
@@ -212,7 +212,8 @@ export default class BookManagementPage{
     async moveChapter(chapterName: string, direction: MoveDirection){
         if(direction == MoveDirection.Down){
             await this.btnMoveDownChapter(chapterName).click();
-        }else if(direction == MoveDirection.Up){
+        }
+        if(direction == MoveDirection.Up){
             await this.btnMoveUpChapter(chapterName).click();
         } 
     }
@@ -220,7 +221,8 @@ export default class BookManagementPage{
     async moveTopic(topicName: string, direction: MoveDirection){
         if(direction == MoveDirection.Down){
             await this.btnMoveDownTopic(topicName).click();
-        }else if(direction ==  MoveDirection.Up){
+        }
+        if(direction ==  MoveDirection.Up){
             await this.btnMoveUpTopic(topicName).click();
         }
     }
