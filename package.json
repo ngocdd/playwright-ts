@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "encrypt-stg-env": "./node_modules/.bin/dotenvenc -e -i ./utils/env/.env.stg -o ./utils/env/.stg.enc",
-    "encrypt-uat-env": "./node_modules/.bin/dotenvenc -e -i ./utils/env/.env.uat -o ./utils/env/.uat.enc",
-    "encrypt-prod-env": "./node_modules/.bin/dotenvenc -e -i ./utils/env/.env.prod -o ./utils/env/.prod.enc",
+    "encrypt-stg-env": "npx dotenvenc -e -i ./utils/env/.env.stg -o ./utils/env/.stg.enc",
+    "encrypt-uat-env": "npx dotenvenc -e -i ./utils/env/.env.uat -o ./utils/env/.uat.enc",
+    "encrypt-prod-env": "npx dotenvenc -e -i ./utils/env/.env.prod -o ./utils/env/.prod.enc",
     "encrypt-envs": "npm run encrypt-stg-env && npm run encrypt-uat-env && npm run encrypt-prod-env",
     "test-stg": "npx dotenv -v ENV=stg npx playwright test",
     "test-uat": "npx dotenv -v ENV=uat npx playwright test",
