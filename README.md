@@ -56,6 +56,16 @@ npm run encrypt-env
 ## Running Tests
 To run the tests for a specific environment, you can use the provided test scripts. These scripts utilize the dotenv package to load the appropriate environment variables before running the tests.
 
+Before run test we need to set `DOTENVENC_PASS` environment variable by following command:
+```
+export DOTENVENC_PASS="input the password here"
+```
+then update bashrc source by following command:
+```
+source ~/.bashrc
+```
+
+
 To execute the tests using the staging environment variables, run the following command:
 
 ```
