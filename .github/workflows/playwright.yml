@@ -19,13 +19,13 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Set environment variable
+    - name: Set DOTENVENC_PASS variable
       run: echo "DOTENVENC_PASS=${{ secrets.DOTENVENC_PASS }}" >> $GITHUB_ENV
 
-    - name: Set headless variable
+    - name: Set config to headless mode
       run: echo "headless=true" >> $GITHUB_ENV
 
-    - name: Set test only variable
+    - name: set check test.only
       run: echo "test_only=true" >> $GITHUB_ENV
 
     - name: Run Playwright tests
