@@ -2,6 +2,15 @@
 
 This repository contains automated tests written in TypeScript using Playwright. Playwright is a Node.js library that allows you to automate actions in web browsers such as Chrome, Firefox, and Safari.
 
+## Author
+
+- **Name:** [Dang Dinh Ngoc]
+- **Email:** [ngocdd94@gmail.com]
+- **Blog:** [https://dangngocblogs.wordpress.com/]
+- **GitHub:** [ngocdd]
+- **LinkedIn:** [https://www.linkedin.com/in/ngocdd94/]
+
+
 ## Installation
 To get started, clone this repository to your local machine using the following command:
 
