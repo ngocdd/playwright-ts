@@ -84,7 +84,7 @@ These commands set the ENV variable to uat and prod respectively before running 
 ## License
 This project is licensed under the ISC License. See the LICENSE file for details.
 
-# Dependencies
+## Dependencies
 ## Development Dependencies
 @playwright/test: A test runner for Playwright that allows you to write and execute tests in a simple and concise manner. Version: ^1.35.1
 

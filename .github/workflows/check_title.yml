@@ -1,0 +1,16 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  check-PR-and-commit-title:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+  
+    steps:
+      - name: title-verifier
+        uses: Mustafakhn/pr-title-verifier-action@v2
+    
