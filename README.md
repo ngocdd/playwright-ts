@@ -4,7 +4,7 @@ This repository contains automated tests written in TypeScript using Playwright.
 
 ## Author
 
-- **Name:** [Dang Dinh Ngoc]
+- **Name:** [Oliver - Dang Dinh Ngoc]
 - **Email:** [ngocdd94@gmail.com]
 - **Blog:** [https://dangngocblogs.wordpress.com/]
 - **GitHub:** [https://github.com/ngocdd]
