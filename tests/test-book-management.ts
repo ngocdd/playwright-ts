@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-03 09:45:24                               *
+ * @LastEditDate          : 2023-07-03 17:35:14                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test';
