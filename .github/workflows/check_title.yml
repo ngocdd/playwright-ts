@@ -7,6 +7,9 @@ on:
 jobs:
   check-PR-and-commit-title:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+  
     steps:
       - name: title-verifier
         uses: Mustafakhn/pr-title-verifier-action@v2
