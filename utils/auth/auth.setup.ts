@@ -1,3 +1,10 @@
+/******************************************************************************
+ * @Author                : ngocdd<ngocdd94@gmail.com>                        *
+ * @CreatedDate           : 2023-07-03 09:44:26                               *
+ * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
+ * @LastEditDate          : 2023-07-03 09:45:22                               *
+ *****************************************************************************/
+
 import { Browser, Page, chromium } from "@playwright/test";
 import LoginPage from "../../page-objects/login-page";
 

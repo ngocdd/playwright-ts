@@ -1,3 +1,10 @@
+/******************************************************************************
+ * @Author                : ngocdd<ngocdd94@gmail.com>                        *
+ * @CreatedDate           : 2023-07-03 09:43:05                               *
+ * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
+ * @LastEditDate          : 2023-07-03 09:55:42                               *
+ *****************************************************************************/
+
 import { Page, expect, Locator } from "@playwright/test";
 import {LOType, MoveDirection} from "../utils/enumeration/enumeration"
 

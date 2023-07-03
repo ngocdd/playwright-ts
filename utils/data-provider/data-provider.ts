@@ -1,4 +1,11 @@
-import { Locator } from '@playwright/test';
+/******************************************************************************
+ * @Author                : ngocdd<ngocdd94@gmail.com>                        *
+ * @CreatedDate           : 2023-07-03 09:44:35                               *
+ * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
+ * @LastEditDate          : 2023-07-03 09:44:36                               *
+ *****************************************************************************/
+
+
 import * as fs from 'fs-extra';
 import { v4 as uuidv4 } from 'uuid';
 

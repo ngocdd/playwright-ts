@@ -1,3 +1,10 @@
+/******************************************************************************
+ * @Author                : ngocdd<ngocdd94@gmail.com>                        *
+ * @CreatedDate           : 2023-07-03 09:43:40                               *
+ * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
+ * @LastEditDate          : 2023-07-03 09:43:56                               *
+ *****************************************************************************/
+
 import { Page, Locator, expect } from "@playwright/test";
 import HomePage from "./book-management-page";
 
