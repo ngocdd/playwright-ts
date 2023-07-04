@@ -4,4 +4,3 @@ node_modules/
 /playwright/.cache/
 **/auth/*.json
 **/**/.env.*
-!**/**/.env.local

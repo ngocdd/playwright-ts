@@ -2,13 +2,13 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:43:05                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-04 15:54:44                               *
+ * @LastEditDate          : 2023-07-04 15:55:23                               *
  *****************************************************************************/
 
 import { Page, expect, Locator } from "@playwright/test";
 import {LOType, MoveDirection} from "../utils/enumeration/enumeration"
 
-export default class BookManagementPage{
+export default class BookManagementPageV2{
     // list elements
     readonly page:Page;
     readonly mnuLearningMaterial: Locator;

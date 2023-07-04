@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-03 17:35:14                               *
+ * @LastEditDate          : 2023-07-03 22:17:53                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test';
@@ -164,11 +164,13 @@ test.describe('test Book Management',async () => {
       const name = await listOriginalChapter[i].textContent();
       afterMove.push(name);
     }
+
     await expect(afterMove[0]).toEqual(topicName2);
     await expect(afterMove[1]).toEqual(topicName3);
     await expect(afterMove[2]).toEqual(topicName1);
   }); 
 
+  
 
   
 })
