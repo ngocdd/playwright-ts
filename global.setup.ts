@@ -5,15 +5,15 @@
  * @LastEditDate          : 2023-07-03 09:44:57                               *
  *****************************************************************************/
 
-import authenticate from "./utils/auth/auth.setup";
-import { setEnv } from './utils/env/env';
+import authenticate from './utils/auth/auth.setup'
+import { setEnv } from './utils/env/env'
 
 async function globalSetup() {
-    // setup env for run test
-    await setEnv();
-    
-    // get authentication for all tests
-    // await authenticate();
+  // setup env for run test
+  await setEnv()
+
+  // get authentication for all tests
+  // await authenticate();
 }
 
-export default globalSetup;
+export default globalSetup

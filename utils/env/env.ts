@@ -2,18 +2,17 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:42:33                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-04 14:56:36                               *
+ * @LastEditDate          : 2023-07-05 20:25:40                               *
  *****************************************************************************/
 
-export function setEnv (){
+export function setEnv() {
+  // default ENV is UAT
+  if (!process.env.ENV) {
+    process.env['ENV'] = 'stg'
+  }
 
-    // default ENV is UAT
-    if(!process.env.ENV){
-        process.env['ENV'] = 'local';    
-    }
-    
-
-    // decrypt en
-    require('@tka85/dotenvenc').decrypt({ encryptedFile: `./utils/env/.${process.env.ENV}.enc`});
-
+  // decrypt en
+  require('@tka85/dotenvenc').decrypt({
+    encryptedFile: `./utils/env/.${process.env.ENV}.enc`,
+  })
 }
