@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-03 22:17:53                               *
+ * @LastEditDate          : 2023-07-05 20:43:37                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
@@ -27,7 +27,7 @@ test.describe('test Book Management', async () => {
     await loginPage.login()
   })
 
-  test('test create new book', async ({ page }) => {
+  test.only('test create new book', async ({ page }) => {
     // INITIAL
     let bookName = await generateUUID('Book')
 
@@ -38,7 +38,7 @@ test.describe('test Book Management', async () => {
 
     // ASSERTIONS
     await expect(bookMngPage.snbMessage).toHaveText(
-      'You have created a new book successfully'
+      'You have created a new book successfully1'
     )
     await expect(bookMngPage.mnuBookName(bookName)).toContainText(bookName)
   })
