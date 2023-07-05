@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:43:05                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-05 20:27:43                               *
+ * @LastEditDate          : 2023-07-05 20:29:53                               *
  *****************************************************************************/
 
 import { Page, expect, Locator } from '@playwright/test'
@@ -58,7 +58,7 @@ export default class BookManagementPage {
       .getByTestId('MenuGroup__root')
       .getByText('Learning Material')
     this.tblBook = page.getByTestId('TableBaseBody__root')
-    this.mnuBookManagement = page.getByLabel('Book (LMS 2.0)', {
+    this.mnuBookManagement = page.getByLabel('Book', {
       exact: true,
     })
     this.mnuBookName = (bookName: string) => {
@@ -181,7 +181,7 @@ export default class BookManagementPage {
 
   //
   async gotoBookManagement() {
-    // await this.mnuLearningMaterial.click()
+    await this.mnuLearningMaterial.click()
     await this.mnuBookManagement.click()
     // this.waitMessageDisappear();
   }
