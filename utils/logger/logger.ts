@@ -2,32 +2,30 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-05 20:02:29                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-05 20:37:29                               *
+ * @LastEditDate          : 2023-07-07 00:02:59                               *
  *****************************************************************************/
 
-import winston = require('winston')
+import * as winston from 'winston'
 
 const Logger = winston.createLogger({
   transports: [
+    // logger in console
     new winston.transports.Console({
       format: winston.format.combine(
         winston.format.uncolorize({ level: true, message: true, raw: true }),
         winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
         winston.format.align(),
-        winston.format.printf(
-          (info) => `${info.timestamp} ${info.level}: ${info.message}`
-        )
+        winston.format.printf((info) => `${info.timestamp} ${info.level}:${info.message}`)
       ),
     }),
+    // logger into a file
     new winston.transports.File({
-      filename: './test-results/execution.log',
+      filename: './logs/logger.log',
       format: winston.format.combine(
         winston.format.uncolorize({ level: true, message: true, raw: true }),
         winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
         winston.format.align(),
-        winston.format.printf(
-          (info) => `${info.timestamp} ${info.level}: ${info.message}`
-        )
+        winston.format.printf((info) => `${info.timestamp} ${info.level}: ${info.message}`)
       ),
     }),
   ],
