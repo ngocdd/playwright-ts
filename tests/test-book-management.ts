@@ -2,15 +2,12 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-06 23:17:42                               *
+ * @LastEditDate          : 2023-07-07 00:16:07                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
 import BookManagementPage from '../page-objects/book-management-page'
-import {
-  readJSONFile,
-  generateUUID,
-} from '../utils/data-provider/data-provider'
+import { readJSONFile, generateUUID } from '../utils/data-provider/data-provider'
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration'
 import LoginPage from '../page-objects/login-page'
 
@@ -27,7 +24,7 @@ test.describe('test Book Management', async () => {
     await loginPage.login()
   })
 
-  test.only('test create new book', async ({ page }) => {
+  test('test create new book', async ({ page }) => {
     // INITIAL
     let bookName = await generateUUID('Book')
 
@@ -37,9 +34,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.addNewBook(bookName)
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage).toHaveText(
-      'You have created a new book successfully'
-    )
+    await expect(bookMngPage.snbMessage).toHaveText('You have created a new book successfully')
     await expect(bookMngPage.mnuBookName(bookName)).toContainText(bookName)
   })
 
@@ -57,9 +52,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.addNewChapter(chapterName)
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage.last()).toHaveText(
-      'You have added chapter successfully'
-    )
+    await expect(bookMngPage.snbMessage.last()).toHaveText('You have added chapter successfully')
     await expect(bookMngPage.mnuChapter(chapterName)).toHaveText(chapterName)
   })
 
@@ -79,9 +72,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.addNewTopic(chapterName, topicName)
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage.last()).toHaveText(
-      'You have added topic successfully'
-    )
+    await expect(bookMngPage.snbMessage.last()).toHaveText('You have added topic successfully')
     await expect(bookMngPage.mnuTopic(topicName)).toHaveText(topicName)
   })
 
@@ -104,9 +95,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.backtoTopicDetail()
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage.last()).toHaveText(
-      'You have created a new LO successfully'
-    )
+    await expect(bookMngPage.snbMessage.last()).toHaveText('You have created a new LO successfully')
     await expect(bookMngPage.mnuLO(loName)).toHaveText(loName)
   })
 
