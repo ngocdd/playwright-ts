@@ -1,4 +1,4 @@
-name: check TS Lints
+name: workflow
 on: [push]
 jobs:
   job:
