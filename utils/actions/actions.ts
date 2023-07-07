@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 17:31:21                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-07 00:04:13                               *
+ * @LastEditDate          : 2023-07-07 09:01:10                               *
  *****************************************************************************/
 
 import { test, Page, Locator } from '@playwright/test'
@@ -25,10 +25,14 @@ export default class Actions {
     })
   }
 
-  public async click(locator: Locator, description: string) {
+  public async click(locator: any, description: string, locatorText?: string) {
     await test.step(description, async () => {
       Logger.info(description)
-      await locator.click()
+      if (locatorText) {
+        await locator(locatorText).click()
+      } else {
+        await locator.click()
+      }
     })
   }
 }
