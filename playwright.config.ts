@@ -1,3 +1,10 @@
+/******************************************************************************
+ * @Author                : ngocdd<ngocdd94@gmail.com>                        *
+ * @CreatedDate           : 2023-07-07 22:45:08                               *
+ * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
+ * @LastEditDate          : 2023-07-07 22:52:40                               *
+ *****************************************************************************/
+
 import { defineConfig, devices } from '@playwright/test'
 
 /**
@@ -29,6 +36,9 @@ export default defineConfig({
       {
         name: 'My Test Report',
         outputFile: './test-results/report.html',
+        traceViewerUrl: 'https://trace.playwright.dev/?trace={traceUrl}',
+        logging: 'info',
+        trend: './test-results/report.json',
       },
     ],
   ],
