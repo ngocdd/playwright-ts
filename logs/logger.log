@@ -1249,3 +1249,122 @@
 2023-07-08 08:01:05 info: 	worker 0: input password
 2023-07-08 08:01:05 info: 	worker 0: tap on login button
 2023-07-08 08:01:05 info: 	worker 0: open Learning Material menu
+2023-07-08 08:01:15 info: 	worker 1: open book management
+2023-07-08 08:01:15 info: 	worker 1: tap on add new book button
+2023-07-08 08:01:16 info: 	worker 0: open book management
+2023-07-08 08:01:16 info: 	worker 0: tap on add new book button
+2023-07-08 08:01:18 info: 	worker 1: input book name: Book---e39fdc86-294a-4265-837b-f9cef7d2aca0
+2023-07-08 08:01:18 info: 	worker 1: tap on save button
+2023-07-08 08:01:18 info: 	worker 1: click on book name Book---e39fdc86-294a-4265-837b-f9cef7d2aca0
+2023-07-08 08:01:19 info: 	worker 0: input book name: Book---13e852b4-afa7-4bc3-a186-0425b1cf5773
+2023-07-08 08:01:19 info: 	worker 0: tap on save button
+2023-07-08 08:02:14 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:02:14 info: 	worker 1: input chapter name is Chapter---8690cefb-389b-4ff9-89d3-2001533b134c
+2023-07-08 08:02:14 info: 	worker 1: tap on save chapter button
+2023-07-08 08:02:15 info: 	worker 1: go to login page
+2023-07-08 08:02:16 info: 	worker 1: tap on Language options
+2023-07-08 08:02:18 info: 	worker 1: select Eng language
+2023-07-08 08:02:18 info: 	worker 1: input ORG_ID
+2023-07-08 08:02:18 info: 	worker 1: input user name
+2023-07-08 08:02:18 info: 	worker 1: input password
+2023-07-08 08:02:18 info: 	worker 1: tap on login button
+2023-07-08 08:02:18 info: 	worker 1: open Learning Material menu
+2023-07-08 08:02:26 info: 	worker 1: open book management
+2023-07-08 08:02:27 info: 	worker 1: tap on add new book button
+2023-07-08 08:02:30 info: 	worker 1: input book name: Book---2d66acef-0c82-46cc-964a-921e5e06403b
+2023-07-08 08:02:30 info: 	worker 1: tap on save button
+2023-07-08 08:02:30 info: 	worker 1: click on book name Book---2d66acef-0c82-46cc-964a-921e5e06403b
+2023-07-08 08:02:31 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:02:31 info: 	worker 1: input chapter name is Chapter---9d5b6d4c-874a-4dc8-a0bb-7acf3dce804a
+2023-07-08 08:02:31 info: 	worker 1: tap on save chapter button
+2023-07-08 08:02:31 info: 	worker 1: click on add Topic for chapter Chapter---9d5b6d4c-874a-4dc8-a0bb-7acf3dce804a
+2023-07-08 08:02:32 info: 	worker 1: input topic name is Topic---adc95303-1870-4bb6-afc9-5f8ad9f99177
+2023-07-08 08:02:32 info: 	worker 1: tap on save button
+2023-07-08 08:02:33 info: 	worker 1: go to login page
+2023-07-08 08:02:34 info: 	worker 1: tap on Language options
+2023-07-08 08:02:36 info: 	worker 1: select Eng language
+2023-07-08 08:02:36 info: 	worker 1: input ORG_ID
+2023-07-08 08:02:36 info: 	worker 1: input user name
+2023-07-08 08:02:36 info: 	worker 1: input password
+2023-07-08 08:02:36 info: 	worker 1: tap on login button
+2023-07-08 08:02:36 info: 	worker 1: open Learning Material menu
+2023-07-08 08:02:45 info: 	worker 1: open book management
+2023-07-08 08:02:45 info: 	worker 1: tap on add new book button
+2023-07-08 08:02:47 info: 	worker 1: input book name: Book---017ddc6d-9e1e-4e41-943b-e872463dd161
+2023-07-08 08:02:47 info: 	worker 1: tap on save button
+2023-07-08 08:02:47 info: 	worker 1: click on book name Book---017ddc6d-9e1e-4e41-943b-e872463dd161
+2023-07-08 08:02:48 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:02:49 info: 	worker 1: input chapter name is Chapter---2733b3a6-4805-4c24-9d03-2bad574548f8
+2023-07-08 08:02:49 info: 	worker 1: tap on save chapter button
+2023-07-08 08:02:49 info: 	worker 1: click on add Topic for chapter Chapter---2733b3a6-4805-4c24-9d03-2bad574548f8
+2023-07-08 08:02:50 info: 	worker 1: input topic name is Topic---b5b0d376-003e-44fd-8791-36afdece5cd6
+2023-07-08 08:02:50 info: 	worker 1: tap on save button
+2023-07-08 08:02:50 info: 	worker 1: click on add LO button
+2023-07-08 08:02:50 info: 	worker 1: select dropdown list LO
+2023-07-08 08:02:50 info: 	worker 1: select LO type is LEARNING_MATERIAL_LEARNING_OBJECTIVE
+2023-07-08 08:02:51 info: 	worker 1: input LO name is LO---37b701b7-da17-49e3-a02c-467891fa581b
+2023-07-08 08:02:51 info: 	worker 1: tap on save button
+2023-07-08 08:02:51 info: 	worker 1: click into topic on breadcum
+2023-07-08 08:02:52 info: 	worker 1: go to login page
+2023-07-08 08:02:53 info: 	worker 1: tap on Language options
+2023-07-08 08:02:55 info: 	worker 1: select Eng language
+2023-07-08 08:02:55 info: 	worker 1: input ORG_ID
+2023-07-08 08:02:55 info: 	worker 1: input user name
+2023-07-08 08:02:55 info: 	worker 1: input password
+2023-07-08 08:02:55 info: 	worker 1: tap on login button
+2023-07-08 08:02:55 info: 	worker 1: open Learning Material menu
+2023-07-08 08:03:06 info: 	worker 1: open book management
+2023-07-08 08:03:06 info: 	worker 1: tap on add new book button
+2023-07-08 08:03:09 info: 	worker 1: input book name: Book---52b977f2-522d-469e-a5b2-b47b3528155d
+2023-07-08 08:03:09 info: 	worker 1: tap on save button
+2023-07-08 08:03:09 info: 	worker 1: click on book name Book---52b977f2-522d-469e-a5b2-b47b3528155d
+2023-07-08 08:03:10 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:03:10 info: 	worker 1: input chapter name is Chapter1---8bb2168c-8321-4c40-9d7b-fdfe0c8ffd7c
+2023-07-08 08:03:10 info: 	worker 1: tap on save chapter button
+2023-07-08 08:03:10 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:03:11 info: 	worker 1: input chapter name is Chapter2---beaeae5b-bbac-472f-9405-331b9ea2e122
+2023-07-08 08:03:11 info: 	worker 1: tap on save chapter button
+2023-07-08 08:03:11 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:03:11 info: 	worker 1: input chapter name is Chapter3---8e80c4eb-7bc1-4e1d-9d55-fe89c7a7db7b
+2023-07-08 08:03:11 info: 	worker 1: tap on save chapter button
+2023-07-08 08:03:11 info: 	worker 1: tap move move chapter Chapter1---8bb2168c-8321-4c40-9d7b-fdfe0c8ffd7c down
+2023-07-08 08:03:11 info: 	worker 1: tap move move chapter Chapter3---8e80c4eb-7bc1-4e1d-9d55-fe89c7a7db7b up
+2023-07-08 08:03:12 info: 	worker 1: go to login page
+2023-07-08 08:03:13 info: 	worker 1: tap on Language options
+2023-07-08 08:03:14 info: 	worker 1: select Eng language
+2023-07-08 08:03:15 info: 	worker 1: input ORG_ID
+2023-07-08 08:03:15 info: 	worker 1: input user name
+2023-07-08 08:03:15 info: 	worker 1: input password
+2023-07-08 08:03:15 info: 	worker 1: tap on login button
+2023-07-08 08:03:15 info: 	worker 1: open Learning Material menu
+2023-07-08 08:03:20 info: 	worker 2: go to login page
+2023-07-08 08:03:21 info: 	worker 2: tap on Language options
+2023-07-08 08:03:23 info: 	worker 2: select Eng language
+2023-07-08 08:03:23 info: 	worker 2: input ORG_ID
+2023-07-08 08:03:23 info: 	worker 2: input user name
+2023-07-08 08:03:23 info: 	worker 2: input password
+2023-07-08 08:03:23 info: 	worker 2: tap on login button
+2023-07-08 08:03:23 info: 	worker 2: open Learning Material menu
+2023-07-08 08:03:24 info: 	worker 1: open book management
+2023-07-08 08:03:24 info: 	worker 1: tap on add new book button
+2023-07-08 08:03:27 info: 	worker 1: input book name: Book---5e24dbf2-f5a2-4d7b-8365-1097d67928ec
+2023-07-08 08:03:27 info: 	worker 1: tap on save button
+2023-07-08 08:03:27 info: 	worker 1: click on book name Book---5e24dbf2-f5a2-4d7b-8365-1097d67928ec
+2023-07-08 08:03:28 info: 	worker 1:  tap on add chapter button
+2023-07-08 08:03:28 info: 	worker 1: input chapter name is Chapter---e38fc09b-6e73-4fde-a43e-b3665b8919bf
+2023-07-08 08:03:28 info: 	worker 1: tap on save chapter button
+2023-07-08 08:03:28 info: 	worker 1: click on add Topic for chapter Chapter---e38fc09b-6e73-4fde-a43e-b3665b8919bf
+2023-07-08 08:03:29 info: 	worker 1: input topic name is Topic1---3400e49a-14ed-4721-94ca-fad704ec9363
+2023-07-08 08:03:29 info: 	worker 1: tap on save button
+2023-07-08 08:03:29 info: 	worker 1: click on add Topic for chapter Chapter---e38fc09b-6e73-4fde-a43e-b3665b8919bf
+2023-07-08 08:03:29 info: 	worker 1: input topic name is Topic2---25cdf3fc-25d9-45cd-8072-bc660cef7913
+2023-07-08 08:03:29 info: 	worker 1: tap on save button
+2023-07-08 08:03:30 info: 	worker 1: click on add Topic for chapter Chapter---e38fc09b-6e73-4fde-a43e-b3665b8919bf
+2023-07-08 08:03:30 info: 	worker 1: input topic name is Topic3---56250637-aa37-4554-a258-0b284c223269
+2023-07-08 08:03:30 info: 	worker 1: tap on save button
+2023-07-08 08:03:30 info: 	worker 1: click on move Topic Topic1---3400e49a-14ed-4721-94ca-fad704ec9363 down
+2023-07-08 08:03:30 info: 	worker 1: click on move Topic Topic3---56250637-aa37-4554-a258-0b284c223269 up
+2023-07-08 08:03:31 info: 	worker 2: open book management
+2023-07-08 08:03:32 info: 	worker 2: tap on add new book button
+2023-07-08 08:03:35 info: 	worker 2: input book name: Book---272eea5b-e61e-4590-876f-af2a1fb51981
+2023-07-08 08:03:35 info: 	worker 2: tap on save button
