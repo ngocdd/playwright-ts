@@ -1233,3 +1233,19 @@
 2023-07-07 23:19:07 info: 	worker 1: tap on save button
 2023-07-07 23:19:07 info: 	worker 1: click on move Topic Topic1---07ce26dc-3071-4cce-a343-c4a75c48428d down
 2023-07-07 23:19:07 info: 	worker 1: click on move Topic Topic3---ac26632b-7b71-4e02-b3db-ff4542c4aaa0 up
+2023-07-08 08:01:01 info: 	worker 1: go to login page
+2023-07-08 08:01:01 info: 	worker 0: go to login page
+2023-07-08 08:01:02 info: 	worker 1: tap on Language options
+2023-07-08 08:01:02 info: 	worker 0: tap on Language options
+2023-07-08 08:01:05 info: 	worker 1: select Eng language
+2023-07-08 08:01:05 info: 	worker 1: input ORG_ID
+2023-07-08 08:01:05 info: 	worker 1: input user name
+2023-07-08 08:01:05 info: 	worker 1: input password
+2023-07-08 08:01:05 info: 	worker 1: tap on login button
+2023-07-08 08:01:05 info: 	worker 0: select Eng language
+2023-07-08 08:01:05 info: 	worker 1: open Learning Material menu
+2023-07-08 08:01:05 info: 	worker 0: input ORG_ID
+2023-07-08 08:01:05 info: 	worker 0: input user name
+2023-07-08 08:01:05 info: 	worker 0: input password
+2023-07-08 08:01:05 info: 	worker 0: tap on login button
+2023-07-08 08:01:05 info: 	worker 0: open Learning Material menu
