@@ -2,16 +2,19 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:43:05                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-07 22:55:07                               *
+ * @LastEditDate          : 2023-07-09 22:28:04                               *
  *****************************************************************************/
 
 import { Page, expect, Locator } from '@playwright/test'
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration'
 import Actions from '../utils/actions/actions'
+import Asserts from '../utils/actions/asserts'
 
-export default class BookManagementPage extends Actions {
+export default class BookManagementPage {
   // list elements
   readonly page: Page
+  readonly actions: Actions
+  readonly asserts: Asserts
   readonly mnuLearningMaterial: Locator
   readonly tblBook: Locator
   readonly mnuBookManagement: Locator
@@ -54,8 +57,9 @@ export default class BookManagementPage extends Actions {
 
   // constructor
   constructor(page: Page) {
-    super(page)
     this.page = page
+    this.actions = new Actions(page)
+    this.asserts = new Asserts(page)
     this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material')
     this.tblBook = page.getByTestId('TableBaseBody__root')
     this.mnuBookManagement = page.getByLabel('Book', {
@@ -160,18 +164,18 @@ export default class BookManagementPage extends Actions {
 
   //
   async gotoBookManagement() {
-    await this.click(this.mnuLearningMaterial, 'open Learning Material menu')
-    await this.click(this.mnuBookManagement, 'open book management')
+    await this.actions.click(this.mnuLearningMaterial, 'open Learning Material menu')
+    await this.actions.click(this.mnuBookManagement, 'open book management')
   }
 
   async addNewBook(bookName: string) {
-    await this.click(this.btnAddBook, 'tap on add new book button')
-    await this.input(this.txtBookName, bookName, `input book name: ${bookName}`)
-    await this.click(this.btnSave, 'tap on save button')
+    await this.actions.click(this.btnAddBook, 'tap on add new book button')
+    await this.actions.input(this.txtBookName, bookName, `input book name: ${bookName}`)
+    await this.actions.click(this.btnSave, 'tap on save button')
   }
 
   async gotoBookDetail(bookName: string) {
-    await this.click(this.mnuBookName(bookName), `click on book name ${bookName}`)
+    await this.actions.click(this.mnuBookName(bookName), `click on book name ${bookName}`)
   }
 
   async gotoChapterDetail(chapterName: string) {
@@ -179,7 +183,7 @@ export default class BookManagementPage extends Actions {
     if (chapterExpandResult == 'true') {
       // do nothing
     } else {
-      await this.click(this.mnuChapter, `click on chapter ${chapterName}`)
+      await this.actions.click(this.mnuChapter, `click on chapter ${chapterName}`)
     }
   }
 
@@ -188,51 +192,51 @@ export default class BookManagementPage extends Actions {
     if (chapterExpandResult == 'true') {
       // do nothing
     } else {
-      await this.click(this.mnuTopic, `click on topic name ${topicName}`)
+      await this.actions.click(this.mnuTopic, `click on topic name ${topicName}`)
     }
   }
 
   async gotoLosDetail(loName: string) {
-    await this.click(this.mnuLO, `click on LO ${loName}`)
+    await this.actions.click(this.mnuLO, `click on LO ${loName}`)
   }
 
   async addNewChapter(chapterName: string) {
-    await this.click(this.btnAddChapter, ' tap on add chapter button')
-    await this.input(this.txtChapterName, chapterName, `input chapter name is ${chapterName}`)
-    await this.click(this.btnChapterSave, 'tap on save chapter button')
+    await this.actions.click(this.btnAddChapter, ' tap on add chapter button')
+    await this.actions.input(this.txtChapterName, chapterName, `input chapter name is ${chapterName}`)
+    await this.actions.click(this.btnChapterSave, 'tap on save chapter button')
   }
 
   async addNewTopic(chapterName: string, topicName: string) {
-    await this.click(this.btnAddTopic(chapterName), `click on add Topic for chapter ${chapterName}`)
-    await this.input(this.txtTopicName, topicName, `input topic name is ${topicName}`)
-    await this.click(this.btnSave, 'tap on save button')
+    await this.actions.click(this.btnAddTopic(chapterName), `click on add Topic for chapter ${chapterName}`)
+    await this.actions.input(this.txtTopicName, topicName, `input topic name is ${topicName}`)
+    await this.actions.click(this.btnSave, 'tap on save button')
   }
 
   async addNewLO(topicName: string, loType: LOType, loName: string) {
-    await this.click(this.btnAddLO(topicName), 'click on add LO button')
-    await this.click(this.lstLO, 'select dropdown list LO')
-    await this.click(this.ddlLOType(loType), `select LO type is ${loType}`)
+    await this.actions.click(this.btnAddLO(topicName), 'click on add LO button')
+    await this.actions.click(this.lstLO, 'select dropdown list LO')
+    await this.actions.click(this.ddlLOType(loType), `select LO type is ${loType}`)
     if ([LOType.LO, LOType.FlashCard].includes(loType)) {
-      await this.input(this.txtLOName, loName, `input LO name is ${loName}`)
-      await this.click(this.btnSave, 'tap on save button')
+      await this.actions.input(this.txtLOName, loName, `input LO name is ${loName}`)
+      await this.actions.click(this.btnSave, 'tap on save button')
     }
   }
 
   async addNewQuestion() {
-    await this.click(this.btnQuestions, 'click on question menu')
-    await this.click(this.btnCreateQuestion, 'click create new quesitons')
+    await this.actions.click(this.btnQuestions, 'click on question menu')
+    await this.actions.click(this.btnCreateQuestion, 'click create new quesitons')
   }
 
   async addNewAnswer() {
-    await this.click(this.btnAddAnswer, 'click on add new answer')
+    await this.actions.click(this.btnAddAnswer, 'click on add new answer')
   }
 
   async selectCorrectAnswer(answerNumber = 1) {
-    await this.click(this.rdoCorrectAnswer(answerNumber), `click correct answer numer ${answerNumber}`)
+    await this.actions.click(this.rdoCorrectAnswer(answerNumber), `click correct answer numer ${answerNumber}`)
   }
 
   async inputQuestionDescription(questionDescription: string) {
-    await this.input(
+    await this.actions.input(
       this.txtQuestionDescription,
       questionDescription,
       `input question description is ${questionDescription}`
@@ -240,7 +244,7 @@ export default class BookManagementPage extends Actions {
   }
 
   async inputQuestionExplanation(questionExplanation: string) {
-    await this.input(
+    await this.actions.input(
       this.txtQuestionExplanation,
       questionExplanation,
       `input question Explanation is ${questionExplanation}`
@@ -248,7 +252,7 @@ export default class BookManagementPage extends Actions {
   }
 
   async inputAnswers(answerNumber: number, answerDescription: string) {
-    await this.input(
+    await this.actions.input(
       this.txtQuestionAnswers(answerNumber),
       answerDescription,
       `input answer description is ${answerDescription}`
@@ -256,24 +260,24 @@ export default class BookManagementPage extends Actions {
   }
 
   async backtoTopicDetail() {
-    await this.click(this.brdcTopic, 'click into topic on breadcum')
+    await this.actions.click(this.brdcTopic, 'click into topic on breadcum')
   }
 
   async moveChapter(chapterName: string, direction: MoveDirection) {
     if (direction == MoveDirection.Down) {
-      await this.click(this.btnMoveChapterDown(chapterName), `tap move move chapter ${chapterName} down`)
+      await this.actions.click(this.btnMoveChapterDown(chapterName), `tap move move chapter ${chapterName} down`)
     }
     if (direction == MoveDirection.Up) {
-      await this.click(this.btnMoveChapterUp(chapterName), `tap move move chapter ${chapterName} up`)
+      await this.actions.click(this.btnMoveChapterUp(chapterName), `tap move move chapter ${chapterName} up`)
     }
   }
 
   async moveTopic(topicName: string, direction: MoveDirection) {
     if (direction == MoveDirection.Down) {
-      await this.click(this.btnMoveTopicDown(topicName), `click on move Topic ${topicName} down`)
+      await this.actions.click(this.btnMoveTopicDown(topicName), `click on move Topic ${topicName} down`)
     }
     if (direction == MoveDirection.Up) {
-      await this.click(this.btnMoveTopicUp(topicName), `click on move Topic ${topicName} up`)
+      await this.actions.click(this.btnMoveTopicUp(topicName), `click on move Topic ${topicName} up`)
     }
   }
 }
