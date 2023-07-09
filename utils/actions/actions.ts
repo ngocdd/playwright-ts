@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 17:31:21                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-07 22:36:20                               *
+ * @LastEditDate          : 2023-07-09 23:37:49                               *
  *****************************************************************************/
 
 import { test, Page, Locator } from '@playwright/test'
@@ -25,14 +25,10 @@ export default class Actions {
     })
   }
 
-  public async click(locator: any, description: string, locatorText?: string) {
+  public async click(locator: any, description: string) {
     await test.step(description, async () => {
       Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      if (locatorText) {
-        await locator(locatorText).click()
-      } else {
-        await locator.click()
-      }
+      await locator.click()
     })
   }
 }
