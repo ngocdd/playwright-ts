@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:43:05                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-09 22:28:04                               *
+ * @LastEditDate          : 2023-07-09 23:37:01                               *
  *****************************************************************************/
 
 import { Page, expect, Locator } from '@playwright/test'
@@ -68,6 +68,7 @@ export default class BookManagementPage {
     this.mnuBookName = (bookName: string) => {
       return page.getByTitle(bookName).getByTestId('BookList__bookName')
     }
+
     this.txtBookName = page.getByTestId('TextFieldHF__input')
     this.btnAddBook = page.getByTestId('AddBook__addButton')
     this.txtChapterName = page.getByTestId('ChapterForm__root').getByTestId('TextFieldHF__input')
@@ -130,7 +131,7 @@ export default class BookManagementPage {
         .getAttribute('aria-expanded')
     }
     this.brdcTopic = page.getByTestId('MBreadcrumbItem').last()
-    this.snbMessage = page.getByTestId('SnackbarBase__content')
+    this.snbMessage = this.page.getByTestId('SnackbarBase__content')
     this.txtSearchBox = page.getByPlaceholder('Enter your keyword')
     this.btnMoveChapterDown = (chapterName: string) => {
       return page

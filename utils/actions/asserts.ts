@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-09 21:44:27                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-09 21:53:15                               *
+ * @LastEditDate          : 2023-07-09 23:33:43                               *
  *****************************************************************************/
 
 /**
@@ -36,25 +36,16 @@ expect(apiResponse).toBeOK()	Response has an OK status
  * 
  */
 
-import { Page, test, expect } from '@playwright/test'
-import { SrvRecord } from 'dns'
+import { Page, test, expect, Locator } from '@playwright/test'
+import Logger from '../logger/logger'
 
 export default class Asserts {
   constructor(protected page: Page) {}
 
-  public async toHaveText(locator: any, expectedText: string, description: string, locatorText?: string) {
+  public async toHaveText(locator: any, expectedText: string, description: string) {
     await test.step(description, async () => {
-      if (locatorText) {
-        await expect(locator(locatorText)).toHaveText(expectedText)
-      } else {
-        await expect(locator).toHaveText(expectedText)
-      }
-    })
-  }
-
-  public async toEquad(locator: any, toEquad: string, description: string, locatorText: string) {
-    await test.step(description, async () => {
-      await locator.toEquad()
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
+      await expect(locator).toHaveText(expectedText)
     })
   }
 }

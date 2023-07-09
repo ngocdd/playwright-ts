@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-09 22:27:32                               *
+ * @LastEditDate          : 2023-07-09 23:40:20                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
@@ -36,16 +36,15 @@ test.describe('test Book Management', async () => {
     // ASSERTIONS
 
     await bookMngPage.asserts.toHaveText(
-      bookMngPage.snbMessage,
+      bookMngPage.snbMessage.last(),
       'You have created a new book successfully',
       'check created a new book successfully notification'
     )
     await bookMngPage.asserts.toHaveText(
       bookMngPage.mnuBookName(bookName),
       bookName,
-      ' check new book updated on book table'
+      `check table book contain book name is ${bookName}`
     )
-    await expect(bookMngPage.mnuBookName(bookName)).toContainText(bookName)
   })
 
   test('test create new chapter', async ({ page }) => {
@@ -62,8 +61,16 @@ test.describe('test Book Management', async () => {
     await bookMngPage.addNewChapter(chapterName)
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage.last()).toHaveText('You have added chapter successfully')
-    await expect(bookMngPage.mnuChapter(chapterName)).toHaveText(chapterName)
+    await bookMngPage.asserts.toHaveText(
+      bookMngPage.snbMessage.last(),
+      'You have added chapter successfully',
+      'check created a new chapter successfully notification'
+    )
+    await bookMngPage.asserts.toHaveText(
+      bookMngPage.mnuChapter(chapterName),
+      chapterName,
+      `check chapter ${chapterName} created`
+    )
   })
 
   test('test create new topic', async ({ page }) => {
