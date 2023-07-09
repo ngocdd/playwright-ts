@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-07 22:38:26                               *
+ * @LastEditDate          : 2023-07-09 22:27:32                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
@@ -34,7 +34,17 @@ test.describe('test Book Management', async () => {
     await bookMngPage.addNewBook(bookName)
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage).toHaveText('You have created a new book successfully')
+
+    await bookMngPage.asserts.toHaveText(
+      bookMngPage.snbMessage,
+      'You have created a new book successfully',
+      'check created a new book successfully notification'
+    )
+    await bookMngPage.asserts.toHaveText(
+      bookMngPage.mnuBookName(bookName),
+      bookName,
+      ' check new book updated on book table'
+    )
     await expect(bookMngPage.mnuBookName(bookName)).toContainText(bookName)
   })
 
