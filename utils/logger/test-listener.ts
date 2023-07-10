@@ -1,24 +1,15 @@
-/******************************************************************************
- * @Author                : ngocdd<ngocdd94@gmail.com>                        *
- * @CreatedDate           : 2023-07-05 20:08:29                               *
- * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-06 23:08:05                               *
- *****************************************************************************/
+/**
+@Author                : ngocdd<ngocdd94@gmail.com>
+@CreatedDate           : 2023-07-10 23:10:48
+@LastEditors           : ngocdd<ngocdd94@gmail.com>
+@LastEditDate          : 2023-07-10 23:10:48
+*/
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import {
-  Reporter,
-  TestCase,
-  TestError,
-  TestResult,
-  TestStep,
-} from '@playwright/test/reporter'
+import { Reporter, TestCase, TestError, TestResult, TestStep } from '@playwright/test/reporter'
 import Logger from './logger'
 
-const TEST_SEPARATOR =
-  '##############################################################################'
-const STEP_SEPARATOR =
-  '------------------------------------------------------------------------------'
+const TEST_SEPARATOR = '##############################################################################'
+const STEP_SEPARATOR = '------------------------------------------------------------------------------'
 
 export default class TestListener implements Reporter {
   onTestBegin(test: TestCase, result: TestResult): void {
