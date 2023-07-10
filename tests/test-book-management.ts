@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 21:15:25                               *
+ * @LastEditDate          : 2023-07-10 21:17:41                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
@@ -121,8 +121,12 @@ test.describe('test Book Management', async () => {
     await bookMngPage.backtoTopicDetail()
 
     // ASSERTIONS
-    await expect(bookMngPage.snbMessage.last()).toHaveText('You have created a new LO successfully')
-    await expect(bookMngPage.mnuLO(loName)).toHaveText(loName)
+    await bookMngPage.asserts.toHaveText(
+      bookMngPage.snbMessage.last(),
+      'You have created a new LO successfully',
+      `check notification create LO successfully`
+    )
+    await bookMngPage.asserts.toHaveText(bookMngPage.mnuLO(loName), loName, `check lo name is ${loName} created`)
   })
 
   test('test move chapter', async ({ page }) => {
