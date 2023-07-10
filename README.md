@@ -108,6 +108,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 @types/uuid: TypeScript definitions for the uuid module. Version: ^9.0.2
 
 monocart-reporter: A reporter for Playwright tests. Version: ^1.6.13
+
 typescript: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. Version: ^4.5.2
 
 # Dependencies
