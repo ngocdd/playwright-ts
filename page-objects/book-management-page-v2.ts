@@ -1,8 +1,8 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:58:25
+@CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:58:25
+@LastEditDate          : 2023-07-10 22:08:08
 */
 
 import { Page, expect, Locator } from '@playwright/test'
@@ -156,15 +156,12 @@ export default class BookManagementPageV2 {
   async gotoBookManagement() {
     await this.mnuLearningMaterial.click()
     await this.mnuBookManagement.click()
-    // this.waitMessageDisappear();
   }
 
   async addNewBook(bookName: string) {
     await this.btnAddBook.click()
     await this.txtBookName.fill(bookName)
     await this.btnSave.click()
-    // this.waitMessageDisappear();
-    // console.log(this.dlgSuccessPopup.textContent());
   }
 
   async gotoBookDetail(bookName: string) {
@@ -197,14 +194,12 @@ export default class BookManagementPageV2 {
     await this.btnAddChapter.click()
     await this.txtChapterName.fill(chapterName)
     await this.btnChapterSave.click()
-    // this.waitMessageDisappear();
   }
 
   async addNewTopic(chapterName: string, topicName: string) {
     await this.btnAddTopic(chapterName).click()
     await this.txtTopicName.fill(topicName)
     await this.btnSave.click()
-    // this.waitMessageDisappear();
   }
 
   async addNewLO(topicName: string, loType: LOType, loName: string) {
@@ -215,7 +210,6 @@ export default class BookManagementPageV2 {
       await this.txtLOName.fill(loName)
     }
     await this.btnSave.click()
-    // this.waitMessageDisappear();
   }
 
   async addNewQuestion() {
@@ -253,7 +247,6 @@ export default class BookManagementPageV2 {
 
   async getListBook() {
     let listBookName = await this.tblBook.textContent()
-    // console.log(aa);
     return listBookName
   }
 
