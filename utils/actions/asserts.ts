@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-09 21:44:27                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-09 23:33:43                               *
+ * @LastEditDate          : 2023-07-10 09:19:06                               *
  *****************************************************************************/
 
 /**
@@ -36,7 +36,7 @@ expect(apiResponse).toBeOK()	Response has an OK status
  * 
  */
 
-import { Page, test, expect, Locator } from '@playwright/test'
+import { Page, test, expect } from '@playwright/test'
 import Logger from '../logger/logger'
 
 export default class Asserts {
