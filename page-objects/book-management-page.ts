@@ -1,8 +1,8 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:58:36
+@CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:58:36
+@LastEditDate          : 2023-07-10 22:02:46
 */
 
 import { Page, expect, Locator } from '@playwright/test'
@@ -260,7 +260,7 @@ export default class BookManagementPage {
     )
   }
 
-  async backtoTopicDetail() {
+  async backToTopicDetail() {
     await this.actions.click(this.brdcTopic, 'click into topic on breadcum')
   }
 
