@@ -1,8 +1,8 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:58:52
+@CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:58:52
+@LastEditDate          : 2023-07-10 22:06:22
 */
 
 import { test } from '@playwright/test'
@@ -118,7 +118,7 @@ test.describe('test Book Management', async () => {
 
     // STEPS
     await bookMngPage.addNewLO(topicName, LOType.LO, loName)
-    await bookMngPage.backtoTopicDetail()
+    await bookMngPage.backToTopicDetail()
 
     // ASSERTIONS
     await bookMngPage.asserts.toHaveText(
@@ -184,16 +184,55 @@ test.describe('test Book Management', async () => {
 
     // ASSERTIONS
     await bookMngPage.asserts.toEnable(bookMngPage.btnMoveTopicUp(topicName3), `check move button is enable`)
-    const listOriginalChapter = await bookMngPage.lstTopic(chapterName).all()
+    const listOriginalTopic = await bookMngPage.lstTopic(chapterName).all()
 
     let afterMove = []
-    for (let i = 0; i < listOriginalChapter.length; i++) {
-      const name = await listOriginalChapter[i].textContent()
+    for (let i = 0; i < listOriginalTopic.length; i++) {
+      const name = await listOriginalTopic[i].textContent()
       afterMove.push(name)
     }
 
     await bookMngPage.asserts.toHaveText(afterMove[0], topicName2, `check move topic 2`)
     await bookMngPage.asserts.toHaveText(afterMove[1], topicName3, `check move topic 3`)
     await bookMngPage.asserts.toHaveText(afterMove[2], topicName1, `check move topic 1`)
+  })
+
+  test.only('test move LO', async ({ page }) => {
+    // INITIAL
+    let bookName = await generateUUID('Book')
+    let chapterName = await generateUUID('Chapter')
+    let topicName = await generateUUID('Topic')
+    let loName1 = await generateUUID('LO1')
+    let loName2 = await generateUUID('LO2')
+    let loName3 = await generateUUID('LO3')
+
+    // PRECONDITIONS
+    await bookMngPage.gotoBookManagement()
+    await bookMngPage.addNewBook(bookName)
+    await bookMngPage.gotoBookDetail(bookName)
+    await bookMngPage.addNewChapter(chapterName)
+    await bookMngPage.addNewTopic(chapterName, topicName)
+
+    // STEPS
+    await bookMngPage.addNewLO(topicName, LOType.LO, loName1)
+    await bookMngPage.backToTopicDetail()
+    await bookMngPage.addNewLO(topicName, LOType.LO, loName2)
+    await bookMngPage.backToTopicDetail()
+    await bookMngPage.addNewLO(topicName, LOType.LO, loName3)
+    await bookMngPage.backToTopicDetail()
+
+    // ASSERTIONS
+    await bookMngPage.asserts.toEnable(bookMngPage.btnMoveTopicUp(loName3), `check move button is enable`)
+    const listOriginalLO = await bookMngPage.lstTopic(chapterName).all()
+
+    let afterMove = []
+    for (let i = 0; i < listOriginalLO.length; i++) {
+      const name = await listOriginalLO[i].textContent()
+      afterMove.push(name)
+    }
+
+    await bookMngPage.asserts.toHaveText(afterMove[0], loName2, `check move topic 2`)
+    await bookMngPage.asserts.toHaveText(afterMove[1], loName2, `check move topic 3`)
+    await bookMngPage.asserts.toHaveText(afterMove[2], loName1, `check move topic 1`)
   })
 })
