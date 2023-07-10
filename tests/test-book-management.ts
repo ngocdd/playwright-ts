@@ -2,12 +2,12 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 21:50:20                               *
+ * @LastEditDate          : 2023-07-10 21:51:37                               *
  *****************************************************************************/
 
-import { test, Locator } from '@playwright/test'
+import { test } from '@playwright/test'
 import BookManagementPage from '../page-objects/book-management-page'
-import { readJSONFile, generateUUID } from '../utils/data-provider/data-provider'
+import { generateUUID } from '../utils/data-provider/data-provider'
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration'
 import LoginPage from '../page-objects/login-page'
 
