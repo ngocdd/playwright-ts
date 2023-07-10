@@ -2,10 +2,10 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 21:43:57                               *
+ * @LastEditDate          : 2023-07-10 21:50:20                               *
  *****************************************************************************/
 
-import { test, expect, Locator } from '@playwright/test'
+import { test, Locator } from '@playwright/test'
 import BookManagementPage from '../page-objects/book-management-page'
 import { readJSONFile, generateUUID } from '../utils/data-provider/data-provider'
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration'
@@ -149,7 +149,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.moveChapter(chapterName3, MoveDirection.Up)
 
     // ASSERTIONS
-    await expect(bookMngPage.btnMoveChapterDown(chapterName3)).toBeEnabled()
+    await bookMngPage.asserts.toEnable(bookMngPage.btnMoveChapterDown(chapterName3), `check move button is enable`)
     const listOriginalChapter = await bookMngPage.lstChapter.all()
     let afterMove = []
     for (let i = 0; i < listOriginalChapter.length; i++) {
@@ -183,7 +183,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.moveTopic(topicName3, MoveDirection.Up)
 
     // ASSERTIONS
-    await expect(await bookMngPage.btnMoveTopicUp(topicName3)).toBeEnabled()
+    await bookMngPage.asserts.toEnable(bookMngPage.btnMoveTopicUp(topicName3), `check move button is enable`)
     const listOriginalChapter = await bookMngPage.lstTopic(chapterName).all()
 
     let afterMove = []
