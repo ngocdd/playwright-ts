@@ -1,9 +1,9 @@
-/******************************************************************************
- * @Author                : ngocdd<ngocdd94@gmail.com>                        *
- * @CreatedDate           : 2023-07-03 09:44:20                               *
- * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 21:51:37                               *
- *****************************************************************************/
+/**
+@Author                : ngocdd<ngocdd94@gmail.com>
+@CreatedDate           : 2023-07-10 21:58:52
+@LastEditors           : ngocdd<ngocdd94@gmail.com>
+@LastEditDate          : 2023-07-10 21:58:52
+*/
 
 import { test } from '@playwright/test'
 import BookManagementPage from '../page-objects/book-management-page'

@@ -1,9 +1,9 @@
-/******************************************************************************
- * @Author                : ngocdd<ngocdd94@gmail.com>                        *
- * @CreatedDate           : 2023-07-03 09:43:05                               *
- * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-04 15:55:23                               *
- *****************************************************************************/
+/**
+@Author                : ngocdd<ngocdd94@gmail.com>
+@CreatedDate           : 2023-07-10 21:58:25
+@LastEditors           : ngocdd<ngocdd94@gmail.com>
+@LastEditDate          : 2023-07-10 21:58:25
+*/
 
 import { Page, expect, Locator } from '@playwright/test'
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration'
@@ -54,9 +54,7 @@ export default class BookManagementPageV2 {
   // constructor
   constructor(page: Page) {
     this.page = page
-    this.mnuLearningMaterial = page
-      .getByTestId('MenuGroup__root')
-      .getByText('Learning Material')
+    this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material')
     this.tblBook = page.getByTestId('TableBaseBody__root')
     this.mnuBookManagement = page.getByLabel('Book (LMS 2.0)', { exact: true })
     this.mnuBookName = (bookName: string) => {
@@ -64,35 +62,23 @@ export default class BookManagementPageV2 {
     }
     this.txtBookName = page.getByTestId('TextFieldHF__input')
     this.btnAddBook = page.getByTestId('AddBook__addButton')
-    this.txtChapterName = page
-      .getByTestId('ChapterForm__root')
-      .getByTestId('TextFieldHF__input')
-    this.txtTopicName = page
-      .getByTestId('TopicForm__root')
-      .getByTestId('TextFieldHF__input')
+    this.txtChapterName = page.getByTestId('ChapterForm__root').getByTestId('TextFieldHF__input')
+    this.txtTopicName = page.getByTestId('TopicForm__root').getByTestId('TextFieldHF__input')
     this.btnSave = page.getByTestId('FooterDialogConfirm__buttonSave')
     this.btnAddChapter = page.getByTestId('ChapterForm__visibleFormControl')
     this.btnChapterSave = page.getByTestId('ChapterForm__submit')
     this.btnAddTopic = (chapterName: string) => {
-      return page
-        .getByTestId('ChapterItem_root')
-        .filter({ hasText: chapterName })
-        .getByTestId('TopicList__createTopic')
+      return page.getByTestId('ChapterItem_root').filter({ hasText: chapterName }).getByTestId('TopicList__createTopic')
     }
     this.btnAddLO = (topicName: string) => {
-      return page
-        .getByTestId('TopicItem__root')
-        .filter({ hasText: topicName })
-        .getByTestId('LOAndAssignment__addLOs')
+      return page.getByTestId('TopicItem__root').filter({ hasText: topicName }).getByTestId('LOAndAssignment__addLOs')
     }
     this.lstLO = page.getByTestId('SelectHF__select')
     this.ddlLOType = (loType: LOType) => {
       return page.locator(`[data-value="${loType}"]`)
     }
     this.txtLOName = page.getByTestId('TextFieldHF__input')
-    this.btnQuestions = page
-      .getByTestId('QuestionListSectionHeader__action')
-      .getByTestId('ActionPanel__trigger')
+    this.btnQuestions = page.getByTestId('QuestionListSectionHeader__action').getByTestId('ActionPanel__trigger')
     this.btnCreateQuestion = page.getByLabel('createQuestion', { exact: true })
     this.btnDeleteQuestion = page.getByTestId('QuizAnswer__DeleteButton')
     this.ddlQuestionType = page.getByTestId('QuizTypeSelect__root')
@@ -119,19 +105,13 @@ export default class BookManagementPageV2 {
     this.btnAddAnswer = page.getByTestId('QuizAnswerList__btnAddAnswer')
     this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab')
     this.mnuChapter = (chapterName: string) => {
-      return page
-        .getByTestId('AccordionSummaryBase__content')
-        .filter({ hasText: chapterName })
+      return page.getByTestId('AccordionSummaryBase__content').filter({ hasText: chapterName })
     }
     this.mnuTopic = (topicName: string) => {
-      return page
-        .getByTestId('TopicAccordion__name')
-        .filter({ hasText: topicName })
+      return page.getByTestId('TopicAccordion__name').filter({ hasText: topicName })
     }
     this.mnuLO = (loName: string) => {
-      return page
-        .getByTestId('LOAndAssignmentItem__name')
-        .filter({ hasText: loName })
+      return page.getByTestId('LOAndAssignmentItem__name').filter({ hasText: loName })
     }
     this.sttCheckExpand = (name: string) => {
       return page
@@ -167,10 +147,7 @@ export default class BookManagementPageV2 {
         .getByTestId('TopicItem__moveUp')
     }
     this.lstTopic = (chapterName: string) => {
-      return page
-        .getByTestId('ChapterItem_root')
-        .filter({ hasText: chapterName })
-        .getByTestId('TopicAccordion__name')
+      return page.getByTestId('ChapterItem_root').filter({ hasText: chapterName }).getByTestId('TopicAccordion__name')
     }
     this.lstChapter = page.getByTestId('ChapterAccordion__name')
   }

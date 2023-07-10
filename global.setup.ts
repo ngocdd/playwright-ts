@@ -1,9 +1,9 @@
-/******************************************************************************
- * @Author                : ngocdd<ngocdd94@gmail.com>                        *
- * @CreatedDate           : 2023-07-03 09:44:56                               *
- * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 14:37:29                               *
- *****************************************************************************/
+/**
+@Author                : ngocdd<ngocdd94@gmail.com>
+@CreatedDate           : 2023-07-10 21:59:31
+@LastEditors           : ngocdd<ngocdd94@gmail.com>
+@LastEditDate          : 2023-07-10 21:59:31
+*/
 
 import { setEnv } from './utils/env/env'
 

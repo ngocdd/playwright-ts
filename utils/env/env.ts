@@ -1,9 +1,9 @@
-/******************************************************************************
- * @Author                : ngocdd<ngocdd94@gmail.com>                        *
- * @CreatedDate           : 2023-07-03 09:42:33                               *
- * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-05 20:25:40                               *
- *****************************************************************************/
+/**
+@Author                : ngocdd<ngocdd94@gmail.com>
+@CreatedDate           : 2023-07-10 21:59:24
+@LastEditors           : ngocdd<ngocdd94@gmail.com>
+@LastEditDate          : 2023-07-10 21:59:24
+*/
 
 export function setEnv() {
   // default ENV is UAT

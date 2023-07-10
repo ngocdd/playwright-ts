@@ -1,9 +1,9 @@
-/******************************************************************************
- * @Author                : ngocdd<ngocdd94@gmail.com>                        *
- * @CreatedDate           : 2023-07-03 09:44:15                               *
- * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-05 20:24:46                               *
- *****************************************************************************/
+/**
+@Author                : ngocdd<ngocdd94@gmail.com>
+@CreatedDate           : 2023-07-10 21:58:48
+@LastEditors           : ngocdd<ngocdd94@gmail.com>
+@LastEditDate          : 2023-07-10 21:58:48
+*/
 
 import { test, expect } from '@playwright/test'
 import LoginPage from '../page-objects/login-page'
@@ -40,15 +40,9 @@ test.skip('create questions for LO worker 1', async ({ page }) => {
       for (let z = 0; z < data[i]['topics'][z]['LO'].length; z++) {
         // for(let z=0; z < 2; z++){
         let loName = data[i]['topics'][z]['LO'][z]
-        await bookManagementPageV2.addNewLO(
-          topicName,
-          LOType.LO,
-          `LO ${y + 1}.${z + 1}  ${loName}`
-        )
+        await bookManagementPageV2.addNewLO(topicName, LOType.LO, `LO ${y + 1}.${z + 1}  ${loName}`)
         // console.log(` Worker1:    Chapter ${i+1} - Topic ${y+1} - LO ${y+1}.${z+1}:  ${loName}`);
-        await bookManagementPageV2.gotoLosDetail(
-          `Chapter ${i + 1} - Topic ${y + 1} - LO ${z + 1}: ${loName}`
-        )
+        await bookManagementPageV2.gotoLosDetail(`Chapter ${i + 1} - Topic ${y + 1} - LO ${z + 1}: ${loName}`)
 
         // create question for LO
         // for(let q=0; q < 3; q++){
