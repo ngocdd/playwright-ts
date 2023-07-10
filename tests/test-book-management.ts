@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 21:17:41                               *
+ * @LastEditDate          : 2023-07-10 21:42:41                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
@@ -156,9 +156,9 @@ test.describe('test Book Management', async () => {
       const name = await listOriginalChapter[i].textContent()
       afterMove.push(name)
     }
-    await expect(afterMove[0]).toEqual(chapterName2)
-    await expect(afterMove[1]).toEqual(chapterName3)
-    await expect(afterMove[2]).toEqual(chapterName1)
+    await bookMngPage.asserts.toHaveText(afterMove[0], chapterName2, `check move chapter 2`)
+    await bookMngPage.asserts.toHaveText(afterMove[1], chapterName3, `check move chapter 3`)
+    await bookMngPage.asserts.toHaveText(afterMove[2], chapterName1, `check move chapter 1`)
   })
 
   test('test move topic', async ({ page }) => {
