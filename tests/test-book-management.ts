@@ -2,7 +2,7 @@
  * @Author                : ngocdd<ngocdd94@gmail.com>                        *
  * @CreatedDate           : 2023-07-03 09:44:20                               *
  * @LastEditors           : ngocdd<ngocdd94@gmail.com>                        *
- * @LastEditDate          : 2023-07-10 08:57:51                               *
+ * @LastEditDate          : 2023-07-10 21:15:25                               *
  *****************************************************************************/
 
 import { test, expect, Locator } from '@playwright/test'
@@ -95,7 +95,11 @@ test.describe('test Book Management', async () => {
       ` check success notification`
     )
 
-    await expect(bookMngPage.mnuTopic(topicName)).toHaveText(topicName)
+    await bookMngPage.asserts.toHaveText(
+      bookMngPage.mnuTopic(topicName),
+      topicName,
+      `check topic name ${topicName} created`
+    )
   })
 
   test('test create new LO', async ({ page }) => {
