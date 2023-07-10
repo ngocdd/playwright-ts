@@ -99,20 +99,29 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 ## Dependencies
 
-## Development Dependencies
+# Development Dependencies
 
 @playwright/test: A test runner for Playwright that allows you to write and execute tests in a simple and concise manner. Version: ^1.35.1
 
 @types/fs-extra: TypeScript definitions for the fs-extra module. Version: ^11.0.1
 
-## Dependencies
+@types/uuid: TypeScript definitions for the uuid module. Version: ^9.0.2
 
-@tka85/dotenvenc: A package that provides encryption and decryption functionality for dotenv files. Version: ^4.0.2 [GitHub Repository](https://github.com/tka85/dotenvenc)
+monocart-reporter: A reporter for Playwright tests. Version: ^1.6.13
+typescript: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. Version: ^4.5.2
+
+# Dependencies
+
+@tka85/dotenvenc: A package that provides encryption and decryption functionality for dotenv files. Version: ^4.0.2 GitHub Repository [GitHub Repository](https://github.com/tka85/dotenvenc)
 
 @types/node: TypeScript definitions for Node.js. Version: ^20.3.1
 
-dotenv: Loads environment variables from a file into process.env. Version: ^16.3.0
+dotenv: Loads environment variables from a file into process.env. Version: ^16.5.0
 
 dotenv-cli: A command-line utility for running scripts with environment variables loaded from a .env file. Version: ^7.2.1
 
 fs-extra: A package that provides additional file system methods beyond the built-in fs module. Version: ^11.1.1
+
+uuid: A package that provides the ability to generate unique identifiers. Version: ^9.0.5
+
+winston: A logger for JavaScript applications. Version: ^3.9.0
