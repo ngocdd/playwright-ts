@@ -33,3 +33,5 @@
 | Complex  | Timer                      | tmr    | tmrAlarm        |
 | Complex  | Toolbar                    | tlb    | tlbActions      |
 | Complex  | TreeView                   | tre    | treOrganization |
+
+refer: https://dangngocblogs.wordpress.com/2023/06/23/standard-naming-convention-for-ui-elements-locator-when-writing-automation-test-scripts/
