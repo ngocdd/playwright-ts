@@ -5,114 +5,114 @@
 @LastEditDate          : 2023-07-12 09:43:47
 */
 
-import { Page, test, expect } from '@playwright/test'
-import Logger from '../logger/logger'
+import { Page, test, expect } from '@playwright/test';
+import Logger from '../logger/logger';
 
 export default class Asserts {
   constructor(protected page: Page) {}
 
   public async toHaveText(locator: any, expectedText: string, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toHaveText(expectedText)
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toHaveText(expectedText);
+    });
   }
 
   public async toContainText(locator: any, expectedText: string, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toContainText(expectedText)
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toContainText(expectedText);
+    });
   }
 
   public async toHaveValue(locator: any, expectedValue: string, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toHaveValue(expectedValue)
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toHaveValue(expectedValue);
+    });
   }
 
   public async toHaveValues(locator: any, listExpectedValues: [], description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toHaveValues(listExpectedValues)
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toHaveValues(listExpectedValues);
+    });
   }
 
   public async toBeEnable(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeEnabled()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeEnabled();
+    });
   }
 
   public async toBeDisabled(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeDisabled()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeDisabled();
+    });
   }
 
   public async toBeAttached(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeAttached()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeAttached();
+    });
   }
 
   public async toBeChecked(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeChecked()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeChecked();
+    });
   }
 
   public async toBeEditable(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeEditable()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeEditable();
+    });
   }
 
   public async toBeEmpty(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeEmpty()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeEmpty();
+    });
   }
 
   public async toBeFocused(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeFocused()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeFocused();
+    });
   }
 
   public async toBeHidden(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeHidden()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeHidden();
+    });
   }
 
   public async toBeInViewport(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeInViewport()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeInViewport();
+    });
   }
 
   public async toBeVisible(locator: any, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toBeVisible()
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toBeVisible();
+    });
   }
 
   public async toHaveAttribute(locator: any, attributeName: string, attributeValue: string, description: string) {
     await test.step(description, async () => {
-      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
-      await expect(locator).toHaveAttribute(attributeName, attributeValue)
-    })
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      await expect(locator).toHaveAttribute(attributeName, attributeValue);
+    });
   }
 }

@@ -5,7 +5,7 @@
 @LastEditDate          : 2023-07-10 23:10:39
 */
 
-import * as winston from 'winston'
+import * as winston from 'winston';
 
 const Logger = winston.createLogger({
   transports: [
@@ -29,5 +29,5 @@ const Logger = winston.createLogger({
       ),
     }),
   ],
-})
-export default Logger
+});
+export default Logger;

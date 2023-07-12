@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 09:58:24
+@LastEditDate          : 2023-07-12 10:03:36
 */
 
 import { test } from '@playwright/test';
@@ -149,7 +149,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.moveChapter(chapterName3, MoveDirection.Up);
 
     // ASSERTIONS
-    await bookMngPage.asserts.toEnable(bookMngPage.btnMoveChapterDown(chapterName3), `check move button is enable`);
+    await bookMngPage.asserts.toBeEnable(bookMngPage.btnMoveChapterDown(chapterName3), `check move button is enable`);
     const listOriginalChapter = await bookMngPage.lstChapter.all();
     let afterMove = [];
     for (let i = 0; i < listOriginalChapter.length; i++) {
@@ -183,7 +183,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.moveTopic(topicName3, MoveDirection.Up);
 
     // ASSERTIONS
-    await bookMngPage.asserts.toEnable(bookMngPage.btnMoveTopicUp(topicName3), `check move button is enable`);
+    await bookMngPage.asserts.toBeEnable(bookMngPage.btnMoveTopicUp(topicName3), `check move button is enable`);
     const listOriginalTopic = await bookMngPage.lstTopic(chapterName).all();
 
     let afterMove = [];
