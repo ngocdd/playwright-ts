@@ -2,10 +2,10 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 22:02:46
+@LastEditDate          : 2023-07-12 10:16:19
 */
 
-import { Page, expect, Locator } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration';
 import Actions from '../utils/actions/actions';
 import Asserts from '../utils/actions/asserts';

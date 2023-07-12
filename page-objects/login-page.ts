@@ -1,11 +1,11 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:58:41
+@CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:58:41
+@LastEditDate          : 2023-07-12 10:16:26
 */
 
-import { Page, Locator, expect } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 import Actions from '../utils/actions/actions';
 
 export default class LoginPage extends Actions {
