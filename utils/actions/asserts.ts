@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:59:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 09:43:47
+@LastEditDate          : 2023-07-12 23:04:39
 */
 
 import { Page, test, expect } from '@playwright/test';
@@ -113,6 +113,14 @@ export default class Asserts {
     await test.step(description, async () => {
       Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
       await expect(locator).toHaveAttribute(attributeName, attributeValue);
+    });
+  }
+
+  public async toHaveCount(locator: any, expectedNumber: number, description: string) {
+    await test.step(description, async () => {
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
+      const listElements = locator.all();
+      await expect(listElements).toHaveCount(expectedNumber);
     });
   }
 }

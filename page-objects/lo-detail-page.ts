@@ -2,18 +2,21 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 22:49:12
+@LastEditDate          : 2023-07-12 23:00:08
 */
 
 import { Page, Locator } from '@playwright/test';
 import Actions from '../utils/actions/actions';
+import Asserts from '../utils/actions/asserts';
 
 export default class LOPage {
   // list Pages
   readonly page: Page;
   readonly actions: Actions;
+  readonly asserts: Asserts;
 
   // list Elements
+  readonly btnSave: Locator;
   readonly btnEditLO: Locator;
   readonly lblUploadVideo: Locator;
   readonly lblUploadPdf: Locator;
@@ -29,14 +32,18 @@ export default class LOPage {
   readonly rdoCorrectAnswer: any;
   readonly btnAddAnswer: Locator;
   readonly btnExamDetail: Locator;
+  readonly snbMessage: Locator;
+  readonly lblQuestionTitle: Locator;
 
   // constructor
   constructor(page: Page) {
     // initial Pages
     this.page = page;
     this.actions = new Actions(page);
+    this.asserts = new Asserts(page);
 
     // initial Elements
+    this.btnSave = page.getByTestId('FooterDialogConfirm__buttonSave');
     this.btnEditLO = page.getByTestId('WrapperPageHeader__root').getByTestId('ActionPanel__root');
     this.lblUploadVideo = page.getByTestId('UploadInput__inputFile').first();
     this.lblUploadPdf = page.getByTestId('UploadInput__inputFile').last();
@@ -70,6 +77,12 @@ export default class LOPage {
     };
     this.btnAddAnswer = page.getByTestId('QuizAnswerList__btnAddAnswer');
     this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
+    this.snbMessage = this.page.getByTestId('SnackbarBase__content');
+    this.lblQuestionTitle = page.getByTestId('QuestionTitleWithPoint__title');
+  }
+
+  async saveAction() {
+    await this.actions.click(this.btnSave, `click on Save button`);
   }
 
   async addNewQuestion() {

@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 22:32:16
+@LastEditDate          : 2023-07-12 23:06:10
 */
 
 import { test } from '@playwright/test';
@@ -10,15 +10,18 @@ import BookManagementPage from '../page-objects/book-management-page';
 import { generateUUID, readJSONFile } from '../utils/data-provider/data-provider';
 import { LOType, MoveDirection } from '../utils/enumeration/enumeration';
 import LoginPage from '../page-objects/login-page';
+import LOPage from '../page-objects/lo-detail-page';
 
 let loginPage: LoginPage;
 let bookMngPage: BookManagementPage;
+let LOPage: LOPage;
 
 test.describe('test Book Management', async () => {
   test.beforeEach(async ({ page }) => {
     // INITIAL
     loginPage = new LoginPage(page);
     bookMngPage = new BookManagementPage(page);
+    LOPage = new LOPage(page);
 
     // PRECONDITIONS
     await loginPage.login();
@@ -110,17 +113,17 @@ test.describe('test Book Management', async () => {
     const questionData = await readJSONFile('question');
     //create question for LO
     for (let q = 0; q < 3; q++) {
-      await bookMngPage.addNewQuestion();
-      await bookMngPage.inputQuestionDescription(`Question number ${q + 1} \n ${questionData[q]['question']}`);
+      await LOPage.addNewQuestion();
+      await LOPage.inputQuestionDescription(`Question number ${q + 1} \n ${questionData[q]['question']}`);
 
       // add answer for questions
       for (let a = 0; a < questionData[q]['answers'].length; a++) {
-        await bookMngPage.inputAnswers(a + 1, questionData[q]['answers'][a]);
+        await LOPage.inputAnswers(a + 1, questionData[q]['answers'][a]);
       }
-      await bookMngPage.inputQuestionExplanation(questionData[q]['explanation']);
-      await bookMngPage.saveAction();
-      await bookMngPage.asserts.toHaveText(
-        bookMngPage.snbMessage.last(),
+      await LOPage.inputQuestionExplanation(questionData[q]['explanation']);
+      await LOPage.saveAction();
+      await LOPage.asserts.toHaveText(
+        LOPage.snbMessage.last(),
         'You have created a new question successfully',
         `check notification create question successfully`
       );
@@ -129,6 +132,6 @@ test.describe('test Book Management', async () => {
     await bookMngPage.backToTopicDetail();
 
     // ASSERTIONS
-    await bookMngPage.asserts.toHaveText(bookMngPage.mnuLO(loName), loName, `check lo name is ${loName} created`);
+    await LOPage.asserts.toHaveCount(LOPage.lblQuestionTitle.all(), 3, `check have 3 questions created`);
   });
 });

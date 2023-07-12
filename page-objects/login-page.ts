@@ -2,15 +2,17 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 10:16:26
+@LastEditDate          : 2023-07-12 22:57:49
 */
 
 import { Page, Locator } from '@playwright/test';
 import Actions from '../utils/actions/actions';
 
 export default class LoginPage extends Actions {
-  // list elements
+  // list pages
   readonly page: Page;
+
+  // list Elements
   readonly txtOrgId: Locator;
   readonly txtUserName: Locator;
   readonly txtPassWord: Locator;
@@ -22,6 +24,8 @@ export default class LoginPage extends Actions {
   constructor(page: Page) {
     super(page);
     this.page = page;
+
+    // initial Elements
     this.txtOrgId = page.getByTestId('LoginTenantForm__textFieldOrganizations');
     this.txtUserName = page.getByTestId('LoginTenantForm__textFieldUsername');
     this.txtPassWord = page.getByTestId('LoginTenantForm__textFieldPassword');
