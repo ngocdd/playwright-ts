@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 10:47:38
+@LastEditDate          : 2023-07-12 10:53:16
 */
 
 import { test } from '@playwright/test';
@@ -79,9 +79,6 @@ test.describe('test Book Management', async () => {
     );
     await bookMngPage.asserts.toHaveText(bookMngPage.mnuLO(loName), loName, `check lo name is ${loName} created`);
   });
-
-  
-
 
  
 });
