@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 11:36:35
+@LastEditDate          : 2023-07-12 22:14:14
 */
 
 import { Page, Locator } from '@playwright/test';
@@ -288,5 +288,9 @@ export default class BookManagementPage {
     if (direction == MoveDirection.Up) {
       await this.actions.click(this.btnMoveTopicUp(topicName), `click on move Topic ${topicName} up`);
     }
+  }
+
+  async saveAction() {
+    await this.actions.click(this.btnSave, `click on Save button`);
   }
 }
