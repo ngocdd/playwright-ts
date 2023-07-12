@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 23:09:12
+@LastEditDate          : 2023-07-12 09:58:24
 */
 
 import { test } from '@playwright/test'
@@ -222,7 +222,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.backToTopicDetail()
 
     // ASSERTIONS
-    await bookMngPage.asserts.toEnable(bookMngPage.btnMoveTopicUp(loName3), `check move button is enable`)
+    await bookMngPage.asserts.toBeEnable(bookMngPage.btnMoveTopicUp(loName3), `check move button is enable`)
     const listOriginalLO = await bookMngPage.lstTopic(chapterName).all()
 
     let afterMove = []
