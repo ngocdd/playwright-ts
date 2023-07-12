@@ -2,14 +2,14 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 23:00:08
+@LastEditDate          : 2023-07-12 23:06:51
 */
 
 import { Page, Locator } from '@playwright/test';
 import Actions from '../utils/actions/actions';
 import Asserts from '../utils/actions/asserts';
 
-export default class LOPage {
+export default class LODetailPage {
   // list Pages
   readonly page: Page;
   readonly actions: Actions;

@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:59:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 23:04:39
+@LastEditDate          : 2023-07-12 23:10:55
 */
 
 import { Page, test, expect } from '@playwright/test';
@@ -119,8 +119,7 @@ export default class Asserts {
   public async toHaveCount(locator: any, expectedNumber: number, description: string) {
     await test.step(description, async () => {
       Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description);
-      const listElements = locator.all();
-      await expect(listElements).toHaveCount(expectedNumber);
+      await expect(locator).toHaveCount(expectedNumber);
     });
   }
 }
