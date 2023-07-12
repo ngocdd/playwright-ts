@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:59:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 09:38:28
+@LastEditDate          : 2023-07-12 09:42:41
 */
 
 import { Page, test, expect } from '@playwright/test'
@@ -22,6 +22,13 @@ export default class Asserts {
     await test.step(description, async () => {
       Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
       await expect(locator).toContainText(expectedText)
+    })
+  }
+
+  public async toHaveValue(locator: any, expectedText: string, description: string) {
+    await test.step(description, async () => {
+      Logger.info(`worker ${process.env.TEST_WORKER_INDEX}: ` + description)
+      await expect(locator).toHaveValue(expectedText)
     })
   }
 
