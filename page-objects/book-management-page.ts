@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 11:32:34
+@LastEditDate          : 2023-07-12 11:36:35
 */
 
 import { Page, Locator } from '@playwright/test';
@@ -11,7 +11,7 @@ import Actions from '../utils/actions/actions';
 import Asserts from '../utils/actions/asserts';
 
 export default class BookManagementPage {
-  // initial pages
+  // list pages
   readonly page: Page;
   readonly actions: Actions;
   readonly asserts: Asserts;
@@ -59,9 +59,12 @@ export default class BookManagementPage {
 
   // constructor
   constructor(page: Page) {
+    // initial pages
     this.page = page;
     this.actions = new Actions(page);
     this.asserts = new Asserts(page);
+
+    // initial elements
     this.mnuLearningMaterial = page.getByTestId('MenuGroup__root').getByText('Learning Material');
     this.tblBook = page.getByTestId('TableBaseBody__root');
     this.mnuBookManagement = page.getByLabel('Book', {
