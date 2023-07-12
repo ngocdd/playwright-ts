@@ -1,8 +1,8 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:58:48
+@CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:58:48
+@LastEditDate          : 2023-07-12 23:13:54
 */
 
 import { test, expect } from '@playwright/test';
@@ -19,7 +19,6 @@ test.skip('create questions for LO worker 1', async ({ page }) => {
   await loginPage.login();
 
   const data = await readJSONFile('10chapter-15topics-5los');
-  const questionData = await readJSONFile('question');
 
   await bookManagementPageV2.gotoBookDetail('HTN-BOOK_AUTO');
 
