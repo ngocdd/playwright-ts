@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 22:14:14
+@LastEditDate          : 2023-07-12 22:49:19
 */
 
 import { Page, Locator } from '@playwright/test';
@@ -32,16 +32,6 @@ export default class BookManagementPage {
   readonly ddlLOType: any;
   readonly txtTopicName: Locator;
   readonly txtLOName: Locator;
-  readonly btnQuestions: Locator;
-  readonly btnCreateQuestion: Locator;
-  readonly ddlQuestionType: Locator;
-  readonly txtQuestionDescription: Locator;
-  readonly txtQuestionAnswers: any;
-  readonly txtQuestionExplanation: Locator;
-  readonly btnDeleteQuestion: Locator;
-  readonly rdoCorrectAnswer: any;
-  readonly btnAddAnswer: Locator;
-  readonly btnExamDetail: Locator;
   readonly mnuChapter: any;
   readonly mnuTopic: any;
   readonly mnuLO: any;
@@ -90,39 +80,12 @@ export default class BookManagementPage {
     this.btnAddLO = (topicName: string) => {
       return page.getByTestId('TopicItem__root').filter({ hasText: topicName }).getByTestId('LOAndAssignment__addLOs');
     };
-    this.lstLO = page.getByTestId('SelectHF__select');
+    this.lstLO = page.getByTestId('MSelectHF__select');
     this.ddlLOType = (loType: LOType) => {
       return page.locator(`[data-value="${loType}"]`);
     };
     this.txtLOName = page.getByTestId('TextFieldHF__input');
-    this.btnQuestions = page.getByTestId('QuestionListSectionHeader__action').getByTestId('ActionPanel__trigger');
-    this.btnCreateQuestion = page.getByLabel('createQuestion', {
-      exact: true,
-    });
-    this.btnDeleteQuestion = page.getByTestId('QuizAnswer__DeleteButton');
-    this.ddlQuestionType = page.getByTestId('QuizTypeSelect__root');
-    this.txtQuestionDescription = page
-      .getByTestId('Editor__content')
-      .filter({ hasText: 'Question Description' })
-      .getByTestId('Editor__draftEditor');
-    this.txtQuestionAnswers = (answerNumber = 1) => {
-      return page
-        .getByTestId('Editor__content')
-        .filter({ hasText: `Answer ${answerNumber}` })
-        .getByTestId('Editor__draftEditor');
-    };
-    this.txtQuestionExplanation = page
-      .getByTestId('Editor__content')
-      .filter({ hasText: 'Explanation' })
-      .getByTestId('Editor__draftEditor');
-    this.rdoCorrectAnswer = (answerNumber = 1) => {
-      return page
-        .getByTestId('QuizMCQAnswerItem__root')
-        .filter({ hasText: `Answer ${answerNumber}` })
-        .getByTestId('QuizMCQRadioHF__radio');
-    };
-    this.btnAddAnswer = page.getByTestId('QuizAnswerList__btnAddAnswer');
-    this.btnExamDetail = page.getByTestId('ExamDetail__questionsTab');
+
     this.mnuChapter = (chapterName: string) => {
       return page.getByTestId('AccordionSummaryBase__content').filter({ hasText: chapterName });
     };
@@ -229,43 +192,6 @@ export default class BookManagementPage {
       await this.actions.input(this.txtLOName, loName, `input LO name is ${loName}`);
       await this.actions.click(this.btnSave, 'tap on save button');
     }
-  }
-
-  async addNewQuestion() {
-    await this.actions.click(this.btnQuestions, 'click on question menu');
-    await this.actions.click(this.btnCreateQuestion, 'click create new quesitons');
-  }
-
-  async addNewAnswer() {
-    await this.actions.click(this.btnAddAnswer, 'click on add new answer');
-  }
-
-  async selectCorrectAnswer(answerNumber = 1) {
-    await this.actions.click(this.rdoCorrectAnswer(answerNumber), `click correct answer numer ${answerNumber}`);
-  }
-
-  async inputQuestionDescription(questionDescription: string) {
-    await this.actions.input(
-      this.txtQuestionDescription,
-      questionDescription,
-      `input question description is ${questionDescription}`
-    );
-  }
-
-  async inputQuestionExplanation(questionExplanation: string) {
-    await this.actions.input(
-      this.txtQuestionExplanation,
-      questionExplanation,
-      `input question Explanation is ${questionExplanation}`
-    );
-  }
-
-  async inputAnswers(answerNumber: number, answerDescription: string) {
-    await this.actions.input(
-      this.txtQuestionAnswers(answerNumber),
-      answerDescription,
-      `input answer description is ${answerDescription}`
-    );
   }
 
   async backToTopicDetail() {

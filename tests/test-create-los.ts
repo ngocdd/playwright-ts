@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 22:14:28
+@LastEditDate          : 2023-07-12 22:32:16
 */
 
 import { test } from '@playwright/test';
@@ -119,16 +119,16 @@ test.describe('test Book Management', async () => {
       }
       await bookMngPage.inputQuestionExplanation(questionData[q]['explanation']);
       await bookMngPage.saveAction();
+      await bookMngPage.asserts.toHaveText(
+        bookMngPage.snbMessage.last(),
+        'You have created a new question successfully',
+        `check notification create question successfully`
+      );
     }
 
     await bookMngPage.backToTopicDetail();
 
     // ASSERTIONS
-    await bookMngPage.asserts.toHaveText(
-      bookMngPage.snbMessage.last(),
-      'You have created a new LO successfully',
-      `check notification create LO successfully`
-    );
     await bookMngPage.asserts.toHaveText(bookMngPage.mnuLO(loName), loName, `check lo name is ${loName} created`);
   });
 });
