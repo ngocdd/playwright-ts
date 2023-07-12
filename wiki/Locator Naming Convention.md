@@ -19,6 +19,7 @@
 | Basic    | TabStrip                   | tab    | tabOptions      |
 | Basic    | Text Area                  | txa    | txaDescription  |
 | Basic    | Text box                   | txt    | txtLastName     |
+| Basic    | Breadcrumb                 | brd    | brdTopic        |
 | Complex  | Chevron                    | chv    | chvProtocol     |
 | Complex  | Data grid                  | dgd    | dgdTitles       |
 | Complex  | Data list                  | dbl    | dblPublisher    |
