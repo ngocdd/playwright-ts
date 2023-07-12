@@ -1,8 +1,8 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:59:14
+@CreatedDate           : 2023-07-10 21:59:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:59:14
+@LastEditDate          : 2023-07-12 22:04:25
 */
 
 import * as fs from 'fs-extra';
@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export function readJSONFile(fileName: string): any {
   try {
-    const fileContent = fs.readFileSync(`./utils/test-data/${fileName}.json`, 'utf8');
+    const fileContent = fs.readFileSync(`./test-data/${fileName}.json`, 'utf8');
     const jsonData = JSON.parse(fileContent);
     // console.log(jsonData[0]['choices'][0]);
     return jsonData;
