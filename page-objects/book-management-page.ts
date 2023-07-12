@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 10:16:19
+@LastEditDate          : 2023-07-12 11:32:34
 */
 
 import { Page, Locator } from '@playwright/test';
@@ -11,10 +11,12 @@ import Actions from '../utils/actions/actions';
 import Asserts from '../utils/actions/asserts';
 
 export default class BookManagementPage {
-  // list elements
+  // initial pages
   readonly page: Page;
   readonly actions: Actions;
   readonly asserts: Asserts;
+
+  // list elements
   readonly mnuLearningMaterial: Locator;
   readonly tblBook: Locator;
   readonly mnuBookManagement: Locator;
@@ -44,7 +46,7 @@ export default class BookManagementPage {
   readonly mnuTopic: any;
   readonly mnuLO: any;
   readonly sttCheckExpand: any;
-  readonly brdcTopic: Locator;
+  readonly brcTopic: Locator;
   readonly snbMessage: Locator;
   readonly txtSearchBox: Locator;
   readonly mnuBookName: any;
@@ -133,7 +135,7 @@ export default class BookManagementPage {
         .filter({ hasText: `${name}` })
         .getAttribute('aria-expanded');
     };
-    this.brdcTopic = page.getByTestId('MBreadcrumbItem').last();
+    this.brcTopic = page.getByTestId('MBreadcrumbItem').last();
     this.snbMessage = this.page.getByTestId('SnackbarBase__content');
     this.txtSearchBox = page.getByPlaceholder('Enter your keyword');
     this.btnMoveChapterDown = (chapterName: string) => {
@@ -264,7 +266,7 @@ export default class BookManagementPage {
   }
 
   async backToTopicDetail() {
-    await this.actions.click(this.brdcTopic, 'click into topic on breadcum');
+    await this.actions.click(this.brcTopic, 'click into topic on breadcum');
   }
 
   async moveChapter(chapterName: string, direction: MoveDirection) {
