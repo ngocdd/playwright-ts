@@ -1,8 +1,8 @@
 /**
 @Author                : ngocdd<ngocdd94@gmail.com>
-@CreatedDate           : 2023-07-10 21:59:19
+@CreatedDate           : 2023-07-10 21:59:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-10 21:59:19
+@LastEditDate          : 2023-07-13 15:30:49
 */
 
 export enum LOType {
@@ -16,4 +16,12 @@ export enum LOType {
 export enum MoveDirection {
   Up = 'Up',
   Down = 'Down',
+}
+
+export enum QuestionTypes {
+  MC = 'Multiple choice',
+  FIB = 'Fill in the blank',
+  MI = 'Manual input',
+  MA = 'Multiple answer',
+  OQ = 'Ordering',
 }

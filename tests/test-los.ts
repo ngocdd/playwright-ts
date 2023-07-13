@@ -2,13 +2,13 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 23:11:57
+@LastEditDate          : 2023-07-13 15:32:26
 */
 
 import { test } from '@playwright/test';
 import BookManagementPage from '../page-objects/book-management-page';
 import { generateUUID, readJSONFile } from '../utils/data-provider/data-provider';
-import { LOType, MoveDirection } from '../utils/enumeration/enumeration';
+import { LOType, MoveDirection, QuestionTypes } from '../utils/enumeration/enumeration';
 import LoginPage from '../page-objects/login-page';
 import LODetailPage from '../page-objects/lo-detail-page';
 
@@ -77,6 +77,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.backToTopicDetail();
     await bookMngPage.addNewLO(topicName, LOType.LO, loName3);
     await bookMngPage.backToTopicDetail();
+    await LODetailPage;
 
     // ASSERTIONS
     await bookMngPage.asserts.toBeEnable(bookMngPage.btnMoveTopicUp(loName3), `check move button is enable`);
@@ -114,6 +115,9 @@ test.describe('test Book Management', async () => {
     //create question for LO
     for (let q = 0; q < 3; q++) {
       await LoDetailPage.addNewQuestion();
+
+      await LoDetailPage.selectQuestionTypes(QuestionTypes.MA);
+      await page.pause();
       await LoDetailPage.inputQuestionDescription(`Question number ${q + 1} \n ${questionData[q]['question']}`);
 
       // add answer for questions
@@ -121,7 +125,7 @@ test.describe('test Book Management', async () => {
         await LoDetailPage.inputAnswers(a + 1, questionData[q]['answers'][a]);
       }
       await LoDetailPage.inputQuestionExplanation(questionData[q]['explanation']);
-      await LoDetailPage.saveAction();
+      await LoDetailPage.saveAction('Save');
       await LoDetailPage.asserts.toHaveText(
         LoDetailPage.snbMessage.last(),
         'You have created a new question successfully',
