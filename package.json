@@ -10,7 +10,8 @@
     "encrypt-envs": "npm run encrypt-stg-env && npm run encrypt-uat-env && npm run encrypt-prod-env",
     "test-stg": "npx dotenv -v ENV=stg npx playwright test",
     "test-uat": "npx dotenv -v ENV=uat npx playwright test",
-    "test-prod": "npx dotenv -v ENV=prod npx playwright test"
+    "test-prod": "npx dotenv -v ENV=prod npx playwright test",
+    "setup": "npm install && npx playwright install"
   },
   "keywords": [],
   "author": "",
