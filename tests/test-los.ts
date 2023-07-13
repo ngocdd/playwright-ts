@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-13 15:32:26
+@LastEditDate          : 2023-07-13 23:03:17
 */
 
 import { test } from '@playwright/test';
@@ -94,7 +94,7 @@ test.describe('test Book Management', async () => {
     await bookMngPage.asserts.toHaveText(afterMove[2], loName1, `check move topic 1`);
   });
 
-  test.only('test questions for LO', async ({ page }) => {
+  test('test questions for LO', async ({ page }) => {
     // INITIAL
     let bookName = await generateUUID('Book');
     let chapterName = await generateUUID('Chapter');
