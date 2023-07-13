@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-13 23:03:17
+@LastEditDate          : 2023-07-13 23:38:28
 */
 
 import { test } from '@playwright/test';
@@ -85,7 +85,7 @@ test.describe('test Book Management', async () => {
 
     let afterMove = [];
     for (let i = 0; i < listOriginalLO.length; i++) {
-      const name = await listOriginalLO[i].textContent();
+      const name = await listOriginalLO[i];
       afterMove.push(name);
     }
 
@@ -117,7 +117,6 @@ test.describe('test Book Management', async () => {
       await LoDetailPage.addNewQuestion();
 
       await LoDetailPage.selectQuestionTypes(QuestionTypes.MA);
-      await page.pause();
       await LoDetailPage.inputQuestionDescription(`Question number ${q + 1} \n ${questionData[q]['question']}`);
 
       // add answer for questions

@@ -47,6 +47,7 @@ npm run encrypt-prod-env
 These commands encrypt the respective environment files `(env/.env.uat` and `env/.env.prod)` and generate encrypted files with the `.uat.enc` and `.prod.enc` extensions.
 
 If you want to encrypt all the environment files at once, you can use the following command:
+s
 
 ```
 npm run encrypt-env

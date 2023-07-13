@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-13 09:27:43
+@LastEditDate          : 2023-07-13 23:32:37
 */
 
 import { test } from '@playwright/test';
@@ -126,7 +126,7 @@ test.describe('test Book Management', async () => {
     const listOriginalChapter = await bookMngPage.lstChapter.all();
     let afterMove = [];
     for (let i = 0; i < listOriginalChapter.length; i++) {
-      const name = await listOriginalChapter[i].textContent();
+      const name = await listOriginalChapter[i];
       afterMove.push(name);
     }
     await bookMngPage.asserts.toHaveText(afterMove[0], chapterName2, `check move chapter 2`);
@@ -161,7 +161,7 @@ test.describe('test Book Management', async () => {
 
     let afterMove = [];
     for (let i = 0; i < listOriginalTopic.length; i++) {
-      const name = await listOriginalTopic[i].textContent();
+      const name = await listOriginalTopic[i];
       afterMove.push(name);
     }
 
