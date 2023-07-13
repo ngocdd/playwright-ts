@@ -21,15 +21,7 @@ https://github.com/ngocdd/playwright-ts.git
 Navigate to the project directory and install the required dependencies by running the following command:
 
 ```
-npm install
-```
-
-This will install all the necessary packages specified in the package.json file.
-
-Then install playwright browsers by following commend:
-
-```
-npx playwright install --with-deps
+npm run setup
 ```
 
 ## Usage
