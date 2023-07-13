@@ -2,13 +2,13 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 22:02:38
+@LastEditDate          : 2023-07-13 09:27:43
 */
 
 import { test } from '@playwright/test';
 import BookManagementPage from '../page-objects/book-management-page';
 import { generateUUID } from '../utils/data-provider/data-provider';
-import { LOType, MoveDirection } from '../utils/enumeration/enumeration';
+import { MoveDirection } from '../utils/enumeration/enumeration';
 import LoginPage from '../page-objects/login-page';
 
 let loginPage: LoginPage;

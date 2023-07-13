@@ -2,12 +2,13 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 23:06:51
+@LastEditDate          : 2023-07-13 14:41:01
 */
 
 import { Page, Locator } from '@playwright/test';
 import Actions from '../utils/actions/actions';
 import Asserts from '../utils/actions/asserts';
+import { MoveDirection } from '../utils/enumeration/enumeration';
 
 export default class LODetailPage {
   // list Pages
@@ -121,4 +122,6 @@ export default class LODetailPage {
       `input answer description is ${answerDescription}`
     );
   }
+
+  async moveLo(loName: string, direction: MoveDirection) {}
 }
