@@ -2,10 +2,10 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-12 23:13:54
+@LastEditDate          : 2023-07-14 08:35:36
 */
 
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import LoginPage from '../page-objects/login-page';
 import { readJSONFile } from '../utils/data-provider/data-provider';
 import { LOType } from '../utils/enumeration/enumeration';

@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-13 15:32:11
+@LastEditDate          : 2023-07-14 09:01:50
 */
 
 import { Page, Locator } from '@playwright/test';
@@ -42,6 +42,8 @@ export default class LODetailPage {
   readonly txtFibAnswers: any;
   readonly txtFibAlAnswer: any;
   readonly lstQuestionType: any;
+  readonly btnMoveLoUp: any;
+  readonly btnMoveLoDown: any;
 
   // constructor
   constructor(page: Page) {
@@ -106,6 +108,19 @@ export default class LODetailPage {
     this.lstQuestionType = (questionType: QuestionTypes) => {
       return page.getByRole('option').filter({ hasText: questionType });
     };
+    this.btnMoveLoDown = (loName: string) => {
+      return page
+        .getByTestId('LOAndAssignmentItem__root')
+        .filter({ hasText: loName })
+        .getByTestId('LOAndAssignmentItem__moveDown');
+    };
+
+    this.btnMoveLoUp = (loName: string) => {
+      return page
+        .getByTestId('LOAndAssignmentItem__root')
+        .filter({ hasText: loName })
+        .getByTestId('LOAndAssignmentItem__moveDown');
+    };
   }
 
   async saveAction(label: string) {
@@ -153,5 +168,13 @@ export default class LODetailPage {
       answerDescription,
       `input answer description is ${answerDescription}`
     );
+  }
+
+  async moveLo(loName: string, direction: MoveDirection) {
+    if ((direction = MoveDirection.Up)) {
+      await this.actions.click(this.btnMoveLoUp(loName), `move lo ${loName} ${direction}`);
+    } else {
+      await this.actions.click(this.btnMoveLoDown(loName), `move lo ${loName} ${direction}`);
+    }
   }
 }

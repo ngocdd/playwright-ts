@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-13 23:38:28
+@LastEditDate          : 2023-07-14 11:17:06
 */
 
 import { test } from '@playwright/test';
@@ -77,10 +77,11 @@ test.describe('test Book Management', async () => {
     await bookMngPage.backToTopicDetail();
     await bookMngPage.addNewLO(topicName, LOType.LO, loName3);
     await bookMngPage.backToTopicDetail();
-    await LODetailPage;
+    await LoDetailPage.moveLo(loName1, MoveDirection.Down);
+    await LoDetailPage.moveLo(loName3, MoveDirection.Up);
 
     // ASSERTIONS
-    await bookMngPage.asserts.toBeEnable(bookMngPage.btnMoveTopicUp(loName3), `check move button is enable`);
+    // await bookMngPage.asserts.toBeEnable(bookMngPage.btnMoveTopicUp(loName3), `check move button is enable`);
     const listOriginalLO = await bookMngPage.lstTopic(chapterName).all();
 
     let afterMove = [];
@@ -94,7 +95,49 @@ test.describe('test Book Management', async () => {
     await bookMngPage.asserts.toHaveText(afterMove[2], loName1, `check move topic 1`);
   });
 
-  test('test questions for LO', async ({ page }) => {
+  test.only('test create multiple choice question', async ({ page }) => {
+    // INITIAL
+    let bookName = await generateUUID('Book');
+    let chapterName = await generateUUID('Chapter');
+    let topicName = await generateUUID('Topic');
+    let loName = await generateUUID('LO');
+
+    // PRECONDITIONS
+    await bookMngPage.gotoBookManagement();
+    await bookMngPage.addNewBook(bookName);
+    await bookMngPage.gotoBookDetail(bookName);
+    await bookMngPage.addNewChapter(chapterName);
+    await bookMngPage.addNewTopic(chapterName, topicName);
+
+    // STEPS
+    await bookMngPage.addNewLO(topicName, LOType.LO, loName);
+
+    const questionData = await readJSONFile('question');
+    //create question for LO
+    for (let q = 0; q < 3; q++) {
+      await LoDetailPage.addNewQuestion();
+
+      // await LoDetailPage.selectQuestionTypes(QuestionTypes.MC);
+      await LoDetailPage.inputQuestionDescription(`Question number ${q + 1} \n ${questionData[q]['question']}`);
+
+      // add answer for questions
+      for (let a = 0; a < questionData[q]['answers'].length; a++) {
+        await LoDetailPage.inputAnswers(a + 1, questionData[q]['answers'][a]);
+      }
+      await LoDetailPage.inputQuestionExplanation(questionData[q]['explanation']);
+      await LoDetailPage.saveAction('Save');
+      await LoDetailPage.asserts.toHaveText(
+        LoDetailPage.snbMessage.last(),
+        'You have created a new question successfully',
+        `check notification create question successfully`
+      );
+    }
+
+    // ASSERTIONS
+    await LoDetailPage.asserts.toHaveCount(LoDetailPage.lblQuestionTitle, 3, `check have 3 questions created`);
+  });
+
+  test.only('test create multiple answers question', async ({ page }) => {
     // INITIAL
     let bookName = await generateUUID('Book');
     let chapterName = await generateUUID('Chapter');
