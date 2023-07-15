@@ -2,12 +2,12 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-13 23:32:37
+@LastEditDate          : 2023-07-15 11:33:06
 */
 
 import { test } from '@playwright/test';
 import BookManagementPage from '../page-objects/book-management-page';
-import { generateUUID } from '../utils/data-provider/data-provider';
+import { generateRandom } from '../utils/data-provider/data-provider';
 import { MoveDirection } from '../utils/enumeration/enumeration';
 import LoginPage from '../page-objects/login-page';
 
@@ -26,7 +26,7 @@ test.describe('test Book Management', async () => {
 
   test('test create new book', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
+    let bookName = await generateRandom('Book');
 
     // PRECONDITIONS
     // STEPS
@@ -49,8 +49,8 @@ test.describe('test Book Management', async () => {
 
   test('test create new chapter', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
+    let bookName = await generateRandom('Book');
+    let chapterName = await generateRandom('Chapter');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -75,9 +75,9 @@ test.describe('test Book Management', async () => {
 
   test('test create new topic', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
-    let topicName = await generateUUID('Topic');
+    let bookName = await generateRandom('Book');
+    let chapterName = await generateRandom('Chapter');
+    let topicName = await generateRandom('Topic');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -104,10 +104,10 @@ test.describe('test Book Management', async () => {
 
   test('test move chapter', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName1 = await generateUUID('Chapter1');
-    let chapterName2 = await generateUUID('Chapter2');
-    let chapterName3 = await generateUUID('Chapter3');
+    let bookName = await generateRandom('Book');
+    let chapterName1 = await generateRandom('Chapter1');
+    let chapterName2 = await generateRandom('Chapter2');
+    let chapterName3 = await generateRandom('Chapter3');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -136,11 +136,11 @@ test.describe('test Book Management', async () => {
 
   test('test move topic', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
-    let topicName1 = await generateUUID('Topic1');
-    let topicName2 = await generateUUID('Topic2');
-    let topicName3 = await generateUUID('Topic3');
+    let bookName = await generateRandom('Book');
+    let chapterName = await generateRandom('Chapter');
+    let topicName1 = await generateRandom('Topic1');
+    let topicName2 = await generateRandom('Topic2');
+    let topicName3 = await generateRandom('Topic3');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();

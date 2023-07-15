@@ -2,7 +2,7 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-14 09:01:50
+@LastEditDate          : 2023-07-15 12:17:17
 */
 
 import { Page, Locator } from '@playwright/test';
@@ -44,6 +44,7 @@ export default class LODetailPage {
   readonly lstQuestionType: any;
   readonly btnMoveLoUp: any;
   readonly btnMoveLoDown: any;
+  readonly chkCorrectAnswer: any;
 
   // constructor
   constructor(page: Page) {
@@ -121,6 +122,12 @@ export default class LODetailPage {
         .filter({ hasText: loName })
         .getByTestId('LOAndAssignmentItem__moveDown');
     };
+    this.chkCorrectAnswer = (answerNumber: number) => {
+      return page
+        .getByTestId('QuizMAQAnswerItem__root')
+        .filter({ hasText: `Answer ${answerNumber}` })
+        .getByTestId('CheckboxLabelHF__checkboxBase');
+    };
   }
 
   async saveAction(label: string) {
@@ -142,8 +149,12 @@ export default class LODetailPage {
     await this.actions.click(this.btnAddAnswer, 'click on add new answer');
   }
 
-  async selectCorrectAnswer(answerNumber = 1) {
+  async selectMCCorrectAnswer(answerNumber = 1) {
     await this.actions.click(this.rdoCorrectAnswer(answerNumber), `click correct answer number ${answerNumber}`);
+  }
+
+  async selectMACorrectAnswer(answerNumber = 1) {
+    await this.actions.click(this.chkCorrectAnswer(answerNumber), `click correct answer number ${answerNumber}`);
   }
 
   async inputQuestionDescription(questionDescription: string) {

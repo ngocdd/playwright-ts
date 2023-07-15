@@ -2,13 +2,13 @@
 @Author                : ngocdd<ngocdd94@gmail.com>
 @CreatedDate           : 2023-07-10 21:58:00
 @LastEditors           : ngocdd<ngocdd94@gmail.com>
-@LastEditDate          : 2023-07-14 11:17:06
+@LastEditDate          : 2023-07-15 13:28:57
 */
 
 import { test } from '@playwright/test';
 import BookManagementPage from '../page-objects/book-management-page';
-import { generateUUID, readJSONFile } from '../utils/data-provider/data-provider';
-import { LOType, MoveDirection, QuestionTypes } from '../utils/enumeration/enumeration';
+import { generateRandom, readJSONFile } from '../utils/data-provider/data-provider';
+import { LOType, MoveDirection, QuestionTypes, RanDomTypes } from '../utils/enumeration/enumeration';
 import LoginPage from '../page-objects/login-page';
 import LODetailPage from '../page-objects/lo-detail-page';
 
@@ -29,10 +29,10 @@ test.describe('test Book Management', async () => {
 
   test('test create new LO', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
-    let topicName = await generateUUID('Topic');
-    let loName = await generateUUID('LO');
+    let bookName = await generateRandom('Book');
+    let chapterName = await generateRandom('Chapter');
+    let topicName = await generateRandom('Topic');
+    let loName = await generateRandom('LO');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -56,12 +56,12 @@ test.describe('test Book Management', async () => {
 
   test('test move LO', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
-    let topicName = await generateUUID('Topic');
-    let loName1 = await generateUUID('LO1');
-    let loName2 = await generateUUID('LO2');
-    let loName3 = await generateUUID('LO3');
+    let bookName = await generateRandom('Book');
+    let chapterName = await generateRandom('Chapter');
+    let topicName = await generateRandom('Topic');
+    let loName1 = await generateRandom('LO1');
+    let loName2 = await generateRandom('LO2');
+    let loName3 = await generateRandom('LO3');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -95,12 +95,12 @@ test.describe('test Book Management', async () => {
     await bookMngPage.asserts.toHaveText(afterMove[2], loName1, `check move topic 1`);
   });
 
-  test.only('test create multiple choice question', async ({ page }) => {
+  test('test create multiple choice question', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
-    let topicName = await generateUUID('Topic');
-    let loName = await generateUUID('LO');
+    let bookName = await generateRandom('Book');
+    let chapterName = await generateRandom('Chapter');
+    let topicName = await generateRandom('Topic');
+    let loName = await generateRandom('LO');
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -137,12 +137,12 @@ test.describe('test Book Management', async () => {
     await LoDetailPage.asserts.toHaveCount(LoDetailPage.lblQuestionTitle, 3, `check have 3 questions created`);
   });
 
-  test.only('test create multiple answers question', async ({ page }) => {
+  test('test create multiple answers question', async ({ page }) => {
     // INITIAL
-    let bookName = await generateUUID('Book');
-    let chapterName = await generateUUID('Chapter');
-    let topicName = await generateUUID('Topic');
-    let loName = await generateUUID('LO');
+    let bookName = await generateRandom('Book', RanDomTypes.text);
+    let chapterName = await generateRandom('Chapter', RanDomTypes.text);
+    let topicName = await generateRandom('Topic', RanDomTypes.text);
+    let loName = await generateRandom('LO', RanDomTypes.text);
 
     // PRECONDITIONS
     await bookMngPage.gotoBookManagement();
@@ -160,6 +160,7 @@ test.describe('test Book Management', async () => {
       await LoDetailPage.addNewQuestion();
 
       await LoDetailPage.selectQuestionTypes(QuestionTypes.MA);
+      await LoDetailPage.selectMACorrectAnswer(2);
       await LoDetailPage.inputQuestionDescription(`Question number ${q + 1} \n ${questionData[q]['question']}`);
 
       // add answer for questions
@@ -174,7 +175,6 @@ test.describe('test Book Management', async () => {
         `check notification create question successfully`
       );
     }
-
     // ASSERTIONS
     await LoDetailPage.asserts.toHaveCount(LoDetailPage.lblQuestionTitle, 3, `check have 3 questions created`);
   });
